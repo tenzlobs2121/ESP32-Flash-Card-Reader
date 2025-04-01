@@ -1,0 +1,143 @@
+Protel Design System Design Rule Check
+PCB File : C:\Users\Public\Documents\Altium\Flash Card Reader Product\Flash_Card_Reader\PCB1.PcbDoc
+Date     : 2025-03-14
+Time     : 5:44:43 PM
+
+Processing Rule : Clearance Constraint (Gap=10mil) (All),(All)
+   Violation between Clearance Constraint: (Collision < 10mil) Between Pad Micro Controller-49_1(4809.252mil,1810.039mil) on Top Layer And Region (0 hole(s)) Top Layer 
+Rule Violations :1
+
+Processing Rule : Short-Circuit Constraint (Allowed=No) (All),(All)
+   Violation between Short-Circuit Constraint: Between Pad Micro Controller-49_1(4809.252mil,1810.039mil) on Top Layer And Region (0 hole(s)) Top Layer Location : [X = 7409.252mil][Y = 9610.039mil]
+Rule Violations :1
+
+Processing Rule : Un-Routed Net Constraint ( (All) )
+   Violation between Un-Routed Net Constraint: Net GND Between Pad 3V7-N(3221.653mil,1500mil) on Multi-Layer And Pad LDO3V3-1(3562.598mil,1416.535mil) on Top Layer 
+   Violation between Un-Routed Net Constraint: Net 3.7V Between Pad 3V7-P(378.346mil,1500mil) on Multi-Layer And Pad LDO3V3-3(3600mil,1500mil) on Top Layer 
+   Violation between Un-Routed Net Constraint: Net 3.7V Between Pad C3-1(3531.102mil,1600mil) on Top Layer And Pad LDO3V3-3(3600mil,1500mil) on Top Layer 
+   Violation between Un-Routed Net Constraint: Net GND Between Pad LDO3V3-1(3562.598mil,1416.535mil) on Top Layer And Pad C3-2(3600mil,1600mil) on Top Layer 
+   Violation between Un-Routed Net Constraint: Net 3V3 Between Pad LDO3V3-2(3637.402mil,1416.535mil) on Top Layer And Pad C4-1(3765.551mil,1300mil) on Top Layer 
+   Violation between Un-Routed Net Constraint: Net 3V3 Between Pad C4-1(3765.551mil,1300mil) on Top Layer And Pad Micro Controller-3(4825.984mil,1964.567mil) on Top Layer 
+   Violation between Un-Routed Net Constraint: Net GND Between Pad LDO3V3-1(3562.598mil,1416.535mil) on Top Layer And Pad C4-2(3834.449mil,1300mil) on Top Layer 
+   Violation between Un-Routed Net Constraint: Net GND Between Pad C4-2(3834.449mil,1300mil) on Top Layer And Pad Micro Controller-51(4536.614mil,1498.032mil) on Top Layer 
+   Violation between Un-Routed Net Constraint: Net GND Between Pad Micro Controller-2(4857.48mil,1964.567mil) on Top Layer And Pad Micro Controller-1(4888.976mil,1964.567mil) on Top Layer 
+   Violation between Un-Routed Net Constraint: Net GND Between Pad Micro Controller-1(4888.976mil,1964.567mil) on Top Layer And Pad Micro Controller-53(4926.378mil,1966.535mil) on Top Layer 
+   Violation between Un-Routed Net Constraint: Net GND Between Pad Micro Controller-52(4536.614mil,1966.535mil) on Top Layer And Pad Micro Controller-11(4574.016mil,1964.567mil) on Top Layer 
+   Violation between Un-Routed Net Constraint: Net GND Between Pad Micro Controller-11(4574.016mil,1964.567mil) on Top Layer And Pad Micro Controller-8(4668.504mil,1964.567mil) on Top Layer 
+   Violation between Un-Routed Net Constraint: Net GND Between Pad Micro Controller-14(4538.583mil,1858.268mil) on Top Layer And Pad Micro Controller-49_7(4653.74mil,1810.039mil) on Top Layer 
+   Violation between Un-Routed Net Constraint: Net GND Between Pad Micro Controller-52(4536.614mil,1966.535mil) on Top Layer And Pad Micro Controller-14(4538.583mil,1858.268mil) on Top Layer 
+   Violation between Un-Routed Net Constraint: Net GND Between Pad Micro Controller-36(4924.409mil,1543.307mil) on Top Layer And Pad Micro Controller-37(4924.409mil,1574.803mil) on Top Layer 
+   Violation between Un-Routed Net Constraint: Net GND Between Pad Micro Controller-36(4924.409mil,1543.307mil) on Top Layer And Pad Micro Controller-50(4926.378mil,1498.032mil) on Top Layer 
+   Violation between Un-Routed Net Constraint: Net GND Between Pad Micro Controller-37(4924.409mil,1574.803mil) on Top Layer And Pad Micro Controller-38(4924.409mil,1606.299mil) on Top Layer 
+   Violation between Un-Routed Net Constraint: Net GND Between Pad Micro Controller-38(4924.409mil,1606.299mil) on Top Layer And Pad Micro Controller-39(4924.409mil,1637.795mil) on Top Layer 
+   Violation between Un-Routed Net Constraint: Net GND Between Pad Micro Controller-39(4924.409mil,1637.795mil) on Top Layer And Pad Micro Controller-40(4924.409mil,1669.291mil) on Top Layer 
+   Violation between Un-Routed Net Constraint: Net GND Between Pad Micro Controller-40(4924.409mil,1669.291mil) on Top Layer And Pad Micro Controller-41(4924.409mil,1700.787mil) on Top Layer 
+   Violation between Un-Routed Net Constraint: Net GND Between Pad Micro Controller-41(4924.409mil,1700.787mil) on Top Layer And Pad Micro Controller-42(4924.409mil,1732.284mil) on Top Layer 
+   Violation between Un-Routed Net Constraint: Net GND Between Pad Micro Controller-42(4924.409mil,1732.284mil) on Top Layer And Pad Micro Controller-43(4924.409mil,1763.78mil) on Top Layer 
+   Violation between Un-Routed Net Constraint: Net GND Between Pad Micro Controller-49_2(4809.252mil,1732.284mil) on Top Layer And Pad Micro Controller-42(4924.409mil,1732.284mil) on Top Layer 
+   Violation between Un-Routed Net Constraint: Net GND Between Pad Micro Controller-43(4924.409mil,1763.78mil) on Top Layer And Pad Micro Controller-44(4924.409mil,1795.276mil) on Top Layer 
+   Violation between Un-Routed Net Constraint: Net GND Between Pad Micro Controller-44(4924.409mil,1795.276mil) on Top Layer And Pad Micro Controller-45(4924.409mil,1826.772mil) on Top Layer 
+   Violation between Un-Routed Net Constraint: Net GND Between Pad Micro Controller-45(4924.409mil,1826.772mil) on Top Layer And Pad Micro Controller-46(4924.409mil,1858.268mil) on Top Layer 
+   Violation between Un-Routed Net Constraint: Net GND Between Pad Micro Controller-46(4924.409mil,1858.268mil) on Top Layer And Pad Micro Controller-47(4924.409mil,1889.764mil) on Top Layer 
+   Violation between Un-Routed Net Constraint: Net GND Between Pad Micro Controller-47(4924.409mil,1889.764mil) on Top Layer And Pad Micro Controller-48(4924.409mil,1921.26mil) on Top Layer 
+   Violation between Un-Routed Net Constraint: Net GND Between Pad Micro Controller-48(4924.409mil,1921.26mil) on Top Layer And Pad Micro Controller-53(4926.378mil,1966.535mil) on Top Layer 
+   Violation between Un-Routed Net Constraint: Net GND Between Pad Micro Controller-49_2(4809.252mil,1732.284mil) on Top Layer And Pad Micro Controller-49_1(4809.252mil,1810.039mil) on Top Layer 
+   Violation between Un-Routed Net Constraint: Net GND Between Pad Micro Controller-49_8(4731.496mil,1810.039mil) on Top Layer And Pad Micro Controller-49_1(4809.252mil,1810.039mil) on Top Layer 
+   Violation between Un-Routed Net Constraint: Net GND Between Pad Micro Controller-49_3(4809.252mil,1654.528mil) on Top Layer And Pad Micro Controller-49_2(4809.252mil,1732.284mil) on Top Layer 
+   Violation between Un-Routed Net Constraint: Net GND Between Pad Micro Controller-49_4(4731.496mil,1654.528mil) on Top Layer And Pad Micro Controller-49_3(4809.252mil,1654.528mil) on Top Layer 
+   Violation between Un-Routed Net Constraint: Net GND Between Pad Micro Controller-49_5(4653.74mil,1654.528mil) on Top Layer And Pad Micro Controller-49_4(4731.496mil,1654.528mil) on Top Layer 
+   Violation between Un-Routed Net Constraint: Net GND Between Pad Micro Controller-49_5(4653.74mil,1654.528mil) on Top Layer And Pad Micro Controller-49_6(4653.74mil,1732.284mil) on Top Layer 
+   Violation between Un-Routed Net Constraint: Net GND Between Pad Micro Controller-51(4536.614mil,1498.032mil) on Top Layer And Pad Micro Controller-49_5(4653.74mil,1654.528mil) on Top Layer 
+   Violation between Un-Routed Net Constraint: Net GND Between Pad Micro Controller-49_7(4653.74mil,1810.039mil) on Top Layer And Pad Micro Controller-49_8(4731.496mil,1810.039mil) on Top Layer 
+   Violation between Un-Routed Net Constraint: Net GND Between Pad Micro Controller-49_9(4731.496mil,1732.284mil) on Top Layer And Pad Micro Controller-49_8(4731.496mil,1810.039mil) on Top Layer 
+Rule Violations :38
+
+Processing Rule : Modified Polygon (Allow modified: No), (Allow shelved: No)
+Rule Violations :0
+
+Processing Rule : Width Constraint (Min=10mil) (Max=10mil) (Preferred=10mil) (All)
+Rule Violations :0
+
+Processing Rule : Power Plane Connect Rule(Relief Connect )(Expansion=20mil) (Conductor Width=10mil) (Air Gap=10mil) (Entries=4) (All)
+Rule Violations :0
+
+Processing Rule : Hole Size Constraint (Min=1mil) (Max=100mil) (All)
+   Violation between Hole Size Constraint: (139.764mil > 100mil) Pad 3V7-(2874.409mil,1809.842mil) on Multi-Layer Actual Hole Size = 139.764mil
+   Violation between Hole Size Constraint: (139.764mil > 100mil) Pad 3V7-(701.181mil,1190.158mil) on Multi-Layer Actual Hole Size = 139.764mil
+Rule Violations :2
+
+Processing Rule : Hole To Hole Clearance (Gap=10mil) (All),(All)
+Rule Violations :0
+
+Processing Rule : Minimum Solder Mask Sliver (Gap=10mil) (All),(All)
+   Violation between Minimum Solder Mask Sliver Constraint: (7.748mil < 10mil) Between Pad Micro Controller-1(4888.976mil,1964.567mil) on Top Layer And Pad Micro Controller-2(4857.48mil,1964.567mil) on Top Layer [Top Solder] Mask Sliver [7.748mil]
+   Violation between Minimum Solder Mask Sliver Constraint: (7.748mil < 10mil) Between Pad Micro Controller-1(4888.976mil,1964.567mil) on Top Layer And Pad Micro Controller-53(4926.378mil,1966.535mil) on Top Layer [Top Solder] Mask Sliver [7.748mil]
+   Violation between Minimum Solder Mask Sliver Constraint: (7.748mil < 10mil) Between Pad Micro Controller-10(4605.512mil,1964.567mil) on Top Layer And Pad Micro Controller-11(4574.016mil,1964.567mil) on Top Layer [Top Solder] Mask Sliver [7.748mil]
+   Violation between Minimum Solder Mask Sliver Constraint: (7.748mil < 10mil) Between Pad Micro Controller-10(4605.512mil,1964.567mil) on Top Layer And Pad Micro Controller-9(4637.008mil,1964.567mil) on Top Layer [Top Solder] Mask Sliver [7.748mil]
+   Violation between Minimum Solder Mask Sliver Constraint: (7.748mil < 10mil) Between Pad Micro Controller-11(4574.016mil,1964.567mil) on Top Layer And Pad Micro Controller-52(4536.614mil,1966.535mil) on Top Layer [Top Solder] Mask Sliver [7.748mil]
+   Violation between Minimum Solder Mask Sliver Constraint: (7.748mil < 10mil) Between Pad Micro Controller-12(4538.583mil,1921.26mil) on Top Layer And Pad Micro Controller-13(4538.583mil,1889.764mil) on Top Layer [Top Solder] Mask Sliver [7.748mil]
+   Violation between Minimum Solder Mask Sliver Constraint: (7.748mil < 10mil) Between Pad Micro Controller-13(4538.583mil,1889.764mil) on Top Layer And Pad Micro Controller-14(4538.583mil,1858.268mil) on Top Layer [Top Solder] Mask Sliver [7.748mil]
+   Violation between Minimum Solder Mask Sliver Constraint: (7.748mil < 10mil) Between Pad Micro Controller-14(4538.583mil,1858.268mil) on Top Layer And Pad Micro Controller-15(4538.583mil,1826.772mil) on Top Layer [Top Solder] Mask Sliver [7.748mil]
+   Violation between Minimum Solder Mask Sliver Constraint: (7.748mil < 10mil) Between Pad Micro Controller-15(4538.583mil,1826.772mil) on Top Layer And Pad Micro Controller-16(4538.583mil,1795.276mil) on Top Layer [Top Solder] Mask Sliver [7.748mil]
+   Violation between Minimum Solder Mask Sliver Constraint: (7.748mil < 10mil) Between Pad Micro Controller-16(4538.583mil,1795.276mil) on Top Layer And Pad Micro Controller-17(4538.583mil,1763.78mil) on Top Layer [Top Solder] Mask Sliver [7.748mil]
+   Violation between Minimum Solder Mask Sliver Constraint: (7.748mil < 10mil) Between Pad Micro Controller-17(4538.583mil,1763.78mil) on Top Layer And Pad Micro Controller-18(4538.583mil,1732.284mil) on Top Layer [Top Solder] Mask Sliver [7.748mil]
+   Violation between Minimum Solder Mask Sliver Constraint: (7.748mil < 10mil) Between Pad Micro Controller-18(4538.583mil,1732.284mil) on Top Layer And Pad Micro Controller-19(4538.583mil,1700.787mil) on Top Layer [Top Solder] Mask Sliver [7.748mil]
+   Violation between Minimum Solder Mask Sliver Constraint: (7.748mil < 10mil) Between Pad Micro Controller-19(4538.583mil,1700.787mil) on Top Layer And Pad Micro Controller-20(4538.583mil,1669.291mil) on Top Layer [Top Solder] Mask Sliver [7.748mil]
+   Violation between Minimum Solder Mask Sliver Constraint: (7.748mil < 10mil) Between Pad Micro Controller-2(4857.48mil,1964.567mil) on Top Layer And Pad Micro Controller-3(4825.984mil,1964.567mil) on Top Layer [Top Solder] Mask Sliver [7.748mil]
+   Violation between Minimum Solder Mask Sliver Constraint: (7.748mil < 10mil) Between Pad Micro Controller-20(4538.583mil,1669.291mil) on Top Layer And Pad Micro Controller-21(4538.583mil,1637.795mil) on Top Layer [Top Solder] Mask Sliver [7.748mil]
+   Violation between Minimum Solder Mask Sliver Constraint: (7.748mil < 10mil) Between Pad Micro Controller-21(4538.583mil,1637.795mil) on Top Layer And Pad Micro Controller-22(4538.583mil,1606.299mil) on Top Layer [Top Solder] Mask Sliver [7.748mil]
+   Violation between Minimum Solder Mask Sliver Constraint: (7.748mil < 10mil) Between Pad Micro Controller-22(4538.583mil,1606.299mil) on Top Layer And Pad Micro Controller-23(4538.583mil,1574.803mil) on Top Layer [Top Solder] Mask Sliver [7.748mil]
+   Violation between Minimum Solder Mask Sliver Constraint: (7.748mil < 10mil) Between Pad Micro Controller-23(4538.583mil,1574.803mil) on Top Layer And Pad Micro Controller-24(4538.583mil,1543.307mil) on Top Layer [Top Solder] Mask Sliver [7.748mil]
+   Violation between Minimum Solder Mask Sliver Constraint: (7.748mil < 10mil) Between Pad Micro Controller-25(4574.016mil,1500mil) on Top Layer And Pad Micro Controller-26(4605.512mil,1500mil) on Top Layer [Top Solder] Mask Sliver [7.748mil]
+   Violation between Minimum Solder Mask Sliver Constraint: (7.748mil < 10mil) Between Pad Micro Controller-25(4574.016mil,1500mil) on Top Layer And Pad Micro Controller-51(4536.614mil,1498.032mil) on Top Layer [Top Solder] Mask Sliver [7.748mil]
+   Violation between Minimum Solder Mask Sliver Constraint: (7.748mil < 10mil) Between Pad Micro Controller-26(4605.512mil,1500mil) on Top Layer And Pad Micro Controller-27(4637.008mil,1500mil) on Top Layer [Top Solder] Mask Sliver [7.748mil]
+   Violation between Minimum Solder Mask Sliver Constraint: (7.748mil < 10mil) Between Pad Micro Controller-27(4637.008mil,1500mil) on Top Layer And Pad Micro Controller-28(4668.504mil,1500mil) on Top Layer [Top Solder] Mask Sliver [7.748mil]
+   Violation between Minimum Solder Mask Sliver Constraint: (7.748mil < 10mil) Between Pad Micro Controller-28(4668.504mil,1500mil) on Top Layer And Pad Micro Controller-29(4700mil,1500mil) on Top Layer [Top Solder] Mask Sliver [7.748mil]
+   Violation between Minimum Solder Mask Sliver Constraint: (7.748mil < 10mil) Between Pad Micro Controller-29(4700mil,1500mil) on Top Layer And Pad Micro Controller-30(4731.496mil,1500mil) on Top Layer [Top Solder] Mask Sliver [7.748mil]
+   Violation between Minimum Solder Mask Sliver Constraint: (7.748mil < 10mil) Between Pad Micro Controller-3(4825.984mil,1964.567mil) on Top Layer And Pad Micro Controller-4(4794.488mil,1964.567mil) on Top Layer [Top Solder] Mask Sliver [7.748mil]
+   Violation between Minimum Solder Mask Sliver Constraint: (7.748mil < 10mil) Between Pad Micro Controller-30(4731.496mil,1500mil) on Top Layer And Pad Micro Controller-31(4762.992mil,1500mil) on Top Layer [Top Solder] Mask Sliver [7.748mil]
+   Violation between Minimum Solder Mask Sliver Constraint: (7.748mil < 10mil) Between Pad Micro Controller-31(4762.992mil,1500mil) on Top Layer And Pad Micro Controller-32(4794.488mil,1500mil) on Top Layer [Top Solder] Mask Sliver [7.748mil]
+   Violation between Minimum Solder Mask Sliver Constraint: (7.748mil < 10mil) Between Pad Micro Controller-32(4794.488mil,1500mil) on Top Layer And Pad Micro Controller-33(4825.984mil,1500mil) on Top Layer [Top Solder] Mask Sliver [7.748mil]
+   Violation between Minimum Solder Mask Sliver Constraint: (7.748mil < 10mil) Between Pad Micro Controller-33(4825.984mil,1500mil) on Top Layer And Pad Micro Controller-34(4857.48mil,1500mil) on Top Layer [Top Solder] Mask Sliver [7.748mil]
+   Violation between Minimum Solder Mask Sliver Constraint: (7.748mil < 10mil) Between Pad Micro Controller-34(4857.48mil,1500mil) on Top Layer And Pad Micro Controller-35(4888.976mil,1500mil) on Top Layer [Top Solder] Mask Sliver [7.748mil]
+   Violation between Minimum Solder Mask Sliver Constraint: (7.748mil < 10mil) Between Pad Micro Controller-35(4888.976mil,1500mil) on Top Layer And Pad Micro Controller-50(4926.378mil,1498.032mil) on Top Layer [Top Solder] Mask Sliver [7.748mil]
+   Violation between Minimum Solder Mask Sliver Constraint: (7.748mil < 10mil) Between Pad Micro Controller-36(4924.409mil,1543.307mil) on Top Layer And Pad Micro Controller-37(4924.409mil,1574.803mil) on Top Layer [Top Solder] Mask Sliver [7.748mil]
+   Violation between Minimum Solder Mask Sliver Constraint: (7.748mil < 10mil) Between Pad Micro Controller-37(4924.409mil,1574.803mil) on Top Layer And Pad Micro Controller-38(4924.409mil,1606.299mil) on Top Layer [Top Solder] Mask Sliver [7.748mil]
+   Violation between Minimum Solder Mask Sliver Constraint: (7.748mil < 10mil) Between Pad Micro Controller-38(4924.409mil,1606.299mil) on Top Layer And Pad Micro Controller-39(4924.409mil,1637.795mil) on Top Layer [Top Solder] Mask Sliver [7.748mil]
+   Violation between Minimum Solder Mask Sliver Constraint: (7.748mil < 10mil) Between Pad Micro Controller-39(4924.409mil,1637.795mil) on Top Layer And Pad Micro Controller-40(4924.409mil,1669.291mil) on Top Layer [Top Solder] Mask Sliver [7.748mil]
+   Violation between Minimum Solder Mask Sliver Constraint: (7.748mil < 10mil) Between Pad Micro Controller-4(4794.488mil,1964.567mil) on Top Layer And Pad Micro Controller-5(4762.992mil,1964.567mil) on Top Layer [Top Solder] Mask Sliver [7.748mil]
+   Violation between Minimum Solder Mask Sliver Constraint: (7.748mil < 10mil) Between Pad Micro Controller-40(4924.409mil,1669.291mil) on Top Layer And Pad Micro Controller-41(4924.409mil,1700.787mil) on Top Layer [Top Solder] Mask Sliver [7.748mil]
+   Violation between Minimum Solder Mask Sliver Constraint: (7.748mil < 10mil) Between Pad Micro Controller-41(4924.409mil,1700.787mil) on Top Layer And Pad Micro Controller-42(4924.409mil,1732.284mil) on Top Layer [Top Solder] Mask Sliver [7.748mil]
+   Violation between Minimum Solder Mask Sliver Constraint: (7.748mil < 10mil) Between Pad Micro Controller-42(4924.409mil,1732.284mil) on Top Layer And Pad Micro Controller-43(4924.409mil,1763.78mil) on Top Layer [Top Solder] Mask Sliver [7.748mil]
+   Violation between Minimum Solder Mask Sliver Constraint: (7.748mil < 10mil) Between Pad Micro Controller-43(4924.409mil,1763.78mil) on Top Layer And Pad Micro Controller-44(4924.409mil,1795.276mil) on Top Layer [Top Solder] Mask Sliver [7.748mil]
+   Violation between Minimum Solder Mask Sliver Constraint: (7.748mil < 10mil) Between Pad Micro Controller-44(4924.409mil,1795.276mil) on Top Layer And Pad Micro Controller-45(4924.409mil,1826.772mil) on Top Layer [Top Solder] Mask Sliver [7.748mil]
+   Violation between Minimum Solder Mask Sliver Constraint: (7.748mil < 10mil) Between Pad Micro Controller-45(4924.409mil,1826.772mil) on Top Layer And Pad Micro Controller-46(4924.409mil,1858.268mil) on Top Layer [Top Solder] Mask Sliver [7.748mil]
+   Violation between Minimum Solder Mask Sliver Constraint: (7.748mil < 10mil) Between Pad Micro Controller-46(4924.409mil,1858.268mil) on Top Layer And Pad Micro Controller-47(4924.409mil,1889.764mil) on Top Layer [Top Solder] Mask Sliver [7.748mil]
+   Violation between Minimum Solder Mask Sliver Constraint: (7.748mil < 10mil) Between Pad Micro Controller-47(4924.409mil,1889.764mil) on Top Layer And Pad Micro Controller-48(4924.409mil,1921.26mil) on Top Layer [Top Solder] Mask Sliver [7.748mil]
+   Violation between Minimum Solder Mask Sliver Constraint: (7.748mil < 10mil) Between Pad Micro Controller-5(4762.992mil,1964.567mil) on Top Layer And Pad Micro Controller-6(4731.496mil,1964.567mil) on Top Layer [Top Solder] Mask Sliver [7.748mil]
+   Violation between Minimum Solder Mask Sliver Constraint: (7.748mil < 10mil) Between Pad Micro Controller-6(4731.496mil,1964.567mil) on Top Layer And Pad Micro Controller-7(4700mil,1964.567mil) on Top Layer [Top Solder] Mask Sliver [7.748mil]
+   Violation between Minimum Solder Mask Sliver Constraint: (7.748mil < 10mil) Between Pad Micro Controller-7(4700mil,1964.567mil) on Top Layer And Pad Micro Controller-8(4668.504mil,1964.567mil) on Top Layer [Top Solder] Mask Sliver [7.748mil]
+   Violation between Minimum Solder Mask Sliver Constraint: (7.748mil < 10mil) Between Pad Micro Controller-8(4668.504mil,1964.567mil) on Top Layer And Pad Micro Controller-9(4637.008mil,1964.567mil) on Top Layer [Top Solder] Mask Sliver [7.748mil]
+Rule Violations :48
+
+Processing Rule : Silk To Solder Mask (Clearance=10mil) (IsPad),(All)
+   Violation between Silk To Solder Mask Clearance Constraint: (8.854mil < 10mil) Between Arc (3560.63mil,1375.591mil) on Top Overlay And Pad LDO3V3-1(3562.598mil,1416.535mil) on Top Layer [Top Overlay] to [Top Solder] clearance [8.854mil]
+   Violation between Silk To Solder Mask Clearance Constraint: (Collision < 10mil) Between Pad C3-1(3531.102mil,1600mil) on Top Layer And Text "LDO3V3" (3539.5mil,1564.768mil) on Top Overlay [Top Overlay] to [Top Solder] clearance [0mil]
+   Violation between Silk To Solder Mask Clearance Constraint: (Collision < 10mil) Between Pad C3-2(3600mil,1600mil) on Top Layer And Text "LDO3V3" (3539.5mil,1564.768mil) on Top Overlay [Top Overlay] to [Top Solder] clearance [0mil]
+   Violation between Silk To Solder Mask Clearance Constraint: (9.897mil < 10mil) Between Pad LDO3V3-1(3562.598mil,1416.535mil) on Top Layer And Track (3538.583mil,1430.709mil)(3538.583mil,1485.827mil) on Top Overlay [Top Overlay] to [Top Solder] clearance [9.897mil]
+   Violation between Silk To Solder Mask Clearance Constraint: (9.897mil < 10mil) Between Pad LDO3V3-2(3637.402mil,1416.535mil) on Top Layer And Track (3661.417mil,1430.709mil)(3661.417mil,1485.827mil) on Top Overlay [Top Overlay] to [Top Solder] clearance [9.897mil]
+Rule Violations :5
+
+Processing Rule : Silk to Silk (Clearance=10mil) (All),(All)
+Rule Violations :0
+
+Processing Rule : Net Antennae (Tolerance=0mil) (All)
+Rule Violations :0
+
+Processing Rule : Height Constraint (Min=0mil) (Max=1000mil) (Prefered=500mil) (All)
+Rule Violations :0
+
+
+Violations Detected : 95
+Waived Violations : 0
+Time Elapsed        : 00:00:01

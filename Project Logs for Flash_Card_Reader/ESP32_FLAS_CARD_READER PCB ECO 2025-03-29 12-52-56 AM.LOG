@@ -1,0 +1,63 @@
+Removed Pin From Net: NetName=GPIO9 Pin=BOOT2-4
+Removed Pin From Net: NetName=GPIO9 Pin=C11-2
+Removed Member From Class: ClassName=ESP32_USBC_CHARGER Member=C1
+Removed Member From Class: ClassName=ESP32_USBC_CHARGER Member=C9
+Removed Member From Class: ClassName=ESP32_USBC_CHARGER Member=IR1
+Removed Member From Class: ClassName=ESP32_USBC_CHARGER Member=IR3
+Added Component: Designator=R27(RESC1005X40N)
+Add component (AddParameter): Name = "Check_prices"; Value = "https://www.snapeda.com/parts/CRG0402J10K/10/TE+Connectivity+Passive+Product/view-part/?ref=eda"; VariantName = "[No Variations]"
+Add component (AddParameter): Name = "EU_RoHS_Compliance"; Value = "Compliant with Exemptions"; VariantName = "[No Variations]"
+Add component (AddParameter): Name = "MF"; Value = "TE Connectivity"; VariantName = "[No Variations]"
+Add component (AddParameter): Name = "MP"; Value = "CRG0402J10K/10"; VariantName = "[No Variations]"
+Add component (AddParameter): Name = "Package"; Value = "0402"; VariantName = "[No Variations]"
+Add component (AddParameter): Name = "Power_Rating"; Value = ".063 W"; VariantName = "[No Variations]"
+Add component (AddParameter): Name = "Resistance"; Value = "10K"; VariantName = "[No Variations]"
+Add component (AddParameter): Name = "SnapEDA_Link"; Value = "https://www.snapeda.com/parts/CRG0402J10K/10/TE+Connectivity+Passive+Product/view-part/?ref=snap"; VariantName = "[No Variations]"
+Add component (AddParameter): Name = "Tolerance"; Value = "5%"; VariantName = "[No Variations]"
+Add component (AddParameter): Name = "Value"; Value = ""; VariantName = "[No Variations]"
+Add component (AddParameter): Name = "Voltage_Rating"; Value = "50 V"; VariantName = "[No Variations]"
+Added Component: Designator=R28(RESC1005X40N)
+Add component (AddParameter): Name = "Check_prices"; Value = "https://www.snapeda.com/parts/CRG0402J10K/10/TE+Connectivity+Passive+Product/view-part/?ref=eda"; VariantName = "[No Variations]"
+Add component (AddParameter): Name = "EU_RoHS_Compliance"; Value = "Compliant with Exemptions"; VariantName = "[No Variations]"
+Add component (AddParameter): Name = "MF"; Value = "TE Connectivity"; VariantName = "[No Variations]"
+Add component (AddParameter): Name = "MP"; Value = "CRG0402J10K/10"; VariantName = "[No Variations]"
+Add component (AddParameter): Name = "Package"; Value = "0402"; VariantName = "[No Variations]"
+Add component (AddParameter): Name = "Power_Rating"; Value = ".063 W"; VariantName = "[No Variations]"
+Add component (AddParameter): Name = "Resistance"; Value = "10K"; VariantName = "[No Variations]"
+Add component (AddParameter): Name = "SnapEDA_Link"; Value = "https://www.snapeda.com/parts/CRG0402J10K/10/TE+Connectivity+Passive+Product/view-part/?ref=snap"; VariantName = "[No Variations]"
+Add component (AddParameter): Name = "Tolerance"; Value = "5%"; VariantName = "[No Variations]"
+Add component (AddParameter): Name = "Value"; Value = ""; VariantName = "[No Variations]"
+Add component (AddParameter): Name = "Voltage_Rating"; Value = "50 V"; VariantName = "[No Variations]"
+Added Component: Designator=U?(QFN50P500X500X80-29N)
+Add component (AddParameter): Name = "Availability"; Value = "In Stock"; VariantName = "[No Variations]"
+Add component (AddParameter): Name = "Check_prices"; Value = "https://www.snapeda.com/parts/CP2102N-A02-GQFN28/Silicon+Labs/view-part/?ref=eda"; VariantName = "[No Variations]"
+Add component (AddParameter): Name = "MF"; Value = "Silicon Labs"; VariantName = "[No Variations]"
+Add component (AddParameter): Name = "MP"; Value = "CP2102N-A02-GQFN28"; VariantName = "[No Variations]"
+Add component (AddParameter): Name = "Package"; Value = "WFQFN-28 Silicon Labs"; VariantName = "[No Variations]"
+Add component (AddParameter): Name = "Price"; Value = "None"; VariantName = "[No Variations]"
+Add component (AddParameter): Name = "Purchase-URL"; Value = "https://pricing.snapeda.com/search/part/CP2102N-A02-GQFN28/?ref=eda"; VariantName = "[No Variations]"
+Add component (AddParameter): Name = "SnapEDA_Link"; Value = "https://www.snapeda.com/parts/CP2102N-A02-GQFN28/Silicon+Labs/view-part/?ref=snap"; VariantName = "[No Variations]"
+Add component (AddParameter): Name = "Value"; Value = ""; VariantName = "[No Variations]"
+Added Pin To Net: NetName=GPIO9 Pin=NPN2-1
+Added Pin To Net: NetName=CHIP_PU Pin=BOOT2-4
+Added Pin To Net: NetName=CHIP_PU Pin=C11-2
+Added Pin To Net: NetName=CHIP_PU Pin=NPN1-1
+Added Net: Name=CHIP_PU
+Added Pin To Net: NetName=DTR Pin=R27-1
+Added Net: Name=DTR
+Added Pin To Net: NetName=NetNPN1_0 Pin=R27-2
+Added Net: Name=NetNPN1_0
+Added Pin To Net: NetName=NetNPN2_0 Pin=R28-2
+Added Net: Name=NetNPN2_0
+Added Pin To Net: NetName=RTS Pin=R28-1
+Added Net: Name=RTS
+Added Member To Class: ClassName=ESP32_USBC_CHARGER Member=Component C12 10nF
+Added Member To Class: ClassName=ESP32_USBC_CHARGER Member=Component C13 10nF
+Added Member To Class: ClassName=ESP32_USBC_CHARGER Member=Component C14 10nF
+Added Member To Class: ClassName=ESP32_USBC_CHARGER Member=Component C15 10nF
+Added Member To Class: ClassName=ESP32_USBC_CHARGER Member=Component C20 100nF
+Added Member To Class: ClassName=ESP32_USBC_CHARGER Member=Component C21 100nF
+Added Member To Class: ClassName=ESP32_USBC_CHARGER Member=Component IR6 QRE1113GR
+Added Member To Class: ClassName=ESP32_USBC_CHARGER Member=Component IR7 QRE1113GR
+Added Member To Class: ClassName=ESP32_USBC_CHARGER Member=Component IR8 QRE1113GR
+Added Member To Class: ClassName=ESP32_USBC_CHARGER Member=Component R19 10K

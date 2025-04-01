@@ -1,0 +1,58 @@
+3.7V              3V7                            P
+3.7V              C3                             1
+3.7V              LDO3V3                         3
+3V3               C1                             1
+3V3               C2                             1
+3V3               C4                             1
+3V3               C6                             1
+3V3               LDO3V3                         2
+3V3               Micro Controller               3
+3V3               R1                             1
+3V3               R2                             1
+GND               3V7                            N
+GND               C1                             2
+GND               C2                             2
+GND               C3                             2
+GND               C4                             2
+GND               C5                             2
+GND               LDO3V3                         1
+GND               Micro Controller               1
+GND               Micro Controller               2
+GND               Micro Controller              11
+GND               Micro Controller              14
+GND               Micro Controller              36
+GND               Micro Controller              37
+GND               Micro Controller              38
+GND               Micro Controller              39
+GND               Micro Controller              40
+GND               Micro Controller              41
+GND               Micro Controller              42
+GND               Micro Controller              43
+GND               Micro Controller              44
+GND               Micro Controller              45
+GND               Micro Controller              46
+GND               Micro Controller              47
+GND               Micro Controller              48
+GND               Micro Controller            49_1
+GND               Micro Controller            49_2
+GND               Micro Controller            49_3
+GND               Micro Controller            49_4
+GND               Micro Controller            49_5
+GND               Micro Controller            49_6
+GND               Micro Controller            49_7
+GND               Micro Controller            49_8
+GND               Micro Controller            49_9
+GND               Micro Controller              50
+GND               Micro Controller              51
+GND               Micro Controller              52
+GND               Micro Controller              53
+GPIO0             Micro Controller              12
+NetC5_1           C5                             1
+NetC5_1           Micro Controller               8
+NetC5_1           R1                             2
+NetC6_2           C6                             2
+NetC6_2           IR1                            C
+NetC6_2           R10                            1
+NetIR1_A          IR1                            A
+NetIR1_A          R2                             2
+-1

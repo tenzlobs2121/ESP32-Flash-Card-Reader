@@ -1,0 +1,37 @@
+Added Pin To Net: NetName=NetC2_1 Pin=C2-1
+Added Pin To Net: NetName=GND Pin=C2-2
+Added Pin To Net: NetName=3V3 Pin=C3-1
+Added Pin To Net: NetName=GND Pin=C3-2
+Added Pin To Net: NetName=GND Pin=LDO3V3-1
+Added Pin To Net: NetName=NetC2_1 Pin=LDO3V3-2
+Added Pin To Net: NetName=4V Pin=LDO3V3-3
+Added Pin To Net: NetName=3V3 Pin=Micro Controller-3
+Added Pin To Net: NetName=GND Pin=Micro Controller-8
+Added Pin To Net: NetName=GND Pin=Micro Controller-11
+Added Pin To Net: NetName=GND Pin=Micro Controller-14
+Added Pin To Net: NetName=GND Pin=Micro Controller-36
+Added Pin To Net: NetName=GND Pin=Micro Controller-37
+Added Pin To Net: NetName=GND Pin=Micro Controller-38
+Added Pin To Net: NetName=GND Pin=Micro Controller-39
+Added Pin To Net: NetName=GND Pin=Micro Controller-40
+Added Pin To Net: NetName=GND Pin=Micro Controller-41
+Added Pin To Net: NetName=GND Pin=Micro Controller-42
+Added Pin To Net: NetName=GND Pin=Micro Controller-43
+Added Pin To Net: NetName=GND Pin=Micro Controller-44
+Added Pin To Net: NetName=GND Pin=Micro Controller-45
+Added Pin To Net: NetName=GND Pin=Micro Controller-46
+Added Pin To Net: NetName=GND Pin=Micro Controller-47
+Added Pin To Net: NetName=GND Pin=Micro Controller-48
+Added Pin To Net: NetName=GND Pin=Micro Controller-49_1
+Added Pin To Net: NetName=GND Pin=Micro Controller-49_2
+Added Pin To Net: NetName=GND Pin=Micro Controller-49_3
+Added Pin To Net: NetName=GND Pin=Micro Controller-49_4
+Added Pin To Net: NetName=GND Pin=Micro Controller-49_5
+Added Pin To Net: NetName=GND Pin=Micro Controller-49_6
+Added Pin To Net: NetName=GND Pin=Micro Controller-49_7
+Added Pin To Net: NetName=GND Pin=Micro Controller-49_8
+Added Pin To Net: NetName=GND Pin=Micro Controller-49_9
+Added Pin To Net: NetName=GND Pin=Micro Controller-50
+Added Pin To Net: NetName=GND Pin=Micro Controller-51
+Added Pin To Net: NetName=GND Pin=Micro Controller-52
+Added Pin To Net: NetName=GND Pin=Micro Controller-53

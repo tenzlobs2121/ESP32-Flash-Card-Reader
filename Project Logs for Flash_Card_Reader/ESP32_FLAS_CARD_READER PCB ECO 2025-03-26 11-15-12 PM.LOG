@@ -1,0 +1,241 @@
+Change Component Description : Designator=R10 Old Description=CRG0402 chip resistor,10K 5% 0.063W New Description=CRG0402 chip resistor,10K 5% 0.063W | TE Connectivity CRG0402J10K/10
+Change Component Description : Designator=R2 Old Description=CRS Series Anti-surge Resistor 2512 Case 100Ohms 2W +/-100ppm/degC New Description=CRS Series Anti-surge Resistor 2512 Case 100Ohms 2W +/-100ppm/degC | Bourns CRS2512-FX-1000ELF
+Change Component Description : Designator=R4 Old Description=CRS Series Anti-surge Resistor 2512 Case 100Ohms 2W +/-100ppm/degC New Description=CRS Series Anti-surge Resistor 2512 Case 100Ohms 2W +/-100ppm/degC | Bourns CRS2512-FX-1000ELF
+Change Component Description : Designator=R6 Old Description=CRS Series Anti-surge Resistor 2512 Case 100Ohms 2W +/-100ppm/degC New Description=CRS Series Anti-surge Resistor 2512 Case 100Ohms 2W +/-100ppm/degC | Bourns CRS2512-FX-1000ELF
+Change Component Description : Designator=R8 Old Description=CRS Series Anti-surge Resistor 2512 Case 100Ohms 2W +/-100ppm/degC New Description=CRS Series Anti-surge Resistor 2512 Case 100Ohms 2W +/-100ppm/degC | Bourns CRS2512-FX-1000ELF
+Change Component Description : Designator=R11 Old Description=CRS Series Anti-surge Resistor 2512 Case 100Ohms 2W +/-100ppm/degC New Description=CRS Series Anti-surge Resistor 2512 Case 100Ohms 2W +/-100ppm/degC | Bourns CRS2512-FX-1000ELF
+Change Component Description : Designator=R13 Old Description=CRS Series Anti-surge Resistor 2512 Case 100Ohms 2W +/-100ppm/degC New Description=CRS Series Anti-surge Resistor 2512 Case 100Ohms 2W +/-100ppm/degC | Bourns CRS2512-FX-1000ELF
+Change Component Description : Designator=R15 Old Description=CRS Series Anti-surge Resistor 2512 Case 100Ohms 2W +/-100ppm/degC New Description=CRS Series Anti-surge Resistor 2512 Case 100Ohms 2W +/-100ppm/degC | Bourns CRS2512-FX-1000ELF
+Change Component Description : Designator=R17 Old Description=CRS Series Anti-surge Resistor 2512 Case 100Ohms 2W +/-100ppm/degC New Description=CRS Series Anti-surge Resistor 2512 Case 100Ohms 2W +/-100ppm/degC | Bourns CRS2512-FX-1000ELF
+Change Component Description : Designator=R1 Old Description=Resistencia de pel铆cula delgada de precisi贸n SMD, carcasa 0402, 220 ohmios +/-0,1 %, 063 W +/-25 ppm/C New Description=Resistencia de pel铆cula delgada de precisi贸n SMD, carcasa 0402, 220 ohmios +/-0,1 %, 063 W +/-25 ppm/C | TE Connectivity CPF0402B220RE1
+Change Component Description : Designator=R3 Old Description=Resistencia de pel铆cula delgada de precisi贸n SMD, carcasa 0402, 220 ohmios +/-0,1 %, 063 W +/-25 ppm/C New Description=Resistencia de pel铆cula delgada de precisi贸n SMD, carcasa 0402, 220 ohmios +/-0,1 %, 063 W +/-25 ppm/C | TE Connectivity CPF0402B220RE1
+Change Component Description : Designator=R5 Old Description=Resistencia de pel铆cula delgada de precisi贸n SMD, carcasa 0402, 220 ohmios +/-0,1 %, 063 W +/-25 ppm/C New Description=Resistencia de pel铆cula delgada de precisi贸n SMD, carcasa 0402, 220 ohmios +/-0,1 %, 063 W +/-25 ppm/C | TE Connectivity CPF0402B220RE1
+Change Component Description : Designator=R7 Old Description=Resistencia de pel铆cula delgada de precisi贸n SMD, carcasa 0402, 220 ohmios +/-0,1 %, 063 W +/-25 ppm/C New Description=Resistencia de pel铆cula delgada de precisi贸n SMD, carcasa 0402, 220 ohmios +/-0,1 %, 063 W +/-25 ppm/C | TE Connectivity CPF0402B220RE1
+Change Component Description : Designator=R9 Old Description=Resistencia de pel铆cula delgada de precisi贸n SMD, carcasa 0402, 220 ohmios +/-0,1 %, 063 W +/-25 ppm/C New Description=Resistencia de pel铆cula delgada de precisi贸n SMD, carcasa 0402, 220 ohmios +/-0,1 %, 063 W +/-25 ppm/C | TE Connectivity CPF0402B220RE1
+Change Component Description : Designator=R12 Old Description=Resistencia de pel铆cula delgada de precisi贸n SMD, carcasa 0402, 220 ohmios +/-0,1 %, 063 W +/-25 ppm/C New Description=Resistencia de pel铆cula delgada de precisi贸n SMD, carcasa 0402, 220 ohmios +/-0,1 %, 063 W +/-25 ppm/C | TE Connectivity CPF0402B220RE1
+Change Component Description : Designator=R14 Old Description=Resistencia de pel铆cula delgada de precisi贸n SMD, carcasa 0402, 220 ohmios +/-0,1 %, 063 W +/-25 ppm/C New Description=Resistencia de pel铆cula delgada de precisi贸n SMD, carcasa 0402, 220 ohmios +/-0,1 %, 063 W +/-25 ppm/C | TE Connectivity CPF0402B220RE1
+Change Component Description : Designator=R16 Old Description=Resistencia de pel铆cula delgada de precisi贸n SMD, carcasa 0402, 220 ohmios +/-0,1 %, 063 W +/-25 ppm/C New Description=Resistencia de pel铆cula delgada de precisi贸n SMD, carcasa 0402, 220 ohmios +/-0,1 %, 063 W +/-25 ppm/C | TE Connectivity CPF0402B220RE1
+Added Component: Designator=C14(WCAP-CSGP_0402_L1W0.5H0.5)
+Add component (AddParameter): Name = "Capacitance"; Value = "100nF"; VariantName = "[No Variations]"
+Add component (AddParameter): Name = "Capacitance Tolerance"; Value = "+/-20%"; VariantName = "[No Variations]"
+Add component (AddParameter): Name = "Case/Size Code"; Value = "0402"; VariantName = "[No Variations]"
+Add component (AddParameter): Name = "Category"; Value = "Multilayer Ceramic Chip Capacitors"; VariantName = "[No Variations]"
+Add component (AddParameter): Name = "Ceramic Type"; Value = "X5R"; VariantName = "[No Variations]"
+Add component (AddParameter): Name = "ComponentLink1Description"; Value = "Website Link"; VariantName = "[No Variations]"
+Add component (AddParameter): Name = "ComponentLink1URL"; Value = "https://www.we-online.com/redexpert/article/885012105001?ad"; VariantName = "[No Variations]"
+Add component (AddParameter): Name = "ComponentLink2Description"; Value = "Datasheet Link"; VariantName = "[No Variations]"
+Add component (AddParameter): Name = "ComponentLink2URL"; Value = "https://www.we-online.com/redexpert/spec/885012105001?ad"; VariantName = "[No Variations]"
+Add component (AddParameter): Name = "Dissipation Factor"; Value = "10%"; VariantName = "[No Variations]"
+Add component (AddParameter): Name = "Height"; Value = "0.5mm"; VariantName = "[No Variations]"
+Add component (AddParameter): Name = "Insulation Resistance"; Value = "1GO"; VariantName = "[No Variations]"
+Add component (AddParameter): Name = "Length"; Value = "1mm"; VariantName = "[No Variations]"
+Add component (AddParameter): Name = "Manufacturer"; Value = "Wurth Elektronik"; VariantName = "[No Variations]"
+Add component (AddParameter): Name = "Manufacturer Part Number"; Value = "885012105001"; VariantName = "[No Variations]"
+Add component (AddParameter): Name = "Match Code"; Value = "WCAP-CSGP"; VariantName = "[No Variations]"
+Add component (AddParameter): Name = "Max Operating Temperature"; Value = "85癈"; VariantName = "[No Variations]"
+Add component (AddParameter): Name = "Min Operating Temperature"; Value = "-55癈"; VariantName = "[No Variations]"
+Add component (AddParameter): Name = "Mount"; Value = "Surface Mount"; VariantName = "[No Variations]"
+Add component (AddParameter): Name = "Packaging"; Value = "Tape and Reel"; VariantName = "[No Variations]"
+Add component (AddParameter): Name = "Rated Voltage (DC)"; Value = "6.3V"; VariantName = "[No Variations]"
+Add component (AddParameter): Name = "Technical Reference"; Value = "X5R0402104M6R3DFCT10000"; VariantName = "[No Variations]"
+Add component (AddParameter): Name = "Width"; Value = "0.5mm"; VariantName = "[No Variations]"
+Added Component: Designator=C15(WCAP-CSGP_0402_L1W0.5H0.5)
+Add component (AddParameter): Name = "Capacitance"; Value = "100nF"; VariantName = "[No Variations]"
+Add component (AddParameter): Name = "Capacitance Tolerance"; Value = "+/-20%"; VariantName = "[No Variations]"
+Add component (AddParameter): Name = "Case/Size Code"; Value = "0402"; VariantName = "[No Variations]"
+Add component (AddParameter): Name = "Category"; Value = "Multilayer Ceramic Chip Capacitors"; VariantName = "[No Variations]"
+Add component (AddParameter): Name = "Ceramic Type"; Value = "X5R"; VariantName = "[No Variations]"
+Add component (AddParameter): Name = "ComponentLink1Description"; Value = "Website Link"; VariantName = "[No Variations]"
+Add component (AddParameter): Name = "ComponentLink1URL"; Value = "https://www.we-online.com/redexpert/article/885012105001?ad"; VariantName = "[No Variations]"
+Add component (AddParameter): Name = "ComponentLink2Description"; Value = "Datasheet Link"; VariantName = "[No Variations]"
+Add component (AddParameter): Name = "ComponentLink2URL"; Value = "https://www.we-online.com/redexpert/spec/885012105001?ad"; VariantName = "[No Variations]"
+Add component (AddParameter): Name = "Dissipation Factor"; Value = "10%"; VariantName = "[No Variations]"
+Add component (AddParameter): Name = "Height"; Value = "0.5mm"; VariantName = "[No Variations]"
+Add component (AddParameter): Name = "Insulation Resistance"; Value = "1GO"; VariantName = "[No Variations]"
+Add component (AddParameter): Name = "Length"; Value = "1mm"; VariantName = "[No Variations]"
+Add component (AddParameter): Name = "Manufacturer"; Value = "Wurth Elektronik"; VariantName = "[No Variations]"
+Add component (AddParameter): Name = "Manufacturer Part Number"; Value = "885012105001"; VariantName = "[No Variations]"
+Add component (AddParameter): Name = "Match Code"; Value = "WCAP-CSGP"; VariantName = "[No Variations]"
+Add component (AddParameter): Name = "Max Operating Temperature"; Value = "85癈"; VariantName = "[No Variations]"
+Add component (AddParameter): Name = "Min Operating Temperature"; Value = "-55癈"; VariantName = "[No Variations]"
+Add component (AddParameter): Name = "Mount"; Value = "Surface Mount"; VariantName = "[No Variations]"
+Add component (AddParameter): Name = "Packaging"; Value = "Tape and Reel"; VariantName = "[No Variations]"
+Add component (AddParameter): Name = "Rated Voltage (DC)"; Value = "6.3V"; VariantName = "[No Variations]"
+Add component (AddParameter): Name = "Technical Reference"; Value = "X5R0402104M6R3DFCT10000"; VariantName = "[No Variations]"
+Add component (AddParameter): Name = "Width"; Value = "0.5mm"; VariantName = "[No Variations]"
+Added Component: Designator=C16(CAPC2012X88N)
+Add component (AddParameter): Name = "Capacitance"; Value = "10uF"; VariantName = "[No Variations]"
+Add component (AddParameter): Name = "Case Code (Imperial)"; Value = "0603"; VariantName = "[No Variations]"
+Add component (AddParameter): Name = "Case Code (Metric)"; Value = "1608"; VariantName = "[No Variations]"
+Add component (AddParameter): Name = "Case/Package"; Value = "0603"; VariantName = "[No Variations]"
+Add component (AddParameter): Name = "Contact Plating"; Value = "Tin"; VariantName = "[No Variations]"
+Add component (AddParameter): Name = "Dielectric"; Value = "X5R"; VariantName = "[No Variations]"
+Add component (AddParameter): Name = "Lead Free"; Value = "Lead Free"; VariantName = "[No Variations]"
+Add component (AddParameter): Name = "Length"; Value = "0.063inch"; VariantName = "[No Variations]"
+Add component (AddParameter): Name = "Max Operating Temperature"; Value = "85癈"; VariantName = "[No Variations]"
+Add component (AddParameter): Name = "Min Operating Temperature"; Value = "-55癈"; VariantName = "[No Variations]"
+Add component (AddParameter): Name = "Mount"; Value = "Surface Mount"; VariantName = "[No Variations]"
+Add component (AddParameter): Name = "Package Quantity"; Value = "1"; VariantName = "[No Variations]"
+Add component (AddParameter): Name = "Packaging"; Value = "Tape and Reel"; VariantName = "[No Variations]"
+Add component (AddParameter): Name = "Termination"; Value = "Wraparound"; VariantName = "[No Variations]"
+Add component (AddParameter): Name = "Thickness"; Value = "0.035inch"; VariantName = "[No Variations]"
+Add component (AddParameter): Name = "Tolerance"; Value = "20%"; VariantName = "[No Variations]"
+Add component (AddParameter): Name = "Voltage Rating"; Value = "25V"; VariantName = "[No Variations]"
+Add component (AddParameter): Name = "Width"; Value = "0.031inch"; VariantName = "[No Variations]"
+Added Component: Designator=G_LED(LED3MM)
+Add component (AddParameter): Name = "Check_prices"; Value = "https://www.snapeda.com/parts/TLLR4400/Vishay+Semiconductor+Opto+Division/view-part/?ref=eda"; VariantName = "[No Variations]"
+Add component (AddParameter): Name = "MF"; Value = "Vishay"; VariantName = "[No Variations]"
+Add component (AddParameter): Name = "MP"; Value = "TLLR4400"; VariantName = "[No Variations]"
+Add component (AddParameter): Name = "Package"; Value = "None"; VariantName = "[No Variations]"
+Add component (AddParameter): Name = "SnapEDA_Link"; Value = "https://www.snapeda.com/parts/TLLR4400/Vishay+Semiconductor+Opto+Division/view-part/?ref=snap"; VariantName = "[No Variations]"
+Add component (AddParameter): Name = "Value"; Value = ""; VariantName = "[No Variations]"
+Added Component: Designator=Q1(SOP65P640X120-8N)
+Add component (AddParameter): Name = "Check_prices"; Value = "https://www.snapeda.com/parts/FS8205A/Fortune+Semiconductor/view-part/?ref=eda"; VariantName = "[No Variations]"
+Add component (AddParameter): Name = "MF"; Value = "Fortune Semiconductor"; VariantName = "[No Variations]"
+Add component (AddParameter): Name = "MP"; Value = "FS8205A"; VariantName = "[No Variations]"
+Add component (AddParameter): Name = "Package"; Value = "Package"; VariantName = "[No Variations]"
+Add component (AddParameter): Name = "SnapEDA_Link"; Value = "https://www.snapeda.com/parts/FS8205A/Fortune+Semiconductor/view-part/?ref=snap"; VariantName = "[No Variations]"
+Add component (AddParameter): Name = "Value"; Value = ""; VariantName = "[No Variations]"
+Added Component: Designator=R19(RES_ERJU06F1001V)
+Add component (AddParameter): Name = "Availability"; Value = "No availability data"; VariantName = "[No Variations]"
+Add component (AddParameter): Name = "Check_prices"; Value = "https://www.snapeda.com/parts/ERJU06F1001V/Panasonic/view-part/5742057/?ref=eda"; VariantName = "[No Variations]"
+Add component (AddParameter): Name = "MF"; Value = "Panasonic"; VariantName = "[No Variations]"
+Add component (AddParameter): Name = "MP"; Value = "ERJU06F1001V"; VariantName = "[No Variations]"
+Add component (AddParameter): Name = "Package"; Value = "2012-2 Panasonic"; VariantName = "[No Variations]"
+Add component (AddParameter): Name = "Price"; Value = "None"; VariantName = "[No Variations]"
+Add component (AddParameter): Name = "SnapEDA_Link"; Value = "https://www.snapeda.com/parts/ERJU06F1001V/Panasonic/view-part/5742057/?ref=snap"; VariantName = "[No Variations]"
+Add component (AddParameter): Name = "Value"; Value = ""; VariantName = "[No Variations]"
+Added Component: Designator=R21(RESC6432X75N)
+Add component (AddParameter): Name = "Check_prices"; Value = "https://www.snapeda.com/parts/CRS2512-FX-1000ELF/Bourns/view-part/?ref=eda"; VariantName = "[No Variations]"
+Add component (AddParameter): Name = "MF"; Value = "Bourns"; VariantName = "[No Variations]"
+Add component (AddParameter): Name = "MP"; Value = "CRS2512-FX-1000ELF"; VariantName = "[No Variations]"
+Add component (AddParameter): Name = "Package"; Value = "6432 Bourns"; VariantName = "[No Variations]"
+Add component (AddParameter): Name = "SnapEDA_Link"; Value = "https://www.snapeda.com/parts/CRS2512-FX-1000ELF/Bourns/view-part/?ref=snap"; VariantName = "[No Variations]"
+Add component (AddParameter): Name = "Value"; Value = ""; VariantName = "[No Variations]"
+Added Component: Designator=R_18(RES_ERJU06F1001V)
+Add component (AddParameter): Name = "Availability"; Value = "No availability data"; VariantName = "[No Variations]"
+Add component (AddParameter): Name = "Check_prices"; Value = "https://www.snapeda.com/parts/ERJU06F1001V/Panasonic/view-part/5742057/?ref=eda"; VariantName = "[No Variations]"
+Add component (AddParameter): Name = "MF"; Value = "Panasonic"; VariantName = "[No Variations]"
+Add component (AddParameter): Name = "MP"; Value = "ERJU06F1001V"; VariantName = "[No Variations]"
+Add component (AddParameter): Name = "Package"; Value = "2012-2 Panasonic"; VariantName = "[No Variations]"
+Add component (AddParameter): Name = "Price"; Value = "None"; VariantName = "[No Variations]"
+Add component (AddParameter): Name = "SnapEDA_Link"; Value = "https://www.snapeda.com/parts/ERJU06F1001V/Panasonic/view-part/5742057/?ref=snap"; VariantName = "[No Variations]"
+Add component (AddParameter): Name = "Value"; Value = ""; VariantName = "[No Variations]"
+Added Component: Designator=R_20(RES_ERJU06F1001V)
+Add component (AddParameter): Name = "Availability"; Value = "No availability data"; VariantName = "[No Variations]"
+Add component (AddParameter): Name = "Check_prices"; Value = "https://www.snapeda.com/parts/ERJU06F1001V/Panasonic/view-part/5742057/?ref=eda"; VariantName = "[No Variations]"
+Add component (AddParameter): Name = "MF"; Value = "Panasonic"; VariantName = "[No Variations]"
+Add component (AddParameter): Name = "MP"; Value = "ERJU06F1001V"; VariantName = "[No Variations]"
+Add component (AddParameter): Name = "Package"; Value = "2012-2 Panasonic"; VariantName = "[No Variations]"
+Add component (AddParameter): Name = "Price"; Value = "None"; VariantName = "[No Variations]"
+Add component (AddParameter): Name = "SnapEDA_Link"; Value = "https://www.snapeda.com/parts/ERJU06F1001V/Panasonic/view-part/5742057/?ref=snap"; VariantName = "[No Variations]"
+Add component (AddParameter): Name = "Value"; Value = ""; VariantName = "[No Variations]"
+Added Component: Designator=R_22(RES_ERJU06F1001V)
+Add component (AddParameter): Name = "Availability"; Value = "No availability data"; VariantName = "[No Variations]"
+Add component (AddParameter): Name = "Check_prices"; Value = "https://www.snapeda.com/parts/ERJU06F1001V/Panasonic/view-part/5742057/?ref=eda"; VariantName = "[No Variations]"
+Add component (AddParameter): Name = "MF"; Value = "Panasonic"; VariantName = "[No Variations]"
+Add component (AddParameter): Name = "MP"; Value = "ERJU06F1001V"; VariantName = "[No Variations]"
+Add component (AddParameter): Name = "Package"; Value = "2012-2 Panasonic"; VariantName = "[No Variations]"
+Add component (AddParameter): Name = "Price"; Value = "None"; VariantName = "[No Variations]"
+Add component (AddParameter): Name = "SnapEDA_Link"; Value = "https://www.snapeda.com/parts/ERJU06F1001V/Panasonic/view-part/5742057/?ref=snap"; VariantName = "[No Variations]"
+Add component (AddParameter): Name = "Value"; Value = ""; VariantName = "[No Variations]"
+Added Component: Designator=R_LED(LED_WP7113SGD)
+Add component (AddParameter): Name = "Check_prices"; Value = "https://www.snapeda.com/parts/WP7113SGD/Kingbright/view-part/?ref=eda"; VariantName = "[No Variations]"
+Add component (AddParameter): Name = "MF"; Value = "Kingbright"; VariantName = "[No Variations]"
+Add component (AddParameter): Name = "MP"; Value = "WP7113SGD"; VariantName = "[No Variations]"
+Add component (AddParameter): Name = "Package"; Value = "Radial Kingbright"; VariantName = "[No Variations]"
+Add component (AddParameter): Name = "SnapEDA_Link"; Value = "https://www.snapeda.com/parts/WP7113SGD/Kingbright/view-part/?ref=snap"; VariantName = "[No Variations]"
+Add component (AddParameter): Name = "Value"; Value = ""; VariantName = "[No Variations]"
+Added Component: Designator=U1(SOP127P600X175-9N)
+Add component (AddParameter): Name = "Availability"; Value = "Not in stock"; VariantName = "[No Variations]"
+Add component (AddParameter): Name = "Check_prices"; Value = "https://www.snapeda.com/parts/TP4056/NanJing+Top+Power+ASIC+Corp./view-part/?ref=eda"; VariantName = "[No Variations]"
+Add component (AddParameter): Name = "MF"; Value = "NanJing Top Power ASIC Corp."; VariantName = "[No Variations]"
+Add component (AddParameter): Name = "MP"; Value = "TP4056"; VariantName = "[No Variations]"
+Add component (AddParameter): Name = "Package"; Value = "Package"; VariantName = "[No Variations]"
+Add component (AddParameter): Name = "Price"; Value = "None"; VariantName = "[No Variations]"
+Add component (AddParameter): Name = "SnapEDA_Link"; Value = "https://www.snapeda.com/parts/TP4056/NanJing+Top+Power+ASIC+Corp./view-part/?ref=snap"; VariantName = "[No Variations]"
+Add component (AddParameter): Name = "Value"; Value = ""; VariantName = "[No Variations]"
+Added Component: Designator=U2(SOT95P280X145-6N)
+Add component (AddParameter): Name = "Check_prices"; Value = "https://www.snapeda.com/parts/DW01A/Fortune+Semiconductor/view-part/?ref=eda"; VariantName = "[No Variations]"
+Add component (AddParameter): Name = "MF"; Value = "Fortune Semiconductor"; VariantName = "[No Variations]"
+Add component (AddParameter): Name = "MP"; Value = "DW01A"; VariantName = "[No Variations]"
+Add component (AddParameter): Name = "Package"; Value = "SOT-23-6 Fortune Semiconductor"; VariantName = "[No Variations]"
+Add component (AddParameter): Name = "SnapEDA_Link"; Value = "https://www.snapeda.com/parts/DW01A/Fortune+Semiconductor/view-part/?ref=snap"; VariantName = "[No Variations]"
+Add component (AddParameter): Name = "Value"; Value = ""; VariantName = "[No Variations]"
+Added Component: Designator=USB_Type_C(*CUI_UJ20-C-H-G-SMT-TR_UJ20-C-H-G-SMT-TR(Primary))
+Add component (AddParameter): Name = "Check_prices"; Value = "https://www.snapeda.com/parts/UJ20-C-H-G-SMT-TR/Same+Sky/view-part/?ref=eda"; VariantName = "[No Variations]"
+Add component (AddParameter): Name = "SnapEDA_Link"; Value = "https://www.snapeda.com/parts/UJ20-C-H-G-SMT-TR/Same+Sky/view-part/?ref=snap"; VariantName = "[No Variations]"
+Add component (AddParameter): Name = "Value"; Value = ""; VariantName = "[No Variations]"
+Added Pin To Net: NetName=GND Pin=C14-1
+Added Pin To Net: NetName=GND Pin=C16-2
+Added Pin To Net: NetName=GND Pin=Q1-6
+Added Pin To Net: NetName=GND Pin=Q1-7
+Added Pin To Net: NetName=GND Pin=U1-1
+Added Pin To Net: NetName=GND Pin=USB_Type_C-SH1
+Added Pin To Net: NetName=GND Pin=USB_Type_C-SH2
+Added Pin To Net: NetName=GND Pin=USB_Type_C-SH3
+Added Pin To Net: NetName=GND Pin=USB_Type_C-SH4
+Change Net Name : Old Net Name=VCC New Net Name=3.7V
+Added Pin To Net: NetName=5V_VCC Pin=C14-2
+Added Pin To Net: NetName=5V_VCC Pin=C16-1
+Added Pin To Net: NetName=5V_VCC Pin=G_LED-A
+Added Pin To Net: NetName=5V_VCC Pin=Q1-2
+Added Pin To Net: NetName=5V_VCC Pin=Q1-3
+Added Pin To Net: NetName=5V_VCC Pin=R21-2
+Added Pin To Net: NetName=5V_VCC Pin=R_LED-A
+Added Pin To Net: NetName=5V_VCC Pin=U1-8
+Added Net: Name=5V_VCC
+Added Pin To Net: NetName=NetC15_1 Pin=C15-1
+Added Pin To Net: NetName=NetC15_1 Pin=R21-1
+Added Pin To Net: NetName=NetC15_1 Pin=U2-5
+Added Net: Name=NetC15_1
+Added Pin To Net: NetName=NetC15_2 Pin=C15-2
+Added Pin To Net: NetName=NetC15_2 Pin=U2-6
+Added Net: Name=NetC15_2
+Added Pin To Net: NetName=NetG_LED_K Pin=G_LED-K
+Added Pin To Net: NetName=NetG_LED_K Pin=R_18-2
+Added Net: Name=NetG_LED_K
+Added Pin To Net: NetName=NetQ1_1 Pin=Q1-1
+Added Pin To Net: NetName=NetQ1_1 Pin=Q1-8
+Added Net: Name=NetQ1_1
+Added Pin To Net: NetName=NetQ1_4 Pin=Q1-4
+Added Pin To Net: NetName=NetQ1_4 Pin=U2-1
+Added Net: Name=NetQ1_4
+Added Pin To Net: NetName=NetQ1_5 Pin=Q1-5
+Added Pin To Net: NetName=NetQ1_5 Pin=U2-3
+Added Net: Name=NetQ1_5
+Added Pin To Net: NetName=NetR19_1 Pin=R19-1
+Added Pin To Net: NetName=NetR19_1 Pin=U1-7
+Added Net: Name=NetR19_1
+Added Pin To Net: NetName=NetR19_2 Pin=R19-2
+Added Pin To Net: NetName=NetR19_2 Pin=R_LED-C
+Added Net: Name=NetR19_2
+Added Pin To Net: NetName=NetR_18_1 Pin=R_18-1
+Added Pin To Net: NetName=NetR_18_1 Pin=U1-6
+Added Net: Name=NetR_18_1
+Added Pin To Net: NetName=NetR_20_2 Pin=R_20-2
+Added Pin To Net: NetName=NetR_20_2 Pin=U1-2
+Added Net: Name=NetR_20_2
+Added Pin To Net: NetName=NetR_22_2 Pin=R_22-2
+Added Pin To Net: NetName=NetR_22_2 Pin=U2-2
+Added Net: Name=NetR_22_2
+Added Pin To Net: NetName=NetU1_3 Pin=U1-3
+Added Pin To Net: NetName=NetU1_3 Pin=U1-9
+Added Net: Name=NetU1_3
+Change Class Name : Old Net Name=Sheet2 New Net Name=ESP32_USBC_CHARGER
+Added Member To Class: ClassName=ESP32_USBC_CHARGER Member=Component C14 100nF
+Added Member To Class: ClassName=ESP32_USBC_CHARGER Member=Component C15 100nF
+Added Member To Class: ClassName=ESP32_USBC_CHARGER Member=Component C16 10uF
+Added Member To Class: ClassName=ESP32_USBC_CHARGER Member=Component G_LED TLLR4400
+Added Member To Class: ClassName=ESP32_USBC_CHARGER Member=Component Q1 FS8205A
+Added Member To Class: ClassName=ESP32_USBC_CHARGER Member=Component R19 1K
+Added Member To Class: ClassName=ESP32_USBC_CHARGER Member=Component R21 100
+Added Member To Class: ClassName=ESP32_USBC_CHARGER Member=Component R_18 1K
+Added Member To Class: ClassName=ESP32_USBC_CHARGER Member=Component R_20 1K
+Added Member To Class: ClassName=ESP32_USBC_CHARGER Member=Component R_22 1K
+Added Member To Class: ClassName=ESP32_USBC_CHARGER Member=Component R_LED WP7113SGD
+Added Member To Class: ClassName=ESP32_USBC_CHARGER Member=Component U1 TP4056
+Added Member To Class: ClassName=ESP32_USBC_CHARGER Member=Component U2 DW01A
+Added Member To Class: ClassName=ESP32_USBC_CHARGER Member=Component USB_Type_C UJ20-C-H-G-SMT-TR
+Change Room Name: Old Name=Sheet2 New Name=ESP32_USBC_CHARGER
+Change Room Scope: Old Scope=InComponentClass('Sheet2') New Scope=InComponentClass('ESP32_USBC_CHARGER')

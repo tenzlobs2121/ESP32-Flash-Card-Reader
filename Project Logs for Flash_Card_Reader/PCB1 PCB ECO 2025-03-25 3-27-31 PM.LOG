@@ -1,0 +1,44 @@
+Removed Member From Class: ClassName=Sheet2 Member=C8
+Removed Member From Class: ClassName=Sheet2 Member=C10
+Removed Member From Class: ClassName=Sheet2 Member=C12
+Removed Member From Class: ClassName=Sheet2 Member=IR5
+Removed Member From Class: ClassName=Sheet2 Member=IR8
+Removed Member From Class: ClassName=Sheet2 Member=R10
+Removed Member From Class: ClassName=Sheet2 Member=R12
+Removed Member From Class: ClassName=Sheet2 Member=R14
+Removed Member From Class: ClassName=Sheet2 Member=R15
+Removed Member From Class: ClassName=Sheet2 Member=R16
+Removed Member From Class: ClassName=Sheet2 Member=R17
+Change Net Name : Old Net Name=3.7V New Net Name=VCC
+Change Net Name : Old Net Name=NetC6_2 New Net Name=NetC13_2
+Change Net Name : Old Net Name=NetC7_2 New Net Name=NetC12_2
+Change Net Name : Old Net Name=NetC8_2 New Net Name=NetC11_2
+Change Net Name : Old Net Name=NetC10_2 New Net Name=NetC7_2
+Change Net Name : Old Net Name=NetC11_2 New Net Name=NetC2_2
+Change Net Name : Old Net Name=NetC12_2 New Net Name=NetC3_2
+Change Net Name : Old Net Name=NetC13_2 New Net Name=NetC1_2
+Change Net Name : Old Net Name=NetIR1_A New Net Name=NetIR8_A
+Change Net Name : Old Net Name=NetIR1_E New Net Name=NetIR8_E
+Change Net Name : Old Net Name=NetIR2_A New Net Name=NetIR7_A
+Change Net Name : Old Net Name=NetIR3_A New Net Name=NetIR6_A
+Change Net Name : Old Net Name=NetIR4_A New Net Name=NetIR5_A
+Change Net Name : Old Net Name=NetIR5_A New Net Name=NetIR4_A
+Change Net Name : Old Net Name=NetIR6_A New Net Name=NetIR3_A
+Change Net Name : Old Net Name=NetIR7_A New Net Name=NetIR2_A
+Change Net Name : Old Net Name=NetIR8_A New Net Name=NetIR1_A
+Change Net Name : Old Net Name=NetMicro Controller_1 New Net Name=NetMicro Controller1_1
+Change Net Name : Old Net Name=NetMicro Controller_18 New Net Name=NetMicro Controller1_18
+Change Net Name : Old Net Name=NetMicro Controller_19 New Net Name=NetMicro Controller1_19
+Change Net Name : Old Net Name=NetMicro Controller_20 New Net Name=NetMicro Controller1_20
+Change Net Name : Old Net Name=NetMicro Controller_21 New Net Name=NetMicro Controller1_21
+Added Member To Class: ClassName=Sheet2 Member=Component C1 10nF
+Added Member To Class: ClassName=Sheet2 Member=Component C3 10nF
+Added Member To Class: ClassName=Sheet2 Member=Component C7 10nF
+Added Member To Class: ClassName=Sheet2 Member=Component IR1 QRE1113GR
+Added Member To Class: ClassName=Sheet2 Member=Component IR4 QRE1113GR
+Added Member To Class: ClassName=Sheet2 Member=Component R1 220
+Added Member To Class: ClassName=Sheet2 Member=Component R2 100
+Added Member To Class: ClassName=Sheet2 Member=Component R3 220
+Added Member To Class: ClassName=Sheet2 Member=Component R4 100
+Added Member To Class: ClassName=Sheet2 Member=Component R5 220
+Added Member To Class: ClassName=Sheet2 Member=Component R8 100

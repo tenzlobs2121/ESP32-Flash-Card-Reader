@@ -1,0 +1,230 @@
+Removed Member From Class: ClassName=ESP32_USBC_CHARGER Member=C20
+Removed Member From Class: ClassName=ESP32_USBC_CHARGER Member=R27
+Removed Member From Class: ClassName=ESP32_USBC_CHARGER Member=R28
+Change Component Designator: OldDesignator=Amplifier NewDesignator=Amplifier1
+Change Component Designator: OldDesignator=C1 NewDesignator=C14
+Change Component Designator: OldDesignator=C2 NewDesignator=C15
+Change Component Designator: OldDesignator=C3 NewDesignator=C13
+Change Component Designator: OldDesignator=C6 NewDesignator=C2
+Change Component Designator: OldDesignator=C7 NewDesignator=C12
+Change Component Designator: OldDesignator=C8 NewDesignator=C1
+Change Component Designator: OldDesignator=C9 NewDesignator=C7
+Change Component Designator: OldDesignator=C10 NewDesignator=C3
+Change Component Designator: OldDesignator=C11 NewDesignator=C6
+Change Component Designator: OldDesignator=C12 NewDesignator=C9
+Change Component Designator: OldDesignator=C13 NewDesignator=C8
+Change Component Designator: OldDesignator=C14 NewDesignator=C20
+Change Component Designator: OldDesignator=C15 NewDesignator=C21
+Change Component Designator: OldDesignator=C16 NewDesignator=C24
+Change Component Designator: OldDesignator=C19 NewDesignator=C16
+Change Component Designator: OldDesignator=C20 NewDesignator=C19
+Change Component Designator: OldDesignator=C21 NewDesignator=C22
+Change Component Designator: OldDesignator=C22 NewDesignator=C23
+Change Component Designator: OldDesignator=Connector NewDesignator=Connector1
+Change Component Designator: OldDesignator=DAC NewDesignator=DAC1
+Change Component Designator: OldDesignator=G_LED NewDesignator=G_LED1
+Change Component Designator: OldDesignator=IR1 NewDesignator=IR7
+Change Component Designator: OldDesignator=IR2 NewDesignator=IR8
+Change Component Designator: OldDesignator=IR3 NewDesignator=IR6
+Change Component Designator: OldDesignator=IR4 NewDesignator=IR5
+Change Component Designator: OldDesignator=IR5 NewDesignator=IR2
+Change Component Designator: OldDesignator=IR6 NewDesignator=IR1
+Change Component Designator: OldDesignator=IR7 NewDesignator=IR4
+Change Component Designator: OldDesignator=IR8 NewDesignator=IR3
+Change Component Designator: OldDesignator=Micro Controller NewDesignator=Micro Controller1
+Change Component Designator: OldDesignator=R1 NewDesignator=R16
+Change Component Designator: OldDesignator=R2 NewDesignator=R14
+Change Component Designator: OldDesignator=R3 NewDesignator=R17
+Change Component Designator: OldDesignator=R4 NewDesignator=R15
+Change Component Designator: OldDesignator=R5 NewDesignator=R13
+Change Component Designator: OldDesignator=R6 NewDesignator=R11
+Change Component Designator: OldDesignator=R7 NewDesignator=R12
+Change Component Designator: OldDesignator=R8 NewDesignator=R10
+Change Component Designator: OldDesignator=R9 NewDesignator=R5
+Change Component Designator: OldDesignator=R10 NewDesignator=R1
+Change Component Designator: OldDesignator=R11 NewDesignator=R3
+Change Component Designator: OldDesignator=R12 NewDesignator=R4
+Change Component Designator: OldDesignator=R13 NewDesignator=R2
+Change Component Designator: OldDesignator=R14 NewDesignator=R9
+Change Component Designator: OldDesignator=R15 NewDesignator=R7
+Change Component Designator: OldDesignator=R16 NewDesignator=R8
+Change Component Designator: OldDesignator=R17 NewDesignator=R6
+Change Component Designator: OldDesignator=R19 NewDesignator=R22
+Change Component Designator: OldDesignator=R21 NewDesignator=R26
+Change Component Designator: OldDesignator=R24 NewDesignator=R18
+Change Component Designator: OldDesignator=R25 NewDesignator=R20
+Change Component Designator: OldDesignator=R26 NewDesignator=R23
+Change Component Designator: OldDesignator=R27 NewDesignator=R21
+Change Component Designator: OldDesignator=R28 NewDesignator=R19
+Change Component Designator: OldDesignator=R29 NewDesignator=R25
+Change Component Designator: OldDesignator=R30 NewDesignator=R24
+Change Component Designator: OldDesignator=R_18 NewDesignator=R_1
+Change Component Designator: OldDesignator=R_20 NewDesignator=R_2
+Change Component Designator: OldDesignator=R_22 NewDesignator=R_3
+Change Component Designator: OldDesignator=R_LED NewDesignator=R_LED1
+Change Component Designator: OldDesignator=Speaker NewDesignator=Speaker1
+Change Component Designator: OldDesignator=USB_Type_C NewDesignator=USB_Type_C1
+Change Component Description : Designator=R1 Old Description=CRG0402 chip resistor,10K 5% 0.063W New Description=CRG0402 chip resistor,10K 5% 0.063W | TE Connectivity CRG0402J10K/10
+Change Component Description : Designator=R18 Old Description=CRG0402 chip resistor,10K 5% 0.063W New Description=CRG0402 chip resistor,10K 5% 0.063W | TE Connectivity CRG0402J10K/10
+Change Component Description : Designator=R20 Old Description=CRG0402 chip resistor,10K 5% 0.063W New Description=CRG0402 chip resistor,10K 5% 0.063W | TE Connectivity CRG0402J10K/10
+Change Component Description : Designator=R23 Old Description=CRG0402 chip resistor,10K 5% 0.063W New Description=CRG0402 chip resistor,10K 5% 0.063W | TE Connectivity CRG0402J10K/10
+Change Component Description : Designator=R21 Old Description=CRG0402 chip resistor,10K 5% 0.063W New Description=CRG0402 chip resistor,10K 5% 0.063W | TE Connectivity CRG0402J10K/10
+Change Component Description : Designator=R19 Old Description=CRG0402 chip resistor,10K 5% 0.063W New Description=CRG0402 chip resistor,10K 5% 0.063W | TE Connectivity CRG0402J10K/10
+Change Component Description : Designator=R14 Old Description=CRS Series Anti-surge Resistor 2512 Case 100Ohms 2W +/-100ppm/degC New Description=CRS Series Anti-surge Resistor 2512 Case 100Ohms 2W +/-100ppm/degC | Bourns CRS2512-FX-1000ELF
+Change Component Description : Designator=R15 Old Description=CRS Series Anti-surge Resistor 2512 Case 100Ohms 2W +/-100ppm/degC New Description=CRS Series Anti-surge Resistor 2512 Case 100Ohms 2W +/-100ppm/degC | Bourns CRS2512-FX-1000ELF
+Change Component Description : Designator=R11 Old Description=CRS Series Anti-surge Resistor 2512 Case 100Ohms 2W +/-100ppm/degC New Description=CRS Series Anti-surge Resistor 2512 Case 100Ohms 2W +/-100ppm/degC | Bourns CRS2512-FX-1000ELF
+Change Component Description : Designator=R10 Old Description=CRS Series Anti-surge Resistor 2512 Case 100Ohms 2W +/-100ppm/degC New Description=CRS Series Anti-surge Resistor 2512 Case 100Ohms 2W +/-100ppm/degC | Bourns CRS2512-FX-1000ELF
+Change Component Description : Designator=R3 Old Description=CRS Series Anti-surge Resistor 2512 Case 100Ohms 2W +/-100ppm/degC New Description=CRS Series Anti-surge Resistor 2512 Case 100Ohms 2W +/-100ppm/degC | Bourns CRS2512-FX-1000ELF
+Change Component Description : Designator=R2 Old Description=CRS Series Anti-surge Resistor 2512 Case 100Ohms 2W +/-100ppm/degC New Description=CRS Series Anti-surge Resistor 2512 Case 100Ohms 2W +/-100ppm/degC | Bourns CRS2512-FX-1000ELF
+Change Component Description : Designator=R7 Old Description=CRS Series Anti-surge Resistor 2512 Case 100Ohms 2W +/-100ppm/degC New Description=CRS Series Anti-surge Resistor 2512 Case 100Ohms 2W +/-100ppm/degC | Bourns CRS2512-FX-1000ELF
+Change Component Description : Designator=R6 Old Description=CRS Series Anti-surge Resistor 2512 Case 100Ohms 2W +/-100ppm/degC New Description=CRS Series Anti-surge Resistor 2512 Case 100Ohms 2W +/-100ppm/degC | Bourns CRS2512-FX-1000ELF
+Change Component Description : Designator=R26 Old Description=CRS Series Anti-surge Resistor 2512 Case 100Ohms 2W +/-100ppm/degC New Description=CRS Series Anti-surge Resistor 2512 Case 100Ohms 2W +/-100ppm/degC | Bourns CRS2512-FX-1000ELF
+Change Component Description : Designator=DAC1 Old Description=IC, OUTPUT D/A CONVERTER;8-BIT W/EEPROM & I2C INTERFACE;-40 TO 125C;SOT23 New Description=IC, OUTPUT D/A CONVERTER;8-BIT W/EEPROM & I2C INTERFACE;-40 TO 125C;SOT23 | Microchip Technology Inc. MCP4706A0T-E/CH
+Change Component Description : Designator=R16 Old Description=Resistencia de película delgada de precisión SMD, carcasa 0402, 220 ohmios +/-0,1 %, 063 W +/-25 ppm/C New Description=Resistencia de película delgada de precisión SMD, carcasa 0402, 220 ohmios +/-0,1 %, 063 W +/-25 ppm/C | TE Connectivity CPF0402B220RE1
+Change Component Description : Designator=R17 Old Description=Resistencia de película delgada de precisión SMD, carcasa 0402, 220 ohmios +/-0,1 %, 063 W +/-25 ppm/C New Description=Resistencia de película delgada de precisión SMD, carcasa 0402, 220 ohmios +/-0,1 %, 063 W +/-25 ppm/C | TE Connectivity CPF0402B220RE1
+Change Component Description : Designator=R13 Old Description=Resistencia de película delgada de precisión SMD, carcasa 0402, 220 ohmios +/-0,1 %, 063 W +/-25 ppm/C New Description=Resistencia de película delgada de precisión SMD, carcasa 0402, 220 ohmios +/-0,1 %, 063 W +/-25 ppm/C | TE Connectivity CPF0402B220RE1
+Change Component Description : Designator=R12 Old Description=Resistencia de película delgada de precisión SMD, carcasa 0402, 220 ohmios +/-0,1 %, 063 W +/-25 ppm/C New Description=Resistencia de película delgada de precisión SMD, carcasa 0402, 220 ohmios +/-0,1 %, 063 W +/-25 ppm/C | TE Connectivity CPF0402B220RE1
+Change Component Description : Designator=R5 Old Description=Resistencia de película delgada de precisión SMD, carcasa 0402, 220 ohmios +/-0,1 %, 063 W +/-25 ppm/C New Description=Resistencia de película delgada de precisión SMD, carcasa 0402, 220 ohmios +/-0,1 %, 063 W +/-25 ppm/C | TE Connectivity CPF0402B220RE1
+Change Component Description : Designator=R4 Old Description=Resistencia de película delgada de precisión SMD, carcasa 0402, 220 ohmios +/-0,1 %, 063 W +/-25 ppm/C New Description=Resistencia de película delgada de precisión SMD, carcasa 0402, 220 ohmios +/-0,1 %, 063 W +/-25 ppm/C | TE Connectivity CPF0402B220RE1
+Change Component Description : Designator=R9 Old Description=Resistencia de película delgada de precisión SMD, carcasa 0402, 220 ohmios +/-0,1 %, 063 W +/-25 ppm/C New Description=Resistencia de película delgada de precisión SMD, carcasa 0402, 220 ohmios +/-0,1 %, 063 W +/-25 ppm/C | TE Connectivity CPF0402B220RE1
+Change Component Description : Designator=R8 Old Description=Resistencia de película delgada de precisión SMD, carcasa 0402, 220 ohmios +/-0,1 %, 063 W +/-25 ppm/C New Description=Resistencia de película delgada de precisión SMD, carcasa 0402, 220 ohmios +/-0,1 %, 063 W +/-25 ppm/C | TE Connectivity CPF0402B220RE1
+Added Component: Designator=BOOT1(SW_4-1437565-2)
+Add component (AddParameter): Name = "Availability"; Value = "Unavailable"; VariantName = "[No Variations]"
+Add component (AddParameter): Name = "MF"; Value = ""; VariantName = "[No Variations]"
+Add component (AddParameter): Name = "MP"; Value = "4-1437565-2"; VariantName = "[No Variations]"
+Add component (AddParameter): Name = "Package"; Value = "None"; VariantName = "[No Variations]"
+Add component (AddParameter): Name = "Price"; Value = "None"; VariantName = "[No Variations]"
+Add component (AddParameter): Name = "Value"; Value = ""; VariantName = "[No Variations]"
+Added Component: Designator=BOOT2(SW_4-1437565-2)
+Add component (AddParameter): Name = "Availability"; Value = "Unavailable"; VariantName = "[No Variations]"
+Add component (AddParameter): Name = "MF"; Value = ""; VariantName = "[No Variations]"
+Add component (AddParameter): Name = "MP"; Value = "4-1437565-2"; VariantName = "[No Variations]"
+Add component (AddParameter): Name = "Package"; Value = "None"; VariantName = "[No Variations]"
+Add component (AddParameter): Name = "Price"; Value = "None"; VariantName = "[No Variations]"
+Add component (AddParameter): Name = "Value"; Value = ""; VariantName = "[No Variations]"
+Added Component: Designator=C10(CAPC1608X90X35NL10T15)
+Add component (AddParameter): Name = "Capacitance"; Value = "100nF"; VariantName = "[No Variations]"
+Add component (AddParameter): Name = "Case Code (Imperial)"; Value = "0603"; VariantName = "[No Variations]"
+Add component (AddParameter): Name = "Case Code (Metric)"; Value = "1608"; VariantName = "[No Variations]"
+Add component (AddParameter): Name = "Case/Package"; Value = "0603"; VariantName = "[No Variations]"
+Add component (AddParameter): Name = "Contact Plating"; Value = "Tin"; VariantName = "[No Variations]"
+Add component (AddParameter): Name = "Datasheet URL"; Value = "http://psearch.en.murata.com/capacitor/product/GRM188R71H104KA93%23.pdf"; VariantName = "[No Variations]"
+Add component (AddParameter): Name = "Datasheet Version"; Value = "42675.0"; VariantName = "[No Variations]"
+Add component (AddParameter): Name = "Depth"; Value = "0.8mm"; VariantName = "[No Variations]"
+Add component (AddParameter): Name = "Dielectric"; Value = "X7R"; VariantName = "[No Variations]"
+Add component (AddParameter): Name = "Dielectric Material"; Value = "Ceramic"; VariantName = "[No Variations]"
+Add component (AddParameter): Name = "Height"; Value = "0.8mm"; VariantName = "[No Variations]"
+Add component (AddParameter): Name = "Insulation Resistance"; Value = "10GR"; VariantName = "[No Variations]"
+Add component (AddParameter): Name = "Lead Free"; Value = "LeadFree"; VariantName = "[No Variations]"
+Add component (AddParameter): Name = "Length"; Value = "1.6mm"; VariantName = "[No Variations]"
+Add component (AddParameter): Name = "Manufacturer"; Value = "Murata"; VariantName = "[No Variations]"
+Add component (AddParameter): Name = "Manufacturer URL"; Value = "http://www.murata.com/"; VariantName = "[No Variations]"
+Add component (AddParameter): Name = "Material"; Value = "Ceramic"; VariantName = "[No Variations]"
+Add component (AddParameter): Name = "Max Operating Temperature"; Value = "125degC"; VariantName = "[No Variations]"
+Add component (AddParameter): Name = "Min Operating Temperature"; Value = "-55degC"; VariantName = "[No Variations]"
+Add component (AddParameter): Name = "Mount"; Value = "SurfaceMount"; VariantName = "[No Variations]"
+Add component (AddParameter): Name = "Number of Pins"; Value = "2"; VariantName = "[No Variations]"
+Add component (AddParameter): Name = "Package Description"; Value = "2-Pin Surface Mount Device, Body 1.6 x 0.8 mm"; VariantName = "[No Variations]"
+Add component (AddParameter): Name = "Package Quantity"; Value = "1"; VariantName = "[No Variations]"
+Add component (AddParameter): Name = "Package Reference"; Value = "0603"; VariantName = "[No Variations]"
+Add component (AddParameter): Name = "Packaging"; Value = "TapeandReel"; VariantName = "[No Variations]"
+Add component (AddParameter): Name = "Radiation Hardening"; Value = "No"; VariantName = "[No Variations]"
+Add component (AddParameter): Name = "REACH SVHC"; Value = "NoSVHC"; VariantName = "[No Variations]"
+Add component (AddParameter): Name = "RoHSCompliant"; Value = "true"; VariantName = "[No Variations]"
+Add component (AddParameter): Name = "Termination"; Value = "SMD/SMT"; VariantName = "[No Variations]"
+Add component (AddParameter): Name = "Thickness"; Value = "0.035inch"; VariantName = "[No Variations]"
+Add component (AddParameter): Name = "Tolerance"; Value = "10%"; VariantName = "[No Variations]"
+Add component (AddParameter): Name = "Voltage"; Value = "50V"; VariantName = "[No Variations]"
+Add component (AddParameter): Name = "Voltage Rating"; Value = "50V"; VariantName = "[No Variations]"
+Add component (AddParameter): Name = "Voltage Rating (DC)"; Value = "50V"; VariantName = "[No Variations]"
+Add component (AddParameter): Name = "Width"; Value = "0.8mm"; VariantName = "[No Variations]"
+Added Component: Designator=C11(CAPC1608X90X35NL10T15)
+Add component (AddParameter): Name = "Capacitance"; Value = "100nF"; VariantName = "[No Variations]"
+Add component (AddParameter): Name = "Case Code (Imperial)"; Value = "0603"; VariantName = "[No Variations]"
+Add component (AddParameter): Name = "Case Code (Metric)"; Value = "1608"; VariantName = "[No Variations]"
+Add component (AddParameter): Name = "Case/Package"; Value = "0603"; VariantName = "[No Variations]"
+Add component (AddParameter): Name = "Contact Plating"; Value = "Tin"; VariantName = "[No Variations]"
+Add component (AddParameter): Name = "Datasheet URL"; Value = "http://psearch.en.murata.com/capacitor/product/GRM188R71H104KA93%23.pdf"; VariantName = "[No Variations]"
+Add component (AddParameter): Name = "Datasheet Version"; Value = "42675.0"; VariantName = "[No Variations]"
+Add component (AddParameter): Name = "Depth"; Value = "0.8mm"; VariantName = "[No Variations]"
+Add component (AddParameter): Name = "Dielectric"; Value = "X7R"; VariantName = "[No Variations]"
+Add component (AddParameter): Name = "Dielectric Material"; Value = "Ceramic"; VariantName = "[No Variations]"
+Add component (AddParameter): Name = "Height"; Value = "0.8mm"; VariantName = "[No Variations]"
+Add component (AddParameter): Name = "Insulation Resistance"; Value = "10GR"; VariantName = "[No Variations]"
+Add component (AddParameter): Name = "Lead Free"; Value = "LeadFree"; VariantName = "[No Variations]"
+Add component (AddParameter): Name = "Length"; Value = "1.6mm"; VariantName = "[No Variations]"
+Add component (AddParameter): Name = "Manufacturer"; Value = "Murata"; VariantName = "[No Variations]"
+Add component (AddParameter): Name = "Manufacturer URL"; Value = "http://www.murata.com/"; VariantName = "[No Variations]"
+Add component (AddParameter): Name = "Material"; Value = "Ceramic"; VariantName = "[No Variations]"
+Add component (AddParameter): Name = "Max Operating Temperature"; Value = "125degC"; VariantName = "[No Variations]"
+Add component (AddParameter): Name = "Min Operating Temperature"; Value = "-55degC"; VariantName = "[No Variations]"
+Add component (AddParameter): Name = "Mount"; Value = "SurfaceMount"; VariantName = "[No Variations]"
+Add component (AddParameter): Name = "Number of Pins"; Value = "2"; VariantName = "[No Variations]"
+Add component (AddParameter): Name = "Package Description"; Value = "2-Pin Surface Mount Device, Body 1.6 x 0.8 mm"; VariantName = "[No Variations]"
+Add component (AddParameter): Name = "Package Quantity"; Value = "1"; VariantName = "[No Variations]"
+Add component (AddParameter): Name = "Package Reference"; Value = "0603"; VariantName = "[No Variations]"
+Add component (AddParameter): Name = "Packaging"; Value = "TapeandReel"; VariantName = "[No Variations]"
+Add component (AddParameter): Name = "Radiation Hardening"; Value = "No"; VariantName = "[No Variations]"
+Add component (AddParameter): Name = "REACH SVHC"; Value = "NoSVHC"; VariantName = "[No Variations]"
+Add component (AddParameter): Name = "RoHSCompliant"; Value = "true"; VariantName = "[No Variations]"
+Add component (AddParameter): Name = "Termination"; Value = "SMD/SMT"; VariantName = "[No Variations]"
+Add component (AddParameter): Name = "Thickness"; Value = "0.035inch"; VariantName = "[No Variations]"
+Add component (AddParameter): Name = "Tolerance"; Value = "10%"; VariantName = "[No Variations]"
+Add component (AddParameter): Name = "Voltage"; Value = "50V"; VariantName = "[No Variations]"
+Add component (AddParameter): Name = "Voltage Rating"; Value = "50V"; VariantName = "[No Variations]"
+Add component (AddParameter): Name = "Voltage Rating (DC)"; Value = "50V"; VariantName = "[No Variations]"
+Add component (AddParameter): Name = "Width"; Value = "0.8mm"; VariantName = "[No Variations]"
+Added Pin To Net: NetName=GND Pin=BOOT1-1
+Added Pin To Net: NetName=GND Pin=BOOT2-1
+Added Pin To Net: NetName=GND Pin=C10-1
+Added Pin To Net: NetName=GND Pin=C11-1
+Change Net Name : Old Net Name=NetAmplifier_1 New Net Name=NetAmplifier1_1
+Change Net Name : Old Net Name=NetAmplifier_2 New Net Name=NetAmplifier1_2
+Change Net Name : Old Net Name=NetAmplifier_4 New Net Name=NetAmplifier1_4
+Change Net Name : Old Net Name=NetAmplifier_5 New Net Name=NetAmplifier1_5
+Change Net Name : Old Net Name=NetAmplifier_8 New Net Name=NetAmplifier1_8
+Change Net Name : Old Net Name=NetC1_2 New Net Name=NetC14_2
+Change Net Name : Old Net Name=NetC2_2 New Net Name=NetC15_2
+Change Net Name : Old Net Name=NetC3_2 New Net Name=NetC13_2
+Change Net Name : Old Net Name=NetC7_2 New Net Name=NetC12_2
+Change Net Name : Old Net Name=NetC9_2 New Net Name=NetC7_2
+Change Net Name : Old Net Name=NetC11_2 New Net Name=NetC6_2
+Change Net Name : Old Net Name=NetC12_2 New Net Name=NetC9_2
+Change Net Name : Old Net Name=NetC13_2 New Net Name=NetC8_2
+Change Net Name : Old Net Name=NetC15_1 New Net Name=NetC21_1
+Change Net Name : Old Net Name=NetC19_1 New Net Name=NetC16_1
+Change Net Name : Old Net Name=NetC19_2 New Net Name=NetC16_2
+Change Net Name : Old Net Name=NetDAC_4 New Net Name=NetDAC1_4
+Change Net Name : Old Net Name=NetG_LED_K New Net Name=NetG_LED1_K
+Change Net Name : Old Net Name=NetIR1_A New Net Name=NetIR7_A
+Change Net Name : Old Net Name=NetIR2_A New Net Name=NetIR8_A
+Change Net Name : Old Net Name=NetIR3_A New Net Name=NetIR6_A
+Change Net Name : Old Net Name=NetIR4_A New Net Name=NetIR5_A
+Change Net Name : Old Net Name=NetIR5_A New Net Name=NetIR2_A
+Change Net Name : Old Net Name=NetIR6_A New Net Name=NetIR1_A
+Change Net Name : Old Net Name=NetIR7_A New Net Name=NetIR4_A
+Change Net Name : Old Net Name=NetIR8_A New Net Name=NetIR3_A
+Change Net Name : Old Net Name=NetMicro Controller_18 New Net Name=NetMicro Controller1_18
+Change Net Name : Old Net Name=NetMicro Controller_19 New Net Name=NetMicro Controller1_19
+Change Net Name : Old Net Name=NetMicro Controller_20 New Net Name=NetMicro Controller1_20
+Change Net Name : Old Net Name=NetMicro Controller_21 New Net Name=NetMicro Controller1_21
+Change Net Name : Old Net Name=NetR19_1 New Net Name=NetR22_1
+Change Net Name : Old Net Name=NetR19_2 New Net Name=NetR22_2
+Change Net Name : Old Net Name=NetR24_2 New Net Name=NetR18_2
+Change Net Name : Old Net Name=NetR25_2 New Net Name=NetR20_2
+Change Net Name : Old Net Name=NetR_18_1 New Net Name=NetR_1_1
+Change Net Name : Old Net Name=NetR_20_2 New Net Name=NetR_2_2
+Change Net Name : Old Net Name=NetR_22_2 New Net Name=NetR_3_2
+Added Pin To Net: NetName=GPIO9 Pin=BOOT1-4
+Added Pin To Net: NetName=GPIO9 Pin=BOOT2-4
+Added Pin To Net: NetName=GPIO9 Pin=C10-2
+Added Pin To Net: NetName=GPIO9 Pin=C11-2
+Added Pin To Net: NetName=GPIO9 Pin=Micro Controller1-23
+Added Net: Name=GPIO9
+Added Pin To Net: NetName=NetDAC1_5 Pin=DAC1-5
+Added Pin To Net: NetName=NetDAC1_5 Pin=Micro Controller1-16
+Added Pin To Net: NetName=NetDAC1_5 Pin=R24-1
+Added Net: Name=NetDAC1_5
+Added Member To Class: ClassName=ESP32_USBC_CHARGER Member=Component C24 10uF
+Added Member To Class: ClassName=ESP32_USBC_CHARGER Member=Component R22 1K
+Added Member To Class: ClassName=ESP32_USBC_CHARGER Member=Component R26 100

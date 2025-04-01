@@ -1,0 +1,4 @@
+Removed Pin From Net: NetName=GND Pin=Micro Controller-8
+Added Component: Designator=C1(FP-CL10-IPC_A)
+Added Component: Designator=R1(FP-RMCF0603-IPC_B)
+Added Pin To Net: NetName=NetC5_1 Pin=Micro Controller-8

@@ -1,0 +1,8 @@
+Change Component Footprint: Designator=C2 Old Footprint=CAPC1608X90X35NL10T15 New Footprint=CAPC1608X90X35NL10T15
+Added Component: Designator=C1(FP-CL10-IPC_A)
+Added Component: Designator=R1(FP-RMCF0603-IPC_B)
+Added Pin To Net: NetName=GND Pin=C2-1
+Added Pin To Net: NetName=GND Pin=C4-1
+Added Pin To Net: NetName=GND Pin=LDO3V3-2
+Added Pin To Net: NetName=GND Pin=Micro Controller-3
+Change Net Name : Old Net Name=GND New Net Name=3V3

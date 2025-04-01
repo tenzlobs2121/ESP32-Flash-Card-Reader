@@ -1,0 +1,633 @@
+<html>
+<head>
+<META http-equiv="Content-Type" content="text/html">
+<style type="text/css">
+		h1, h2, h3, h4, h5, h6 {
+			font-family : segoe ui;
+			color : black;
+			background-color : #EDE7D9;
+			padding: 0.3em;
+		}
+
+		h1 {
+			font-size: 1.2em;
+		}		
+
+		h2 {
+			font-size: 1.2em;
+		}
+
+		body {
+			font-family : segoe ui;
+		}
+
+		td, th {
+			padding: 0.5em;
+			text-align : left;
+			width: 10em;
+		}
+		th {
+			background-color : #EEEEEE;
+
+		}
+		th.column1, td.column1 {
+			text-align: left;
+			width : auto;
+		}
+		table {
+			width : 100%;
+			font-size: 0.9em;
+		}
+
+		.DRC_summary_header {
+			padding-bottom : 0.1em;
+			border : 0px solid black;
+			width: 100%;
+			align: left;
+		}
+
+		.DRC_summary_header_col1,
+		.DRC_summary_header_col2, 
+		.DRC_summary_header_col3 {
+			color : black;
+			font-size:100%;
+			padding : 0em;
+			padding-top : 0.2em;
+			padding-bottom 0.2em;
+			border : 0px solid black;
+			vertical-align: top;
+			text-align: left;
+		}
+
+		.DRC_summary_header_col1 {
+			font-weight: bold;
+			width: 8em;
+		}
+
+		.DRC_summary_header_col2 {
+			width: 0.1em;
+		
+		}
+
+		.DRC_summary_header_col3 {
+			width : auto;
+		}
+
+		.header_holder {
+		    Width = 100%;
+		    border = 0px solid green;
+		    padding = 0;
+		}
+
+
+		.front_matter, .front_matter_column1, .front_matter_column2, .front_matter_column3
+		{
+			left : 0;
+			top : 0;
+			padding: 0em;
+			padding-top : 0.1em;
+			border : 0px solid black;
+			width : 100%;
+			vertical-align: top;
+			text-align: left;
+		}
+
+		.front_matter_column1 {
+			width : 8em;
+			font-weight: bold;
+		}
+
+		.front_matter_column2 {
+			width: 0.1em;
+		}
+
+		.front_matter_column3 {
+			width : auto;
+		}
+
+		.total_column1, .total_column {
+			font-weight : bold;
+		}
+		.total_column1 {
+			text-align : left;
+		}
+		.warning, .error {
+			color : red;
+			font-weight : bold;
+		}
+		tr.onmouseout_odd {
+			background-color : #white;
+		}
+		tr.onmouseout_even { 
+			background-color : #FAFAFA;
+		}
+		tr.onmouseover_odd, tr.onmouseover_even { 
+			background-color : #EEEEEE;
+		} 
+		a:link, a:visited, .q a:link,.q a:active,.q {
+			color: #21489e; 
+		}
+		a:link.callback, a:visited.callback { 
+			color: #21489e;
+		}
+		a:link.customize, a:visited.customize {
+			color: #C0C0C0;
+			position: absolute; 
+			right: 10px;
+		}	
+		p.contents_level1 {
+			font-weight : bold;
+			font-size : 110%;
+			margin : 0.5em;
+		}
+		p.contents_level2 {
+			position : relative;
+			left : 20px;
+			margin : 0.5em;
+		}
+	</style><script type="text/javascript">
+		function coordToMils(coord) {
+			var number = coord / 10000;
+			
+			if (number != number.toFixed(3))
+				number = number.toFixed(3);
+
+			return number + 'mil'
+		}
+
+		function coordToMM(coord) {
+			var number = 0.0254 * coord / 10000;
+			
+			if (number != number.toFixed(4))
+				number = number.toFixed(4);
+			
+			return number + 'mm'
+		}
+	
+		function convertCoord(coordNode, units) {
+			for (var i = 0; i < coordNode.childNodes.length; i++) {
+				coordNode.removeChild(coordNode.childNodes[i]);
+			}
+
+			var coord = coordNode.getAttribute('value');
+			if (coord != null) {
+				if (units == 'mm') {
+					textNode = document.createTextNode(coordToMM(coord));
+					coordNode.appendChild(textNode);
+				} else if (units == 'mil') {
+					textNode = document.createTextNode(coordToMils(coord));		
+					coordNode.appendChild(textNode);	
+				}
+			}
+		}
+	
+		function convertUnits(unitNode, units) {
+			for (var i = 0; i < unitNode.childNodes.length; i++) {
+				unitNode.removeChild(unitNode.childNodes[i]);		
+			}
+		
+			textNode = document.createTextNode(units); 
+			unitNode.appendChild(textNode);
+		}
+	
+		function changeUnits(radio_input, units) {
+			if (radio_input.checked) {
+			
+				var elements = document.getElementsByName('coordinate');
+				if (elements) {
+					for (var i = 0; i < elements.length; i++) {
+						convertCoord(elements[i], units);
+					}
+				}
+	
+				var elements = document.getElementsByName('units');
+				if (elements) {
+					for (var i = 0; i < elements.length; i++) {
+						convertUnits(elements[i], units);
+					}
+				}
+			}
+		}
+	</script><title>Design Rule Verification Report</title>
+</head>
+<body onload=""><img ALT="Altium" src="
+			file://C:\Users\Public\Documents\Altium\AD21\Templates\AD_logo.png
+		"><h1>Design Rule Verification Report</h1>
+<table class="header_holder">
+<td class="column1">
+<table class="front_matter">
+<tr class="front_matter">
+<td class="front_matter_column1">Date:</td>
+<td class="front_matter_column2"></td>
+<td class="front_matter_column3">2025-03-14</td>
+</tr>
+<tr class="front_matter">
+<td class="front_matter_column1">Time:</td>
+<td class="front_matter_column2"></td>
+<td class="front_matter_column3">5:44:43 PM</td>
+</tr>
+<tr class="front_matter">
+<td class="front_matter_column1">Elapsed Time:</td>
+<td class="front_matter_column2"></td>
+<td class="front_matter_column3">00:00:01</td>
+</tr>
+<tr class="front_matter">
+<td class="front_matter_column1">Filename:</td>
+<td class="front_matter_column2"></td>
+<td class="front_matter_column3"><a href="file:///C:\Users\Public\Documents\Altium\Flash Card Reader Product\Flash_Card_Reader\PCB1.PcbDoc" class="file"><acronym title="C:\Users\Public\Documents\Altium\Flash Card Reader Product\Flash_Card_Reader\PCB1.PcbDoc">C:\Users\Public\Documents\Altium\Flash Card Reader Product\Flash_Card_Reader\PCB1.PcbDoc</acronym></a></td>
+</tr>
+</table>
+</td>
+<td class="column2">
+<table class="DRC_summary_header">
+<tr>
+<td class="DRC_summary_header_col1">Warnings:</td>
+<td class="DRC_summary_header_col2"></td>
+<td class="DRC_summary_header_col3">0</td></tr>
+<tr>
+<td class="DRC_summary_header_col1">Rule Violations:</td>
+<td class="DRC_summary_header_col2"></td>
+<td class="DRC_summary_header_col3" style="color : red">95</td></tr>
+</table>
+</td>
+</table><a name="IDF5OWFBKXIZV4FBG40WTYAICQAMH34XY2Y2PBDNGGV5B22VW3PQJB"><h2>Summary</h2></a><table>
+<tr>
+<th class="column1">Warnings</th>
+<th class="column2">Count</th>
+</tr>
+<tr>
+<td style="font-weight : bold; text-align : right" class="column1">Total</td>
+<td style="font-weight : bold" class="column2">0</td>
+</tr>
+</table><br><table>
+<tr>
+<th class="column1">Rule Violations</th>
+<th class="column2">Count</th>
+</tr>
+<tr class="onmouseout_odd" onmouseover="className = 'onmouseover_odd'" onmouseout="className = 'onmouseout_odd'">
+<td class="column1"><a href="#ID12FQCKOZUNQMNXOJTMCA5WYTCMNTKEPOHLL5PPPBEAHDZFIC1EHC">Clearance Constraint (Gap=10mil) (All),(All)</a></td>
+<td class="column2">1</td>
+</tr>
+<tr class="onmouseout_even" onmouseover="className = 'onmouseover_even'" onmouseout="className = 'onmouseout_even'">
+<td class="column1"><a href="#IDN02HA3Q4JBQ3GVTWGS2K5QGCTH14Z0JFX0W5ASPFEHDPNBYD502K">Short-Circuit Constraint (Allowed=No) (All),(All)</a></td>
+<td class="column2">1</td>
+</tr>
+<tr class="onmouseout_odd" onmouseover="className = 'onmouseover_odd'" onmouseout="className = 'onmouseout_odd'">
+<td class="column1"><a href="#IDNZW0QMJWZCCRNSW0OEY3EDCWYPEPVOF3G0VT1DFO1L3RYQT3TLJM">Un-Routed Net Constraint ( (All) )</a></td>
+<td class="column2">38</td>
+</tr>
+<tr class="onmouseout_even" onmouseover="className = 'onmouseover_even'" onmouseout="className = 'onmouseout_even'">
+<td class="column1"><a href="#IDQUMRDPBDLUSPCOXHFBR5MRIAWOABTAARI4NGDOFO1OPVBEBO4RN">Modified Polygon (Allow modified: No), (Allow shelved: No)</a></td>
+<td class="column2">0</td>
+</tr>
+<tr class="onmouseout_odd" onmouseover="className = 'onmouseover_odd'" onmouseout="className = 'onmouseout_odd'">
+<td class="column1"><a href="#IDEJFURDNUOIHLMPSBIQMXTD0SEMELN1FI0ACX3ZDCJNZKVYXUAQTL">Width Constraint (Min=10mil) (Max=10mil) (Preferred=10mil) (All)</a></td>
+<td class="column2">0</td>
+</tr>
+<tr class="onmouseout_even" onmouseover="className = 'onmouseover_even'" onmouseout="className = 'onmouseout_even'">
+<td class="column1"><a href="#IDXAIDHSNM2PN0BPNZFFWI3T5QRJ54HX34TOSLDKHNBA20FWFZKJML">Power Plane Connect Rule(Relief Connect )(Expansion=20mil) (Conductor Width=10mil) (Air Gap=10mil) (Entries=4) (All)</a></td>
+<td class="column2">0</td>
+</tr>
+<tr class="onmouseout_odd" onmouseover="className = 'onmouseover_odd'" onmouseout="className = 'onmouseout_odd'">
+<td class="column1"><a href="#IDFSJ43EPZK4M3BUUWTVE1WCPT5FBMKHM1WIV13GLZ3F3SJ3M3XFRD">Hole Size Constraint (Min=1mil) (Max=100mil) (All)</a></td>
+<td class="column2">2</td>
+</tr>
+<tr class="onmouseout_even" onmouseover="className = 'onmouseover_even'" onmouseout="className = 'onmouseout_even'">
+<td class="column1"><a href="#IDK4VDEWGYHEJALRG03H3YNJOZSMBUS1LCIHNMPQIC2SEHOZZSMJEP">Hole To Hole Clearance (Gap=10mil) (All),(All)</a></td>
+<td class="column2">0</td>
+</tr>
+<tr class="onmouseout_odd" onmouseover="className = 'onmouseover_odd'" onmouseout="className = 'onmouseout_odd'">
+<td class="column1"><a href="#ID12XCGGZ0JCJIEQC050TUEFJ05BTMINDP5PDXL3OTFFCF2NE3PTRF">Minimum Solder Mask Sliver (Gap=10mil) (All),(All)</a></td>
+<td class="column2">48</td>
+</tr>
+<tr class="onmouseout_even" onmouseover="className = 'onmouseover_even'" onmouseout="className = 'onmouseout_even'">
+<td class="column1"><a href="#IDXNWDCE4SS0X5NP0ASEUHM4BIOLD2PG1N0RGHX5I5KL2E5YBL0LYB">Silk To Solder Mask (Clearance=10mil) (IsPad),(All)</a></td>
+<td class="column2">5</td>
+</tr>
+<tr class="onmouseout_odd" onmouseover="className = 'onmouseover_odd'" onmouseout="className = 'onmouseout_odd'">
+<td class="column1"><a href="#IDI2IH44LARINYKJ3WFGLHMMK22HVUYSHL5SOFHIC5C5C1SZ2V3QD">Silk to Silk (Clearance=10mil) (All),(All)</a></td>
+<td class="column2">0</td>
+</tr>
+<tr class="onmouseout_even" onmouseover="className = 'onmouseover_even'" onmouseout="className = 'onmouseout_even'">
+<td class="column1"><a href="#IDPM3A2TJCOCOZLUX2HIMM5Q5OBDABAA1PUQXJ50MAT5UKFN0IYUXI">Net Antennae (Tolerance=0mil) (All)</a></td>
+<td class="column2">0</td>
+</tr>
+<tr class="onmouseout_odd" onmouseover="className = 'onmouseover_odd'" onmouseout="className = 'onmouseout_odd'">
+<td class="column1"><a href="#ID3FSRQRU5BY4ZPUFAAHIUVV5JAJTUP5TSJUTW4SJC1AUOJSH4HRKD">Height Constraint (Min=0mil) (Max=1000mil) (Prefered=500mil) (All)</a></td>
+<td class="column2">0</td>
+</tr>
+<tr>
+<td style="font-weight : bold; text-align : right" class="column1">Total</td>
+<td style="font-weight : bold" class="column2">95</td>
+</tr>
+</table><br><a name="ID12FQCKOZUNQMNXOJTMCA5WYTCMNTKEPOHLL5PPPBEAHDZFIC1EHC"><table>
+<tr>
+<th style="text-align : left" colspan="1" class="rule">Clearance Constraint (Gap=10mil) (All),(All)</th>
+</tr>
+<tr class="onmouseout_odd" onmouseover="className = 'onmouseover_odd'" onmouseout="className = 'onmouseout_odd'">
+<td class="column1"><a href="dxpprocess://PCB:Zoom?document=C:\Users\Public\Documents\Altium\Flash Card Reader Product\Flash_Card_Reader\PCB1.PcbDoc;viewname=PCBEditor;Action=AREA_DYNAMICZOOM|Location1.X=7417.23mil|Location2.X=7424.896mil|Location1.Y=9594.395mil|Location2.Y=9602.062mil|Absolute=True" class="callback"><acronym title="dxpprocess://PCB:Zoom?document=C:\Users\Public\Documents\Altium\Flash Card Reader Product\Flash_Card_Reader\PCB1.PcbDoc;viewname=PCBEditor;Action=AREA_DYNAMICZOOM|Location1.X=7417.23mil|Location2.X=7424.896mil|Location1.Y=9594.395mil|Location2.Y=9602.062mil|Absolute=True">Clearance Constraint: (Collision &lt; 10mil) Between Pad Micro Controller-49_1(4809.252mil,1810.039mil) on Top Layer And Region (0 hole(s)) Top Layer </acronym></a><br></td>
+</tr>
+</table></a><hr color="#EEEEEE"><a href="#top" style="font-size: 0.9em">Back to top</a><br><br><a name="IDN02HA3Q4JBQ3GVTWGS2K5QGCTH14Z0JFX0W5ASPFEHDPNBYD502K"><table>
+<tr>
+<th style="text-align : left" colspan="1" class="rule">Short-Circuit Constraint (Allowed=No) (All),(All)</th>
+</tr>
+<tr class="onmouseout_odd" onmouseover="className = 'onmouseover_odd'" onmouseout="className = 'onmouseout_odd'">
+<td class="column1"><a href="dxpprocess://PCB:Zoom?document=C:\Users\Public\Documents\Altium\Flash Card Reader Product\Flash_Card_Reader\PCB1.PcbDoc;viewname=PCBEditor;Action=AREA_DYNAMICZOOM|Location1.X=7391.049mil|Location2.X=7427.455mil|Location1.Y=9591.836mil|Location2.Y=9628.243mil|Absolute=True" class="callback"><acronym title="dxpprocess://PCB:Zoom?document=C:\Users\Public\Documents\Altium\Flash Card Reader Product\Flash_Card_Reader\PCB1.PcbDoc;viewname=PCBEditor;Action=AREA_DYNAMICZOOM|Location1.X=7391.049mil|Location2.X=7427.455mil|Location1.Y=9591.836mil|Location2.Y=9628.243mil|Absolute=True">Short-Circuit Constraint: Between Pad Micro Controller-49_1(4809.252mil,1810.039mil) on Top Layer And Region (0 hole(s)) Top Layer Location : [X = 7409.252mil][Y = 9610.039mil]</acronym></a><br></td>
+</tr>
+</table></a><hr color="#EEEEEE"><a href="#top" style="font-size: 0.9em">Back to top</a><br><br><a name="IDNZW0QMJWZCCRNSW0OEY3EDCWYPEPVOF3G0VT1DFO1L3RYQT3TLJM"><table>
+<tr>
+<th style="text-align : left" colspan="1" class="rule">Un-Routed Net Constraint ( (All) )</th>
+</tr>
+<tr class="onmouseout_odd" onmouseover="className = 'onmouseover_odd'" onmouseout="className = 'onmouseout_odd'">
+<td class="column1"><a href="dxpprocess://PCB:Zoom?document=C:\Users\Public\Documents\Altium\Flash Card Reader Product\Flash_Card_Reader\PCB1.PcbDoc;viewname=PCBEditor;Action=AREA_DYNAMICZOOM|Location1.X=5778.677mil|Location2.X=6178.212mil|Location1.Y=9188.323mil|Location2.Y=9342.976mil|Absolute=True" class="callback"><acronym title="dxpprocess://PCB:Zoom?document=C:\Users\Public\Documents\Altium\Flash Card Reader Product\Flash_Card_Reader\PCB1.PcbDoc;viewname=PCBEditor;Action=AREA_DYNAMICZOOM|Location1.X=5778.677mil|Location2.X=6178.212mil|Location1.Y=9188.323mil|Location2.Y=9342.976mil|Absolute=True">Un-Routed Net Constraint: Net GND Between Pad 3V7-N(3221.653mil,1500mil) on Multi-Layer And Pad LDO3V3-1(3562.598mil,1416.535mil) on Top Layer </acronym></a><br></td>
+</tr>
+<tr class="onmouseout_even" onmouseover="className = 'onmouseover_even'" onmouseout="className = 'onmouseout_even'">
+<td class="column1"><a href="dxpprocess://PCB:Zoom?document=C:\Users\Public\Documents\Altium\Flash Card Reader Product\Flash_Card_Reader\PCB1.PcbDoc;viewname=PCBEditor;Action=AREA_DYNAMICZOOM|Location1.X=2935.37mil|Location2.X=6215.614mil|Location1.Y=9257.024mil|Location2.Y=9342.976mil|Absolute=True" class="callback"><acronym title="dxpprocess://PCB:Zoom?document=C:\Users\Public\Documents\Altium\Flash Card Reader Product\Flash_Card_Reader\PCB1.PcbDoc;viewname=PCBEditor;Action=AREA_DYNAMICZOOM|Location1.X=2935.37mil|Location2.X=6215.614mil|Location1.Y=9257.024mil|Location2.Y=9342.976mil|Absolute=True">Un-Routed Net Constraint: Net 3.7V Between Pad 3V7-P(378.346mil,1500mil) on Multi-Layer And Pad LDO3V3-3(3600mil,1500mil) on Top Layer </acronym></a><br></td>
+</tr>
+<tr class="onmouseout_odd" onmouseover="className = 'onmouseover_odd'" onmouseout="className = 'onmouseout_odd'">
+<td class="column1"><a href="dxpprocess://PCB:Zoom?document=C:\Users\Public\Documents\Altium\Flash Card Reader Product\Flash_Card_Reader\PCB1.PcbDoc;viewname=PCBEditor;Action=AREA_DYNAMICZOOM|Location1.X=6104.268mil|Location2.X=6215.614mil|Location1.Y=9271.787mil|Location2.Y=9432.937mil|Absolute=True" class="callback"><acronym title="dxpprocess://PCB:Zoom?document=C:\Users\Public\Documents\Altium\Flash Card Reader Product\Flash_Card_Reader\PCB1.PcbDoc;viewname=PCBEditor;Action=AREA_DYNAMICZOOM|Location1.X=6104.268mil|Location2.X=6215.614mil|Location1.Y=9271.787mil|Location2.Y=9432.937mil|Absolute=True">Un-Routed Net Constraint: Net 3.7V Between Pad C3-1(3531.102mil,1600mil) on Top Layer And Pad LDO3V3-3(3600mil,1500mil) on Top Layer </acronym></a><br></td>
+</tr>
+<tr class="onmouseout_even" onmouseover="className = 'onmouseover_even'" onmouseout="className = 'onmouseout_even'">
+<td class="column1"><a href="dxpprocess://PCB:Zoom?document=C:\Users\Public\Documents\Altium\Flash Card Reader Product\Flash_Card_Reader\PCB1.PcbDoc;viewname=PCBEditor;Action=AREA_DYNAMICZOOM|Location1.X=6146.984mil|Location2.X=6226.835mil|Location1.Y=9188.323mil|Location2.Y=9432.937mil|Absolute=True" class="callback"><acronym title="dxpprocess://PCB:Zoom?document=C:\Users\Public\Documents\Altium\Flash Card Reader Product\Flash_Card_Reader\PCB1.PcbDoc;viewname=PCBEditor;Action=AREA_DYNAMICZOOM|Location1.X=6146.984mil|Location2.X=6226.835mil|Location1.Y=9188.323mil|Location2.Y=9432.937mil|Absolute=True">Un-Routed Net Constraint: Net GND Between Pad LDO3V3-1(3562.598mil,1416.535mil) on Top Layer And Pad C3-2(3600mil,1600mil) on Top Layer </acronym></a><br></td>
+</tr>
+<tr class="onmouseout_odd" onmouseover="className = 'onmouseover_odd'" onmouseout="className = 'onmouseout_odd'">
+<td class="column1"><a href="dxpprocess://PCB:Zoom?document=C:\Users\Public\Documents\Altium\Flash Card Reader Product\Flash_Card_Reader\PCB1.PcbDoc;viewname=PCBEditor;Action=AREA_DYNAMICZOOM|Location1.X=6221.788mil|Location2.X=6392.386mil|Location1.Y=9067.063mil|Location2.Y=9244.748mil|Absolute=True" class="callback"><acronym title="dxpprocess://PCB:Zoom?document=C:\Users\Public\Documents\Altium\Flash Card Reader Product\Flash_Card_Reader\PCB1.PcbDoc;viewname=PCBEditor;Action=AREA_DYNAMICZOOM|Location1.X=6221.788mil|Location2.X=6392.386mil|Location1.Y=9067.063mil|Location2.Y=9244.748mil|Absolute=True">Un-Routed Net Constraint: Net 3V3 Between Pad LDO3V3-2(3637.402mil,1416.535mil) on Top Layer And Pad C4-1(3765.551mil,1300mil) on Top Layer </acronym></a><br></td>
+</tr>
+<tr class="onmouseout_even" onmouseover="className = 'onmouseover_even'" onmouseout="className = 'onmouseout_even'">
+<td class="column1"><a href="dxpprocess://PCB:Zoom?document=C:\Users\Public\Documents\Altium\Flash Card Reader Product\Flash_Card_Reader\PCB1.PcbDoc;viewname=PCBEditor;Action=AREA_DYNAMICZOOM|Location1.X=6338.717mil|Location2.X=7437.858mil|Location1.Y=9067.063mil|Location2.Y=9784.315mil|Absolute=True" class="callback"><acronym title="dxpprocess://PCB:Zoom?document=C:\Users\Public\Documents\Altium\Flash Card Reader Product\Flash_Card_Reader\PCB1.PcbDoc;viewname=PCBEditor;Action=AREA_DYNAMICZOOM|Location1.X=6338.717mil|Location2.X=7437.858mil|Location1.Y=9067.063mil|Location2.Y=9784.315mil|Absolute=True">Un-Routed Net Constraint: Net 3V3 Between Pad C4-1(3765.551mil,1300mil) on Top Layer And Pad Micro Controller-3(4825.984mil,1964.567mil) on Top Layer </acronym></a><br></td>
+</tr>
+<tr class="onmouseout_odd" onmouseover="className = 'onmouseover_odd'" onmouseout="className = 'onmouseout_odd'">
+<td class="column1"><a href="dxpprocess://PCB:Zoom?document=C:\Users\Public\Documents\Altium\Flash Card Reader Product\Flash_Card_Reader\PCB1.PcbDoc;viewname=PCBEditor;Action=AREA_DYNAMICZOOM|Location1.X=6146.984mil|Location2.X=6461.283mil|Location1.Y=9067.063mil|Location2.Y=9244.748mil|Absolute=True" class="callback"><acronym title="dxpprocess://PCB:Zoom?document=C:\Users\Public\Documents\Altium\Flash Card Reader Product\Flash_Card_Reader\PCB1.PcbDoc;viewname=PCBEditor;Action=AREA_DYNAMICZOOM|Location1.X=6146.984mil|Location2.X=6461.283mil|Location1.Y=9067.063mil|Location2.Y=9244.748mil|Absolute=True">Un-Routed Net Constraint: Net GND Between Pad LDO3V3-1(3562.598mil,1416.535mil) on Top Layer And Pad C4-2(3834.449mil,1300mil) on Top Layer </acronym></a><br></td>
+</tr>
+<tr class="onmouseout_even" onmouseover="className = 'onmouseover_even'" onmouseout="className = 'onmouseout_even'">
+<td class="column1"><a href="dxpprocess://PCB:Zoom?document=C:\Users\Public\Documents\Altium\Flash Card Reader Product\Flash_Card_Reader\PCB1.PcbDoc;viewname=PCBEditor;Action=AREA_DYNAMICZOOM|Location1.X=6407.614mil|Location2.X=7154.394mil|Location1.Y=9067.063mil|Location2.Y=9315.811mil|Absolute=True" class="callback"><acronym title="dxpprocess://PCB:Zoom?document=C:\Users\Public\Documents\Altium\Flash Card Reader Product\Flash_Card_Reader\PCB1.PcbDoc;viewname=PCBEditor;Action=AREA_DYNAMICZOOM|Location1.X=6407.614mil|Location2.X=7154.394mil|Location1.Y=9067.063mil|Location2.Y=9315.811mil|Absolute=True">Un-Routed Net Constraint: Net GND Between Pad C4-2(3834.449mil,1300mil) on Top Layer And Pad Micro Controller-51(4536.614mil,1498.032mil) on Top Layer </acronym></a><br></td>
+</tr>
+<tr class="onmouseout_odd" onmouseover="className = 'onmouseover_odd'" onmouseout="className = 'onmouseout_odd'">
+<td class="column1"><a href="dxpprocess://PCB:Zoom?document=C:\Users\Public\Documents\Altium\Flash Card Reader Product\Flash_Card_Reader\PCB1.PcbDoc;viewname=PCBEditor;Action=AREA_DYNAMICZOOM|Location1.X=7445.606mil|Location2.X=7500.85mil|Location1.Y=9744.819mil|Location2.Y=9784.315mil|Absolute=True" class="callback"><acronym title="dxpprocess://PCB:Zoom?document=C:\Users\Public\Documents\Altium\Flash Card Reader Product\Flash_Card_Reader\PCB1.PcbDoc;viewname=PCBEditor;Action=AREA_DYNAMICZOOM|Location1.X=7445.606mil|Location2.X=7500.85mil|Location1.Y=9744.819mil|Location2.Y=9784.315mil|Absolute=True">Un-Routed Net Constraint: Net GND Between Pad Micro Controller-2(4857.48mil,1964.567mil) on Top Layer And Pad Micro Controller-1(4888.976mil,1964.567mil) on Top Layer </acronym></a><br></td>
+</tr>
+<tr class="onmouseout_even" onmouseover="className = 'onmouseover_even'" onmouseout="className = 'onmouseout_even'">
+<td class="column1"><a href="dxpprocess://PCB:Zoom?document=C:\Users\Public\Documents\Altium\Flash Card Reader Product\Flash_Card_Reader\PCB1.PcbDoc;viewname=PCBEditor;Action=AREA_DYNAMICZOOM|Location1.X=7477.102mil|Location2.X=7544.158mil|Location1.Y=9744.819mil|Location2.Y=9784.315mil|Absolute=True" class="callback"><acronym title="dxpprocess://PCB:Zoom?document=C:\Users\Public\Documents\Altium\Flash Card Reader Product\Flash_Card_Reader\PCB1.PcbDoc;viewname=PCBEditor;Action=AREA_DYNAMICZOOM|Location1.X=7477.102mil|Location2.X=7544.158mil|Location1.Y=9744.819mil|Location2.Y=9784.315mil|Absolute=True">Un-Routed Net Constraint: Net GND Between Pad Micro Controller-1(4888.976mil,1964.567mil) on Top Layer And Pad Micro Controller-53(4926.378mil,1966.535mil) on Top Layer </acronym></a><br></td>
+</tr>
+<tr class="onmouseout_odd" onmouseover="className = 'onmouseover_odd'" onmouseout="className = 'onmouseout_odd'">
+<td class="column1"><a href="dxpprocess://PCB:Zoom?document=C:\Users\Public\Documents\Altium\Flash Card Reader Product\Flash_Card_Reader\PCB1.PcbDoc;viewname=PCBEditor;Action=AREA_DYNAMICZOOM|Location1.X=7118.835mil|Location2.X=7185.89mil|Location1.Y=9744.819mil|Location2.Y=9784.315mil|Absolute=True" class="callback"><acronym title="dxpprocess://PCB:Zoom?document=C:\Users\Public\Documents\Altium\Flash Card Reader Product\Flash_Card_Reader\PCB1.PcbDoc;viewname=PCBEditor;Action=AREA_DYNAMICZOOM|Location1.X=7118.835mil|Location2.X=7185.89mil|Location1.Y=9744.819mil|Location2.Y=9784.315mil|Absolute=True">Un-Routed Net Constraint: Net GND Between Pad Micro Controller-52(4536.614mil,1966.535mil) on Top Layer And Pad Micro Controller-11(4574.016mil,1964.567mil) on Top Layer </acronym></a><br></td>
+</tr>
+<tr class="onmouseout_even" onmouseover="className = 'onmouseover_even'" onmouseout="className = 'onmouseout_even'">
+<td class="column1"><a href="dxpprocess://PCB:Zoom?document=C:\Users\Public\Documents\Altium\Flash Card Reader Product\Flash_Card_Reader\PCB1.PcbDoc;viewname=PCBEditor;Action=AREA_DYNAMICZOOM|Location1.X=7162.142mil|Location2.X=7280.378mil|Location1.Y=9744.819mil|Location2.Y=9784.315mil|Absolute=True" class="callback"><acronym title="dxpprocess://PCB:Zoom?document=C:\Users\Public\Documents\Altium\Flash Card Reader Product\Flash_Card_Reader\PCB1.PcbDoc;viewname=PCBEditor;Action=AREA_DYNAMICZOOM|Location1.X=7162.142mil|Location2.X=7280.378mil|Location1.Y=9744.819mil|Location2.Y=9784.315mil|Absolute=True">Un-Routed Net Constraint: Net GND Between Pad Micro Controller-11(4574.016mil,1964.567mil) on Top Layer And Pad Micro Controller-8(4668.504mil,1964.567mil) on Top Layer </acronym></a><br></td>
+</tr>
+<tr class="onmouseout_odd" onmouseover="className = 'onmouseover_odd'" onmouseout="className = 'onmouseout_odd'">
+<td class="column1"><a href="dxpprocess://PCB:Zoom?document=C:\Users\Public\Documents\Altium\Flash Card Reader Product\Flash_Card_Reader\PCB1.PcbDoc;viewname=PCBEditor;Action=AREA_DYNAMICZOOM|Location1.X=7118.835mil|Location2.X=7286.283mil|Location1.Y=9577.496mil|Location2.Y=9670.142mil|Absolute=True" class="callback"><acronym title="dxpprocess://PCB:Zoom?document=C:\Users\Public\Documents\Altium\Flash Card Reader Product\Flash_Card_Reader\PCB1.PcbDoc;viewname=PCBEditor;Action=AREA_DYNAMICZOOM|Location1.X=7118.835mil|Location2.X=7286.283mil|Location1.Y=9577.496mil|Location2.Y=9670.142mil|Absolute=True">Un-Routed Net Constraint: Net GND Between Pad Micro Controller-14(4538.583mil,1858.268mil) on Top Layer And Pad Micro Controller-49_7(4653.74mil,1810.039mil) on Top Layer </acronym></a><br></td>
+</tr>
+<tr class="onmouseout_even" onmouseover="className = 'onmouseover_even'" onmouseout="className = 'onmouseout_even'">
+<td class="column1"><a href="dxpprocess://PCB:Zoom?document=C:\Users\Public\Documents\Altium\Flash Card Reader Product\Flash_Card_Reader\PCB1.PcbDoc;viewname=PCBEditor;Action=AREA_DYNAMICZOOM|Location1.X=7118.835mil|Location2.X=7158.331mil|Location1.Y=9646.394mil|Location2.Y=9784.315mil|Absolute=True" class="callback"><acronym title="dxpprocess://PCB:Zoom?document=C:\Users\Public\Documents\Altium\Flash Card Reader Product\Flash_Card_Reader\PCB1.PcbDoc;viewname=PCBEditor;Action=AREA_DYNAMICZOOM|Location1.X=7118.835mil|Location2.X=7158.331mil|Location1.Y=9646.394mil|Location2.Y=9784.315mil|Absolute=True">Un-Routed Net Constraint: Net GND Between Pad Micro Controller-52(4536.614mil,1966.535mil) on Top Layer And Pad Micro Controller-14(4538.583mil,1858.268mil) on Top Layer </acronym></a><br></td>
+</tr>
+<tr class="onmouseout_odd" onmouseover="className = 'onmouseover_odd'" onmouseout="className = 'onmouseout_odd'">
+<td class="column1"><a href="dxpprocess://PCB:Zoom?document=C:\Users\Public\Documents\Altium\Flash Card Reader Product\Flash_Card_Reader\PCB1.PcbDoc;viewname=PCBEditor;Action=AREA_DYNAMICZOOM|Location1.X=7504.662mil|Location2.X=7544.158mil|Location1.Y=9331.433mil|Location2.Y=9386.677mil|Absolute=True" class="callback"><acronym title="dxpprocess://PCB:Zoom?document=C:\Users\Public\Documents\Altium\Flash Card Reader Product\Flash_Card_Reader\PCB1.PcbDoc;viewname=PCBEditor;Action=AREA_DYNAMICZOOM|Location1.X=7504.662mil|Location2.X=7544.158mil|Location1.Y=9331.433mil|Location2.Y=9386.677mil|Absolute=True">Un-Routed Net Constraint: Net GND Between Pad Micro Controller-36(4924.409mil,1543.307mil) on Top Layer And Pad Micro Controller-37(4924.409mil,1574.803mil) on Top Layer </acronym></a><br></td>
+</tr>
+<tr class="onmouseout_even" onmouseover="className = 'onmouseover_even'" onmouseout="className = 'onmouseout_even'">
+<td class="column1"><a href="dxpprocess://PCB:Zoom?document=C:\Users\Public\Documents\Altium\Flash Card Reader Product\Flash_Card_Reader\PCB1.PcbDoc;viewname=PCBEditor;Action=AREA_DYNAMICZOOM|Location1.X=7504.662mil|Location2.X=7544.158mil|Location1.Y=9280.252mil|Location2.Y=9355.181mil|Absolute=True" class="callback"><acronym title="dxpprocess://PCB:Zoom?document=C:\Users\Public\Documents\Altium\Flash Card Reader Product\Flash_Card_Reader\PCB1.PcbDoc;viewname=PCBEditor;Action=AREA_DYNAMICZOOM|Location1.X=7504.662mil|Location2.X=7544.158mil|Location1.Y=9280.252mil|Location2.Y=9355.181mil|Absolute=True">Un-Routed Net Constraint: Net GND Between Pad Micro Controller-36(4924.409mil,1543.307mil) on Top Layer And Pad Micro Controller-50(4926.378mil,1498.032mil) on Top Layer </acronym></a><br></td>
+</tr>
+<tr class="onmouseout_odd" onmouseover="className = 'onmouseover_odd'" onmouseout="className = 'onmouseout_odd'">
+<td class="column1"><a href="dxpprocess://PCB:Zoom?document=C:\Users\Public\Documents\Altium\Flash Card Reader Product\Flash_Card_Reader\PCB1.PcbDoc;viewname=PCBEditor;Action=AREA_DYNAMICZOOM|Location1.X=7504.662mil|Location2.X=7544.158mil|Location1.Y=9362.929mil|Location2.Y=9418.173mil|Absolute=True" class="callback"><acronym title="dxpprocess://PCB:Zoom?document=C:\Users\Public\Documents\Altium\Flash Card Reader Product\Flash_Card_Reader\PCB1.PcbDoc;viewname=PCBEditor;Action=AREA_DYNAMICZOOM|Location1.X=7504.662mil|Location2.X=7544.158mil|Location1.Y=9362.929mil|Location2.Y=9418.173mil|Absolute=True">Un-Routed Net Constraint: Net GND Between Pad Micro Controller-37(4924.409mil,1574.803mil) on Top Layer And Pad Micro Controller-38(4924.409mil,1606.299mil) on Top Layer </acronym></a><br></td>
+</tr>
+<tr class="onmouseout_even" onmouseover="className = 'onmouseover_even'" onmouseout="className = 'onmouseout_even'">
+<td class="column1"><a href="dxpprocess://PCB:Zoom?document=C:\Users\Public\Documents\Altium\Flash Card Reader Product\Flash_Card_Reader\PCB1.PcbDoc;viewname=PCBEditor;Action=AREA_DYNAMICZOOM|Location1.X=7504.662mil|Location2.X=7544.158mil|Location1.Y=9394.425mil|Location2.Y=9449.669mil|Absolute=True" class="callback"><acronym title="dxpprocess://PCB:Zoom?document=C:\Users\Public\Documents\Altium\Flash Card Reader Product\Flash_Card_Reader\PCB1.PcbDoc;viewname=PCBEditor;Action=AREA_DYNAMICZOOM|Location1.X=7504.662mil|Location2.X=7544.158mil|Location1.Y=9394.425mil|Location2.Y=9449.669mil|Absolute=True">Un-Routed Net Constraint: Net GND Between Pad Micro Controller-38(4924.409mil,1606.299mil) on Top Layer And Pad Micro Controller-39(4924.409mil,1637.795mil) on Top Layer </acronym></a><br></td>
+</tr>
+<tr class="onmouseout_odd" onmouseover="className = 'onmouseover_odd'" onmouseout="className = 'onmouseout_odd'">
+<td class="column1"><a href="dxpprocess://PCB:Zoom?document=C:\Users\Public\Documents\Altium\Flash Card Reader Product\Flash_Card_Reader\PCB1.PcbDoc;viewname=PCBEditor;Action=AREA_DYNAMICZOOM|Location1.X=7504.662mil|Location2.X=7544.158mil|Location1.Y=9425.921mil|Location2.Y=9481.165mil|Absolute=True" class="callback"><acronym title="dxpprocess://PCB:Zoom?document=C:\Users\Public\Documents\Altium\Flash Card Reader Product\Flash_Card_Reader\PCB1.PcbDoc;viewname=PCBEditor;Action=AREA_DYNAMICZOOM|Location1.X=7504.662mil|Location2.X=7544.158mil|Location1.Y=9425.921mil|Location2.Y=9481.165mil|Absolute=True">Un-Routed Net Constraint: Net GND Between Pad Micro Controller-39(4924.409mil,1637.795mil) on Top Layer And Pad Micro Controller-40(4924.409mil,1669.291mil) on Top Layer </acronym></a><br></td>
+</tr>
+<tr class="onmouseout_even" onmouseover="className = 'onmouseover_even'" onmouseout="className = 'onmouseout_even'">
+<td class="column1"><a href="dxpprocess://PCB:Zoom?document=C:\Users\Public\Documents\Altium\Flash Card Reader Product\Flash_Card_Reader\PCB1.PcbDoc;viewname=PCBEditor;Action=AREA_DYNAMICZOOM|Location1.X=7504.662mil|Location2.X=7544.158mil|Location1.Y=9457.417mil|Location2.Y=9512.661mil|Absolute=True" class="callback"><acronym title="dxpprocess://PCB:Zoom?document=C:\Users\Public\Documents\Altium\Flash Card Reader Product\Flash_Card_Reader\PCB1.PcbDoc;viewname=PCBEditor;Action=AREA_DYNAMICZOOM|Location1.X=7504.662mil|Location2.X=7544.158mil|Location1.Y=9457.417mil|Location2.Y=9512.661mil|Absolute=True">Un-Routed Net Constraint: Net GND Between Pad Micro Controller-40(4924.409mil,1669.291mil) on Top Layer And Pad Micro Controller-41(4924.409mil,1700.787mil) on Top Layer </acronym></a><br></td>
+</tr>
+<tr class="onmouseout_odd" onmouseover="className = 'onmouseover_odd'" onmouseout="className = 'onmouseout_odd'">
+<td class="column1"><a href="dxpprocess://PCB:Zoom?document=C:\Users\Public\Documents\Altium\Flash Card Reader Product\Flash_Card_Reader\PCB1.PcbDoc;viewname=PCBEditor;Action=AREA_DYNAMICZOOM|Location1.X=7504.662mil|Location2.X=7544.158mil|Location1.Y=9488.913mil|Location2.Y=9544.157mil|Absolute=True" class="callback"><acronym title="dxpprocess://PCB:Zoom?document=C:\Users\Public\Documents\Altium\Flash Card Reader Product\Flash_Card_Reader\PCB1.PcbDoc;viewname=PCBEditor;Action=AREA_DYNAMICZOOM|Location1.X=7504.662mil|Location2.X=7544.158mil|Location1.Y=9488.913mil|Location2.Y=9544.157mil|Absolute=True">Un-Routed Net Constraint: Net GND Between Pad Micro Controller-41(4924.409mil,1700.787mil) on Top Layer And Pad Micro Controller-42(4924.409mil,1732.284mil) on Top Layer </acronym></a><br></td>
+</tr>
+<tr class="onmouseout_even" onmouseover="className = 'onmouseover_even'" onmouseout="className = 'onmouseout_even'">
+<td class="column1"><a href="dxpprocess://PCB:Zoom?document=C:\Users\Public\Documents\Altium\Flash Card Reader Product\Flash_Card_Reader\PCB1.PcbDoc;viewname=PCBEditor;Action=AREA_DYNAMICZOOM|Location1.X=7504.662mil|Location2.X=7544.158mil|Location1.Y=9520.409mil|Location2.Y=9575.654mil|Absolute=True" class="callback"><acronym title="dxpprocess://PCB:Zoom?document=C:\Users\Public\Documents\Altium\Flash Card Reader Product\Flash_Card_Reader\PCB1.PcbDoc;viewname=PCBEditor;Action=AREA_DYNAMICZOOM|Location1.X=7504.662mil|Location2.X=7544.158mil|Location1.Y=9520.409mil|Location2.Y=9575.654mil|Absolute=True">Un-Routed Net Constraint: Net GND Between Pad Micro Controller-42(4924.409mil,1732.284mil) on Top Layer And Pad Micro Controller-43(4924.409mil,1763.78mil) on Top Layer </acronym></a><br></td>
+</tr>
+<tr class="onmouseout_odd" onmouseover="className = 'onmouseover_odd'" onmouseout="className = 'onmouseout_odd'">
+<td class="column1"><a href="dxpprocess://PCB:Zoom?document=C:\Users\Public\Documents\Altium\Flash Card Reader Product\Flash_Card_Reader\PCB1.PcbDoc;viewname=PCBEditor;Action=AREA_DYNAMICZOOM|Location1.X=7376.709mil|Location2.X=7544.158mil|Location1.Y=9499.74mil|Location2.Y=9564.827mil|Absolute=True" class="callback"><acronym title="dxpprocess://PCB:Zoom?document=C:\Users\Public\Documents\Altium\Flash Card Reader Product\Flash_Card_Reader\PCB1.PcbDoc;viewname=PCBEditor;Action=AREA_DYNAMICZOOM|Location1.X=7376.709mil|Location2.X=7544.158mil|Location1.Y=9499.74mil|Location2.Y=9564.827mil|Absolute=True">Un-Routed Net Constraint: Net GND Between Pad Micro Controller-49_2(4809.252mil,1732.284mil) on Top Layer And Pad Micro Controller-42(4924.409mil,1732.284mil) on Top Layer </acronym></a><br></td>
+</tr>
+<tr class="onmouseout_even" onmouseover="className = 'onmouseover_even'" onmouseout="className = 'onmouseout_even'">
+<td class="column1"><a href="dxpprocess://PCB:Zoom?document=C:\Users\Public\Documents\Altium\Flash Card Reader Product\Flash_Card_Reader\PCB1.PcbDoc;viewname=PCBEditor;Action=AREA_DYNAMICZOOM|Location1.X=7504.662mil|Location2.X=7544.158mil|Location1.Y=9551.906mil|Location2.Y=9607.15mil|Absolute=True" class="callback"><acronym title="dxpprocess://PCB:Zoom?document=C:\Users\Public\Documents\Altium\Flash Card Reader Product\Flash_Card_Reader\PCB1.PcbDoc;viewname=PCBEditor;Action=AREA_DYNAMICZOOM|Location1.X=7504.662mil|Location2.X=7544.158mil|Location1.Y=9551.906mil|Location2.Y=9607.15mil|Absolute=True">Un-Routed Net Constraint: Net GND Between Pad Micro Controller-43(4924.409mil,1763.78mil) on Top Layer And Pad Micro Controller-44(4924.409mil,1795.276mil) on Top Layer </acronym></a><br></td>
+</tr>
+<tr class="onmouseout_odd" onmouseover="className = 'onmouseover_odd'" onmouseout="className = 'onmouseout_odd'">
+<td class="column1"><a href="dxpprocess://PCB:Zoom?document=C:\Users\Public\Documents\Altium\Flash Card Reader Product\Flash_Card_Reader\PCB1.PcbDoc;viewname=PCBEditor;Action=AREA_DYNAMICZOOM|Location1.X=7504.662mil|Location2.X=7544.158mil|Location1.Y=9583.402mil|Location2.Y=9638.646mil|Absolute=True" class="callback"><acronym title="dxpprocess://PCB:Zoom?document=C:\Users\Public\Documents\Altium\Flash Card Reader Product\Flash_Card_Reader\PCB1.PcbDoc;viewname=PCBEditor;Action=AREA_DYNAMICZOOM|Location1.X=7504.662mil|Location2.X=7544.158mil|Location1.Y=9583.402mil|Location2.Y=9638.646mil|Absolute=True">Un-Routed Net Constraint: Net GND Between Pad Micro Controller-44(4924.409mil,1795.276mil) on Top Layer And Pad Micro Controller-45(4924.409mil,1826.772mil) on Top Layer </acronym></a><br></td>
+</tr>
+<tr class="onmouseout_even" onmouseover="className = 'onmouseover_even'" onmouseout="className = 'onmouseout_even'">
+<td class="column1"><a href="dxpprocess://PCB:Zoom?document=C:\Users\Public\Documents\Altium\Flash Card Reader Product\Flash_Card_Reader\PCB1.PcbDoc;viewname=PCBEditor;Action=AREA_DYNAMICZOOM|Location1.X=7504.662mil|Location2.X=7544.158mil|Location1.Y=9614.898mil|Location2.Y=9670.142mil|Absolute=True" class="callback"><acronym title="dxpprocess://PCB:Zoom?document=C:\Users\Public\Documents\Altium\Flash Card Reader Product\Flash_Card_Reader\PCB1.PcbDoc;viewname=PCBEditor;Action=AREA_DYNAMICZOOM|Location1.X=7504.662mil|Location2.X=7544.158mil|Location1.Y=9614.898mil|Location2.Y=9670.142mil|Absolute=True">Un-Routed Net Constraint: Net GND Between Pad Micro Controller-45(4924.409mil,1826.772mil) on Top Layer And Pad Micro Controller-46(4924.409mil,1858.268mil) on Top Layer </acronym></a><br></td>
+</tr>
+<tr class="onmouseout_odd" onmouseover="className = 'onmouseover_odd'" onmouseout="className = 'onmouseout_odd'">
+<td class="column1"><a href="dxpprocess://PCB:Zoom?document=C:\Users\Public\Documents\Altium\Flash Card Reader Product\Flash_Card_Reader\PCB1.PcbDoc;viewname=PCBEditor;Action=AREA_DYNAMICZOOM|Location1.X=7504.662mil|Location2.X=7544.158mil|Location1.Y=9646.394mil|Location2.Y=9701.638mil|Absolute=True" class="callback"><acronym title="dxpprocess://PCB:Zoom?document=C:\Users\Public\Documents\Altium\Flash Card Reader Product\Flash_Card_Reader\PCB1.PcbDoc;viewname=PCBEditor;Action=AREA_DYNAMICZOOM|Location1.X=7504.662mil|Location2.X=7544.158mil|Location1.Y=9646.394mil|Location2.Y=9701.638mil|Absolute=True">Un-Routed Net Constraint: Net GND Between Pad Micro Controller-46(4924.409mil,1858.268mil) on Top Layer And Pad Micro Controller-47(4924.409mil,1889.764mil) on Top Layer </acronym></a><br></td>
+</tr>
+<tr class="onmouseout_even" onmouseover="className = 'onmouseover_even'" onmouseout="className = 'onmouseout_even'">
+<td class="column1"><a href="dxpprocess://PCB:Zoom?document=C:\Users\Public\Documents\Altium\Flash Card Reader Product\Flash_Card_Reader\PCB1.PcbDoc;viewname=PCBEditor;Action=AREA_DYNAMICZOOM|Location1.X=7504.662mil|Location2.X=7544.158mil|Location1.Y=9677.89mil|Location2.Y=9733.134mil|Absolute=True" class="callback"><acronym title="dxpprocess://PCB:Zoom?document=C:\Users\Public\Documents\Altium\Flash Card Reader Product\Flash_Card_Reader\PCB1.PcbDoc;viewname=PCBEditor;Action=AREA_DYNAMICZOOM|Location1.X=7504.662mil|Location2.X=7544.158mil|Location1.Y=9677.89mil|Location2.Y=9733.134mil|Absolute=True">Un-Routed Net Constraint: Net GND Between Pad Micro Controller-47(4924.409mil,1889.764mil) on Top Layer And Pad Micro Controller-48(4924.409mil,1921.26mil) on Top Layer </acronym></a><br></td>
+</tr>
+<tr class="onmouseout_odd" onmouseover="className = 'onmouseover_odd'" onmouseout="className = 'onmouseout_odd'">
+<td class="column1"><a href="dxpprocess://PCB:Zoom?document=C:\Users\Public\Documents\Altium\Flash Card Reader Product\Flash_Card_Reader\PCB1.PcbDoc;viewname=PCBEditor;Action=AREA_DYNAMICZOOM|Location1.X=7504.662mil|Location2.X=7544.158mil|Location1.Y=9709.386mil|Location2.Y=9784.315mil|Absolute=True" class="callback"><acronym title="dxpprocess://PCB:Zoom?document=C:\Users\Public\Documents\Altium\Flash Card Reader Product\Flash_Card_Reader\PCB1.PcbDoc;viewname=PCBEditor;Action=AREA_DYNAMICZOOM|Location1.X=7504.662mil|Location2.X=7544.158mil|Location1.Y=9709.386mil|Location2.Y=9784.315mil|Absolute=True">Un-Routed Net Constraint: Net GND Between Pad Micro Controller-48(4924.409mil,1921.26mil) on Top Layer And Pad Micro Controller-53(4926.378mil,1966.535mil) on Top Layer </acronym></a><br></td>
+</tr>
+<tr class="onmouseout_even" onmouseover="className = 'onmouseover_even'" onmouseout="className = 'onmouseout_even'">
+<td class="column1"><a href="dxpprocess://PCB:Zoom?document=C:\Users\Public\Documents\Altium\Flash Card Reader Product\Flash_Card_Reader\PCB1.PcbDoc;viewname=PCBEditor;Action=AREA_DYNAMICZOOM|Location1.X=7376.709mil|Location2.X=7441.795mil|Location1.Y=9499.74mil|Location2.Y=9621.85mil|Absolute=True" class="callback"><acronym title="dxpprocess://PCB:Zoom?document=C:\Users\Public\Documents\Altium\Flash Card Reader Product\Flash_Card_Reader\PCB1.PcbDoc;viewname=PCBEditor;Action=AREA_DYNAMICZOOM|Location1.X=7376.709mil|Location2.X=7441.795mil|Location1.Y=9499.74mil|Location2.Y=9621.85mil|Absolute=True">Un-Routed Net Constraint: Net GND Between Pad Micro Controller-49_2(4809.252mil,1732.284mil) on Top Layer And Pad Micro Controller-49_1(4809.252mil,1810.039mil) on Top Layer </acronym></a><br></td>
+</tr>
+<tr class="onmouseout_odd" onmouseover="className = 'onmouseover_odd'" onmouseout="className = 'onmouseout_odd'">
+<td class="column1"><a href="dxpprocess://PCB:Zoom?document=C:\Users\Public\Documents\Altium\Flash Card Reader Product\Flash_Card_Reader\PCB1.PcbDoc;viewname=PCBEditor;Action=AREA_DYNAMICZOOM|Location1.X=7298.953mil|Location2.X=7421.063mil|Location1.Y=9577.496mil|Location2.Y=9642.583mil|Absolute=True" class="callback"><acronym title="dxpprocess://PCB:Zoom?document=C:\Users\Public\Documents\Altium\Flash Card Reader Product\Flash_Card_Reader\PCB1.PcbDoc;viewname=PCBEditor;Action=AREA_DYNAMICZOOM|Location1.X=7298.953mil|Location2.X=7421.063mil|Location1.Y=9577.496mil|Location2.Y=9642.583mil|Absolute=True">Un-Routed Net Constraint: Net GND Between Pad Micro Controller-49_8(4731.496mil,1810.039mil) on Top Layer And Pad Micro Controller-49_1(4809.252mil,1810.039mil) on Top Layer </acronym></a><br></td>
+</tr>
+<tr class="onmouseout_even" onmouseover="className = 'onmouseover_even'" onmouseout="className = 'onmouseout_even'">
+<td class="column1"><a href="dxpprocess://PCB:Zoom?document=C:\Users\Public\Documents\Altium\Flash Card Reader Product\Flash_Card_Reader\PCB1.PcbDoc;viewname=PCBEditor;Action=AREA_DYNAMICZOOM|Location1.X=7376.709mil|Location2.X=7441.795mil|Location1.Y=9421.984mil|Location2.Y=9564.827mil|Absolute=True" class="callback"><acronym title="dxpprocess://PCB:Zoom?document=C:\Users\Public\Documents\Altium\Flash Card Reader Product\Flash_Card_Reader\PCB1.PcbDoc;viewname=PCBEditor;Action=AREA_DYNAMICZOOM|Location1.X=7376.709mil|Location2.X=7441.795mil|Location1.Y=9421.984mil|Location2.Y=9564.827mil|Absolute=True">Un-Routed Net Constraint: Net GND Between Pad Micro Controller-49_3(4809.252mil,1654.528mil) on Top Layer And Pad Micro Controller-49_2(4809.252mil,1732.284mil) on Top Layer </acronym></a><br></td>
+</tr>
+<tr class="onmouseout_odd" onmouseover="className = 'onmouseover_odd'" onmouseout="className = 'onmouseout_odd'">
+<td class="column1"><a href="dxpprocess://PCB:Zoom?document=C:\Users\Public\Documents\Altium\Flash Card Reader Product\Flash_Card_Reader\PCB1.PcbDoc;viewname=PCBEditor;Action=AREA_DYNAMICZOOM|Location1.X=7298.953mil|Location2.X=7441.795mil|Location1.Y=9421.984mil|Location2.Y=9487.071mil|Absolute=True" class="callback"><acronym title="dxpprocess://PCB:Zoom?document=C:\Users\Public\Documents\Altium\Flash Card Reader Product\Flash_Card_Reader\PCB1.PcbDoc;viewname=PCBEditor;Action=AREA_DYNAMICZOOM|Location1.X=7298.953mil|Location2.X=7441.795mil|Location1.Y=9421.984mil|Location2.Y=9487.071mil|Absolute=True">Un-Routed Net Constraint: Net GND Between Pad Micro Controller-49_4(4731.496mil,1654.528mil) on Top Layer And Pad Micro Controller-49_3(4809.252mil,1654.528mil) on Top Layer </acronym></a><br></td>
+</tr>
+<tr class="onmouseout_even" onmouseover="className = 'onmouseover_even'" onmouseout="className = 'onmouseout_even'">
+<td class="column1"><a href="dxpprocess://PCB:Zoom?document=C:\Users\Public\Documents\Altium\Flash Card Reader Product\Flash_Card_Reader\PCB1.PcbDoc;viewname=PCBEditor;Action=AREA_DYNAMICZOOM|Location1.X=7221.197mil|Location2.X=7364.039mil|Location1.Y=9421.984mil|Location2.Y=9487.071mil|Absolute=True" class="callback"><acronym title="dxpprocess://PCB:Zoom?document=C:\Users\Public\Documents\Altium\Flash Card Reader Product\Flash_Card_Reader\PCB1.PcbDoc;viewname=PCBEditor;Action=AREA_DYNAMICZOOM|Location1.X=7221.197mil|Location2.X=7364.039mil|Location1.Y=9421.984mil|Location2.Y=9487.071mil|Absolute=True">Un-Routed Net Constraint: Net GND Between Pad Micro Controller-49_5(4653.74mil,1654.528mil) on Top Layer And Pad Micro Controller-49_4(4731.496mil,1654.528mil) on Top Layer </acronym></a><br></td>
+</tr>
+<tr class="onmouseout_odd" onmouseover="className = 'onmouseover_odd'" onmouseout="className = 'onmouseout_odd'">
+<td class="column1"><a href="dxpprocess://PCB:Zoom?document=C:\Users\Public\Documents\Altium\Flash Card Reader Product\Flash_Card_Reader\PCB1.PcbDoc;viewname=PCBEditor;Action=AREA_DYNAMICZOOM|Location1.X=7221.197mil|Location2.X=7286.283mil|Location1.Y=9421.984mil|Location2.Y=9564.827mil|Absolute=True" class="callback"><acronym title="dxpprocess://PCB:Zoom?document=C:\Users\Public\Documents\Altium\Flash Card Reader Product\Flash_Card_Reader\PCB1.PcbDoc;viewname=PCBEditor;Action=AREA_DYNAMICZOOM|Location1.X=7221.197mil|Location2.X=7286.283mil|Location1.Y=9421.984mil|Location2.Y=9564.827mil|Absolute=True">Un-Routed Net Constraint: Net GND Between Pad Micro Controller-49_5(4653.74mil,1654.528mil) on Top Layer And Pad Micro Controller-49_6(4653.74mil,1732.284mil) on Top Layer </acronym></a><br></td>
+</tr>
+<tr class="onmouseout_even" onmouseover="className = 'onmouseover_even'" onmouseout="className = 'onmouseout_even'">
+<td class="column1"><a href="dxpprocess://PCB:Zoom?document=C:\Users\Public\Documents\Altium\Flash Card Reader Product\Flash_Card_Reader\PCB1.PcbDoc;viewname=PCBEditor;Action=AREA_DYNAMICZOOM|Location1.X=7118.835mil|Location2.X=7286.283mil|Location1.Y=9280.252mil|Location2.Y=9487.071mil|Absolute=True" class="callback"><acronym title="dxpprocess://PCB:Zoom?document=C:\Users\Public\Documents\Altium\Flash Card Reader Product\Flash_Card_Reader\PCB1.PcbDoc;viewname=PCBEditor;Action=AREA_DYNAMICZOOM|Location1.X=7118.835mil|Location2.X=7286.283mil|Location1.Y=9280.252mil|Location2.Y=9487.071mil|Absolute=True">Un-Routed Net Constraint: Net GND Between Pad Micro Controller-51(4536.614mil,1498.032mil) on Top Layer And Pad Micro Controller-49_5(4653.74mil,1654.528mil) on Top Layer </acronym></a><br></td>
+</tr>
+<tr class="onmouseout_odd" onmouseover="className = 'onmouseover_odd'" onmouseout="className = 'onmouseout_odd'">
+<td class="column1"><a href="dxpprocess://PCB:Zoom?document=C:\Users\Public\Documents\Altium\Flash Card Reader Product\Flash_Card_Reader\PCB1.PcbDoc;viewname=PCBEditor;Action=AREA_DYNAMICZOOM|Location1.X=7221.197mil|Location2.X=7364.039mil|Location1.Y=9577.496mil|Location2.Y=9642.583mil|Absolute=True" class="callback"><acronym title="dxpprocess://PCB:Zoom?document=C:\Users\Public\Documents\Altium\Flash Card Reader Product\Flash_Card_Reader\PCB1.PcbDoc;viewname=PCBEditor;Action=AREA_DYNAMICZOOM|Location1.X=7221.197mil|Location2.X=7364.039mil|Location1.Y=9577.496mil|Location2.Y=9642.583mil|Absolute=True">Un-Routed Net Constraint: Net GND Between Pad Micro Controller-49_7(4653.74mil,1810.039mil) on Top Layer And Pad Micro Controller-49_8(4731.496mil,1810.039mil) on Top Layer </acronym></a><br></td>
+</tr>
+<tr class="onmouseout_even" onmouseover="className = 'onmouseover_even'" onmouseout="className = 'onmouseout_even'">
+<td class="column1"><a href="dxpprocess://PCB:Zoom?document=C:\Users\Public\Documents\Altium\Flash Card Reader Product\Flash_Card_Reader\PCB1.PcbDoc;viewname=PCBEditor;Action=AREA_DYNAMICZOOM|Location1.X=7298.953mil|Location2.X=7364.039mil|Location1.Y=9499.74mil|Location2.Y=9642.583mil|Absolute=True" class="callback"><acronym title="dxpprocess://PCB:Zoom?document=C:\Users\Public\Documents\Altium\Flash Card Reader Product\Flash_Card_Reader\PCB1.PcbDoc;viewname=PCBEditor;Action=AREA_DYNAMICZOOM|Location1.X=7298.953mil|Location2.X=7364.039mil|Location1.Y=9499.74mil|Location2.Y=9642.583mil|Absolute=True">Un-Routed Net Constraint: Net GND Between Pad Micro Controller-49_9(4731.496mil,1732.284mil) on Top Layer And Pad Micro Controller-49_8(4731.496mil,1810.039mil) on Top Layer </acronym></a><br></td>
+</tr>
+</table></a><hr color="#EEEEEE"><a href="#top" style="font-size: 0.9em">Back to top</a><br><br><a name="IDFSJ43EPZK4M3BUUWTVE1WCPT5FBMKHM1WIV13GLZ3F3SJ3M3XFRD"><table>
+<tr>
+<th style="text-align : left" colspan="1" class="rule">Hole Size Constraint (Min=1mil) (Max=100mil) (All)</th>
+</tr>
+<tr class="onmouseout_odd" onmouseover="className = 'onmouseover_odd'" onmouseout="className = 'onmouseout_odd'">
+<td class="column1"><a href="dxpprocess://PCB:Zoom?document=C:\Users\Public\Documents\Altium\Flash Card Reader Product\Flash_Card_Reader\PCB1.PcbDoc;viewname=PCBEditor;Action=AREA_DYNAMICZOOM|Location1.X=5403.903mil|Location2.X=5544.916mil|Location1.Y=9539.336mil|Location2.Y=9680.349mil|Absolute=True" class="callback"><acronym title="dxpprocess://PCB:Zoom?document=C:\Users\Public\Documents\Altium\Flash Card Reader Product\Flash_Card_Reader\PCB1.PcbDoc;viewname=PCBEditor;Action=AREA_DYNAMICZOOM|Location1.X=5403.903mil|Location2.X=5544.916mil|Location1.Y=9539.336mil|Location2.Y=9680.349mil|Absolute=True">Hole Size Constraint: (139.764mil &gt; 100mil) Pad 3V7-(2874.409mil,1809.842mil) on Multi-Layer Actual Hole Size = 139.764mil</acronym></a><br></td>
+</tr>
+<tr class="onmouseout_even" onmouseover="className = 'onmouseover_even'" onmouseout="className = 'onmouseout_even'">
+<td class="column1"><a href="dxpprocess://PCB:Zoom?document=C:\Users\Public\Documents\Altium\Flash Card Reader Product\Flash_Card_Reader\PCB1.PcbDoc;viewname=PCBEditor;Action=AREA_DYNAMICZOOM|Location1.X=3230.674mil|Location2.X=3371.688mil|Location1.Y=8919.651mil|Location2.Y=9060.664mil|Absolute=True" class="callback"><acronym title="dxpprocess://PCB:Zoom?document=C:\Users\Public\Documents\Altium\Flash Card Reader Product\Flash_Card_Reader\PCB1.PcbDoc;viewname=PCBEditor;Action=AREA_DYNAMICZOOM|Location1.X=3230.674mil|Location2.X=3371.688mil|Location1.Y=8919.651mil|Location2.Y=9060.664mil|Absolute=True">Hole Size Constraint: (139.764mil &gt; 100mil) Pad 3V7-(701.181mil,1190.158mil) on Multi-Layer Actual Hole Size = 139.764mil</acronym></a><br></td>
+</tr>
+</table></a><hr color="#EEEEEE"><a href="#top" style="font-size: 0.9em">Back to top</a><br><br><a name="ID12XCGGZ0JCJIEQC050TUEFJ05BTMINDP5PDXL3OTFFCF2NE3PTRF"><table>
+<tr>
+<th style="text-align : left" colspan="1" class="rule">Minimum Solder Mask Sliver (Gap=10mil) (All),(All)</th>
+</tr>
+<tr class="onmouseout_odd" onmouseover="className = 'onmouseover_odd'" onmouseout="className = 'onmouseout_odd'">
+<td class="column1"><a href="dxpprocess://PCB:Zoom?document=C:\Users\Public\Documents\Altium\Flash Card Reader Product\Flash_Card_Reader\PCB1.PcbDoc;viewname=PCBEditor;Action=AREA_DYNAMICZOOM|Location1.X=7467.603mil|Location2.X=7478.853mil|Location1.Y=9778.69mil|Location2.Y=9789.94mil|Absolute=True" class="callback"><acronym title="dxpprocess://PCB:Zoom?document=C:\Users\Public\Documents\Altium\Flash Card Reader Product\Flash_Card_Reader\PCB1.PcbDoc;viewname=PCBEditor;Action=AREA_DYNAMICZOOM|Location1.X=7467.603mil|Location2.X=7478.853mil|Location1.Y=9778.69mil|Location2.Y=9789.94mil|Absolute=True">Minimum Solder Mask Sliver Constraint: (7.748mil &lt; 10mil) Between Pad Micro Controller-1(4888.976mil,1964.567mil) on Top Layer And Pad Micro Controller-2(4857.48mil,1964.567mil) on Top Layer [Top Solder] Mask Sliver [7.748mil]</acronym></a><br></td>
+</tr>
+<tr class="onmouseout_even" onmouseover="className = 'onmouseover_even'" onmouseout="className = 'onmouseout_even'">
+<td class="column1"><a href="dxpprocess://PCB:Zoom?document=C:\Users\Public\Documents\Altium\Flash Card Reader Product\Flash_Card_Reader\PCB1.PcbDoc;viewname=PCBEditor;Action=AREA_DYNAMICZOOM|Location1.X=7499.099mil|Location2.X=7510.349mil|Location1.Y=9778.69mil|Location2.Y=9789.94mil|Absolute=True" class="callback"><acronym title="dxpprocess://PCB:Zoom?document=C:\Users\Public\Documents\Altium\Flash Card Reader Product\Flash_Card_Reader\PCB1.PcbDoc;viewname=PCBEditor;Action=AREA_DYNAMICZOOM|Location1.X=7499.099mil|Location2.X=7510.349mil|Location1.Y=9778.69mil|Location2.Y=9789.94mil|Absolute=True">Minimum Solder Mask Sliver Constraint: (7.748mil &lt; 10mil) Between Pad Micro Controller-1(4888.976mil,1964.567mil) on Top Layer And Pad Micro Controller-53(4926.378mil,1966.535mil) on Top Layer [Top Solder] Mask Sliver [7.748mil]</acronym></a><br></td>
+</tr>
+<tr class="onmouseout_odd" onmouseover="className = 'onmouseover_odd'" onmouseout="className = 'onmouseout_odd'">
+<td class="column1"><a href="dxpprocess://PCB:Zoom?document=C:\Users\Public\Documents\Altium\Flash Card Reader Product\Flash_Card_Reader\PCB1.PcbDoc;viewname=PCBEditor;Action=AREA_DYNAMICZOOM|Location1.X=7184.139mil|Location2.X=7195.389mil|Location1.Y=9778.69mil|Location2.Y=9789.94mil|Absolute=True" class="callback"><acronym title="dxpprocess://PCB:Zoom?document=C:\Users\Public\Documents\Altium\Flash Card Reader Product\Flash_Card_Reader\PCB1.PcbDoc;viewname=PCBEditor;Action=AREA_DYNAMICZOOM|Location1.X=7184.139mil|Location2.X=7195.389mil|Location1.Y=9778.69mil|Location2.Y=9789.94mil|Absolute=True">Minimum Solder Mask Sliver Constraint: (7.748mil &lt; 10mil) Between Pad Micro Controller-10(4605.512mil,1964.567mil) on Top Layer And Pad Micro Controller-11(4574.016mil,1964.567mil) on Top Layer [Top Solder] Mask Sliver [7.748mil]</acronym></a><br></td>
+</tr>
+<tr class="onmouseout_even" onmouseover="className = 'onmouseover_even'" onmouseout="className = 'onmouseout_even'">
+<td class="column1"><a href="dxpprocess://PCB:Zoom?document=C:\Users\Public\Documents\Altium\Flash Card Reader Product\Flash_Card_Reader\PCB1.PcbDoc;viewname=PCBEditor;Action=AREA_DYNAMICZOOM|Location1.X=7215.635mil|Location2.X=7226.885mil|Location1.Y=9778.69mil|Location2.Y=9789.94mil|Absolute=True" class="callback"><acronym title="dxpprocess://PCB:Zoom?document=C:\Users\Public\Documents\Altium\Flash Card Reader Product\Flash_Card_Reader\PCB1.PcbDoc;viewname=PCBEditor;Action=AREA_DYNAMICZOOM|Location1.X=7215.635mil|Location2.X=7226.885mil|Location1.Y=9778.69mil|Location2.Y=9789.94mil|Absolute=True">Minimum Solder Mask Sliver Constraint: (7.748mil &lt; 10mil) Between Pad Micro Controller-10(4605.512mil,1964.567mil) on Top Layer And Pad Micro Controller-9(4637.008mil,1964.567mil) on Top Layer [Top Solder] Mask Sliver [7.748mil]</acronym></a><br></td>
+</tr>
+<tr class="onmouseout_odd" onmouseover="className = 'onmouseover_odd'" onmouseout="className = 'onmouseout_odd'">
+<td class="column1"><a href="dxpprocess://PCB:Zoom?document=C:\Users\Public\Documents\Altium\Flash Card Reader Product\Flash_Card_Reader\PCB1.PcbDoc;viewname=PCBEditor;Action=AREA_DYNAMICZOOM|Location1.X=7152.643mil|Location2.X=7163.893mil|Location1.Y=9778.69mil|Location2.Y=9789.94mil|Absolute=True" class="callback"><acronym title="dxpprocess://PCB:Zoom?document=C:\Users\Public\Documents\Altium\Flash Card Reader Product\Flash_Card_Reader\PCB1.PcbDoc;viewname=PCBEditor;Action=AREA_DYNAMICZOOM|Location1.X=7152.643mil|Location2.X=7163.893mil|Location1.Y=9778.69mil|Location2.Y=9789.94mil|Absolute=True">Minimum Solder Mask Sliver Constraint: (7.748mil &lt; 10mil) Between Pad Micro Controller-11(4574.016mil,1964.567mil) on Top Layer And Pad Micro Controller-52(4536.614mil,1966.535mil) on Top Layer [Top Solder] Mask Sliver [7.748mil]</acronym></a><br></td>
+</tr>
+<tr class="onmouseout_even" onmouseover="className = 'onmouseover_even'" onmouseout="className = 'onmouseout_even'">
+<td class="column1"><a href="dxpprocess://PCB:Zoom?document=C:\Users\Public\Documents\Altium\Flash Card Reader Product\Flash_Card_Reader\PCB1.PcbDoc;viewname=PCBEditor;Action=AREA_DYNAMICZOOM|Location1.X=7113.21mil|Location2.X=7124.46mil|Location1.Y=9699.887mil|Location2.Y=9711.137mil|Absolute=True" class="callback"><acronym title="dxpprocess://PCB:Zoom?document=C:\Users\Public\Documents\Altium\Flash Card Reader Product\Flash_Card_Reader\PCB1.PcbDoc;viewname=PCBEditor;Action=AREA_DYNAMICZOOM|Location1.X=7113.21mil|Location2.X=7124.46mil|Location1.Y=9699.887mil|Location2.Y=9711.137mil|Absolute=True">Minimum Solder Mask Sliver Constraint: (7.748mil &lt; 10mil) Between Pad Micro Controller-12(4538.583mil,1921.26mil) on Top Layer And Pad Micro Controller-13(4538.583mil,1889.764mil) on Top Layer [Top Solder] Mask Sliver [7.748mil]</acronym></a><br></td>
+</tr>
+<tr class="onmouseout_odd" onmouseover="className = 'onmouseover_odd'" onmouseout="className = 'onmouseout_odd'">
+<td class="column1"><a href="dxpprocess://PCB:Zoom?document=C:\Users\Public\Documents\Altium\Flash Card Reader Product\Flash_Card_Reader\PCB1.PcbDoc;viewname=PCBEditor;Action=AREA_DYNAMICZOOM|Location1.X=7113.21mil|Location2.X=7124.46mil|Location1.Y=9668.391mil|Location2.Y=9679.641mil|Absolute=True" class="callback"><acronym title="dxpprocess://PCB:Zoom?document=C:\Users\Public\Documents\Altium\Flash Card Reader Product\Flash_Card_Reader\PCB1.PcbDoc;viewname=PCBEditor;Action=AREA_DYNAMICZOOM|Location1.X=7113.21mil|Location2.X=7124.46mil|Location1.Y=9668.391mil|Location2.Y=9679.641mil|Absolute=True">Minimum Solder Mask Sliver Constraint: (7.748mil &lt; 10mil) Between Pad Micro Controller-13(4538.583mil,1889.764mil) on Top Layer And Pad Micro Controller-14(4538.583mil,1858.268mil) on Top Layer [Top Solder] Mask Sliver [7.748mil]</acronym></a><br></td>
+</tr>
+<tr class="onmouseout_even" onmouseover="className = 'onmouseover_even'" onmouseout="className = 'onmouseout_even'">
+<td class="column1"><a href="dxpprocess://PCB:Zoom?document=C:\Users\Public\Documents\Altium\Flash Card Reader Product\Flash_Card_Reader\PCB1.PcbDoc;viewname=PCBEditor;Action=AREA_DYNAMICZOOM|Location1.X=7113.21mil|Location2.X=7124.46mil|Location1.Y=9636.895mil|Location2.Y=9648.145mil|Absolute=True" class="callback"><acronym title="dxpprocess://PCB:Zoom?document=C:\Users\Public\Documents\Altium\Flash Card Reader Product\Flash_Card_Reader\PCB1.PcbDoc;viewname=PCBEditor;Action=AREA_DYNAMICZOOM|Location1.X=7113.21mil|Location2.X=7124.46mil|Location1.Y=9636.895mil|Location2.Y=9648.145mil|Absolute=True">Minimum Solder Mask Sliver Constraint: (7.748mil &lt; 10mil) Between Pad Micro Controller-14(4538.583mil,1858.268mil) on Top Layer And Pad Micro Controller-15(4538.583mil,1826.772mil) on Top Layer [Top Solder] Mask Sliver [7.748mil]</acronym></a><br></td>
+</tr>
+<tr class="onmouseout_odd" onmouseover="className = 'onmouseover_odd'" onmouseout="className = 'onmouseout_odd'">
+<td class="column1"><a href="dxpprocess://PCB:Zoom?document=C:\Users\Public\Documents\Altium\Flash Card Reader Product\Flash_Card_Reader\PCB1.PcbDoc;viewname=PCBEditor;Action=AREA_DYNAMICZOOM|Location1.X=7113.21mil|Location2.X=7124.46mil|Location1.Y=9605.399mil|Location2.Y=9616.649mil|Absolute=True" class="callback"><acronym title="dxpprocess://PCB:Zoom?document=C:\Users\Public\Documents\Altium\Flash Card Reader Product\Flash_Card_Reader\PCB1.PcbDoc;viewname=PCBEditor;Action=AREA_DYNAMICZOOM|Location1.X=7113.21mil|Location2.X=7124.46mil|Location1.Y=9605.399mil|Location2.Y=9616.649mil|Absolute=True">Minimum Solder Mask Sliver Constraint: (7.748mil &lt; 10mil) Between Pad Micro Controller-15(4538.583mil,1826.772mil) on Top Layer And Pad Micro Controller-16(4538.583mil,1795.276mil) on Top Layer [Top Solder] Mask Sliver [7.748mil]</acronym></a><br></td>
+</tr>
+<tr class="onmouseout_even" onmouseover="className = 'onmouseover_even'" onmouseout="className = 'onmouseout_even'">
+<td class="column1"><a href="dxpprocess://PCB:Zoom?document=C:\Users\Public\Documents\Altium\Flash Card Reader Product\Flash_Card_Reader\PCB1.PcbDoc;viewname=PCBEditor;Action=AREA_DYNAMICZOOM|Location1.X=7113.21mil|Location2.X=7124.46mil|Location1.Y=9573.903mil|Location2.Y=9585.153mil|Absolute=True" class="callback"><acronym title="dxpprocess://PCB:Zoom?document=C:\Users\Public\Documents\Altium\Flash Card Reader Product\Flash_Card_Reader\PCB1.PcbDoc;viewname=PCBEditor;Action=AREA_DYNAMICZOOM|Location1.X=7113.21mil|Location2.X=7124.46mil|Location1.Y=9573.903mil|Location2.Y=9585.153mil|Absolute=True">Minimum Solder Mask Sliver Constraint: (7.748mil &lt; 10mil) Between Pad Micro Controller-16(4538.583mil,1795.276mil) on Top Layer And Pad Micro Controller-17(4538.583mil,1763.78mil) on Top Layer [Top Solder] Mask Sliver [7.748mil]</acronym></a><br></td>
+</tr>
+<tr class="onmouseout_odd" onmouseover="className = 'onmouseover_odd'" onmouseout="className = 'onmouseout_odd'">
+<td class="column1"><a href="dxpprocess://PCB:Zoom?document=C:\Users\Public\Documents\Altium\Flash Card Reader Product\Flash_Card_Reader\PCB1.PcbDoc;viewname=PCBEditor;Action=AREA_DYNAMICZOOM|Location1.X=7113.21mil|Location2.X=7124.46mil|Location1.Y=9542.406mil|Location2.Y=9553.656mil|Absolute=True" class="callback"><acronym title="dxpprocess://PCB:Zoom?document=C:\Users\Public\Documents\Altium\Flash Card Reader Product\Flash_Card_Reader\PCB1.PcbDoc;viewname=PCBEditor;Action=AREA_DYNAMICZOOM|Location1.X=7113.21mil|Location2.X=7124.46mil|Location1.Y=9542.406mil|Location2.Y=9553.656mil|Absolute=True">Minimum Solder Mask Sliver Constraint: (7.748mil &lt; 10mil) Between Pad Micro Controller-17(4538.583mil,1763.78mil) on Top Layer And Pad Micro Controller-18(4538.583mil,1732.284mil) on Top Layer [Top Solder] Mask Sliver [7.748mil]</acronym></a><br></td>
+</tr>
+<tr class="onmouseout_even" onmouseover="className = 'onmouseover_even'" onmouseout="className = 'onmouseout_even'">
+<td class="column1"><a href="dxpprocess://PCB:Zoom?document=C:\Users\Public\Documents\Altium\Flash Card Reader Product\Flash_Card_Reader\PCB1.PcbDoc;viewname=PCBEditor;Action=AREA_DYNAMICZOOM|Location1.X=7113.21mil|Location2.X=7124.46mil|Location1.Y=9510.91mil|Location2.Y=9522.16mil|Absolute=True" class="callback"><acronym title="dxpprocess://PCB:Zoom?document=C:\Users\Public\Documents\Altium\Flash Card Reader Product\Flash_Card_Reader\PCB1.PcbDoc;viewname=PCBEditor;Action=AREA_DYNAMICZOOM|Location1.X=7113.21mil|Location2.X=7124.46mil|Location1.Y=9510.91mil|Location2.Y=9522.16mil|Absolute=True">Minimum Solder Mask Sliver Constraint: (7.748mil &lt; 10mil) Between Pad Micro Controller-18(4538.583mil,1732.284mil) on Top Layer And Pad Micro Controller-19(4538.583mil,1700.787mil) on Top Layer [Top Solder] Mask Sliver [7.748mil]</acronym></a><br></td>
+</tr>
+<tr class="onmouseout_odd" onmouseover="className = 'onmouseover_odd'" onmouseout="className = 'onmouseout_odd'">
+<td class="column1"><a href="dxpprocess://PCB:Zoom?document=C:\Users\Public\Documents\Altium\Flash Card Reader Product\Flash_Card_Reader\PCB1.PcbDoc;viewname=PCBEditor;Action=AREA_DYNAMICZOOM|Location1.X=7113.21mil|Location2.X=7124.46mil|Location1.Y=9479.414mil|Location2.Y=9490.664mil|Absolute=True" class="callback"><acronym title="dxpprocess://PCB:Zoom?document=C:\Users\Public\Documents\Altium\Flash Card Reader Product\Flash_Card_Reader\PCB1.PcbDoc;viewname=PCBEditor;Action=AREA_DYNAMICZOOM|Location1.X=7113.21mil|Location2.X=7124.46mil|Location1.Y=9479.414mil|Location2.Y=9490.664mil|Absolute=True">Minimum Solder Mask Sliver Constraint: (7.748mil &lt; 10mil) Between Pad Micro Controller-19(4538.583mil,1700.787mil) on Top Layer And Pad Micro Controller-20(4538.583mil,1669.291mil) on Top Layer [Top Solder] Mask Sliver [7.748mil]</acronym></a><br></td>
+</tr>
+<tr class="onmouseout_even" onmouseover="className = 'onmouseover_even'" onmouseout="className = 'onmouseout_even'">
+<td class="column1"><a href="dxpprocess://PCB:Zoom?document=C:\Users\Public\Documents\Altium\Flash Card Reader Product\Flash_Card_Reader\PCB1.PcbDoc;viewname=PCBEditor;Action=AREA_DYNAMICZOOM|Location1.X=7436.107mil|Location2.X=7447.357mil|Location1.Y=9778.69mil|Location2.Y=9789.94mil|Absolute=True" class="callback"><acronym title="dxpprocess://PCB:Zoom?document=C:\Users\Public\Documents\Altium\Flash Card Reader Product\Flash_Card_Reader\PCB1.PcbDoc;viewname=PCBEditor;Action=AREA_DYNAMICZOOM|Location1.X=7436.107mil|Location2.X=7447.357mil|Location1.Y=9778.69mil|Location2.Y=9789.94mil|Absolute=True">Minimum Solder Mask Sliver Constraint: (7.748mil &lt; 10mil) Between Pad Micro Controller-2(4857.48mil,1964.567mil) on Top Layer And Pad Micro Controller-3(4825.984mil,1964.567mil) on Top Layer [Top Solder] Mask Sliver [7.748mil]</acronym></a><br></td>
+</tr>
+<tr class="onmouseout_odd" onmouseover="className = 'onmouseover_odd'" onmouseout="className = 'onmouseout_odd'">
+<td class="column1"><a href="dxpprocess://PCB:Zoom?document=C:\Users\Public\Documents\Altium\Flash Card Reader Product\Flash_Card_Reader\PCB1.PcbDoc;viewname=PCBEditor;Action=AREA_DYNAMICZOOM|Location1.X=7113.21mil|Location2.X=7124.46mil|Location1.Y=9447.918mil|Location2.Y=9459.168mil|Absolute=True" class="callback"><acronym title="dxpprocess://PCB:Zoom?document=C:\Users\Public\Documents\Altium\Flash Card Reader Product\Flash_Card_Reader\PCB1.PcbDoc;viewname=PCBEditor;Action=AREA_DYNAMICZOOM|Location1.X=7113.21mil|Location2.X=7124.46mil|Location1.Y=9447.918mil|Location2.Y=9459.168mil|Absolute=True">Minimum Solder Mask Sliver Constraint: (7.748mil &lt; 10mil) Between Pad Micro Controller-20(4538.583mil,1669.291mil) on Top Layer And Pad Micro Controller-21(4538.583mil,1637.795mil) on Top Layer [Top Solder] Mask Sliver [7.748mil]</acronym></a><br></td>
+</tr>
+<tr class="onmouseout_even" onmouseover="className = 'onmouseover_even'" onmouseout="className = 'onmouseout_even'">
+<td class="column1"><a href="dxpprocess://PCB:Zoom?document=C:\Users\Public\Documents\Altium\Flash Card Reader Product\Flash_Card_Reader\PCB1.PcbDoc;viewname=PCBEditor;Action=AREA_DYNAMICZOOM|Location1.X=7113.21mil|Location2.X=7124.46mil|Location1.Y=9416.422mil|Location2.Y=9427.672mil|Absolute=True" class="callback"><acronym title="dxpprocess://PCB:Zoom?document=C:\Users\Public\Documents\Altium\Flash Card Reader Product\Flash_Card_Reader\PCB1.PcbDoc;viewname=PCBEditor;Action=AREA_DYNAMICZOOM|Location1.X=7113.21mil|Location2.X=7124.46mil|Location1.Y=9416.422mil|Location2.Y=9427.672mil|Absolute=True">Minimum Solder Mask Sliver Constraint: (7.748mil &lt; 10mil) Between Pad Micro Controller-21(4538.583mil,1637.795mil) on Top Layer And Pad Micro Controller-22(4538.583mil,1606.299mil) on Top Layer [Top Solder] Mask Sliver [7.748mil]</acronym></a><br></td>
+</tr>
+<tr class="onmouseout_odd" onmouseover="className = 'onmouseover_odd'" onmouseout="className = 'onmouseout_odd'">
+<td class="column1"><a href="dxpprocess://PCB:Zoom?document=C:\Users\Public\Documents\Altium\Flash Card Reader Product\Flash_Card_Reader\PCB1.PcbDoc;viewname=PCBEditor;Action=AREA_DYNAMICZOOM|Location1.X=7113.21mil|Location2.X=7124.46mil|Location1.Y=9384.926mil|Location2.Y=9396.176mil|Absolute=True" class="callback"><acronym title="dxpprocess://PCB:Zoom?document=C:\Users\Public\Documents\Altium\Flash Card Reader Product\Flash_Card_Reader\PCB1.PcbDoc;viewname=PCBEditor;Action=AREA_DYNAMICZOOM|Location1.X=7113.21mil|Location2.X=7124.46mil|Location1.Y=9384.926mil|Location2.Y=9396.176mil|Absolute=True">Minimum Solder Mask Sliver Constraint: (7.748mil &lt; 10mil) Between Pad Micro Controller-22(4538.583mil,1606.299mil) on Top Layer And Pad Micro Controller-23(4538.583mil,1574.803mil) on Top Layer [Top Solder] Mask Sliver [7.748mil]</acronym></a><br></td>
+</tr>
+<tr class="onmouseout_even" onmouseover="className = 'onmouseover_even'" onmouseout="className = 'onmouseout_even'">
+<td class="column1"><a href="dxpprocess://PCB:Zoom?document=C:\Users\Public\Documents\Altium\Flash Card Reader Product\Flash_Card_Reader\PCB1.PcbDoc;viewname=PCBEditor;Action=AREA_DYNAMICZOOM|Location1.X=7113.21mil|Location2.X=7124.46mil|Location1.Y=9353.43mil|Location2.Y=9364.68mil|Absolute=True" class="callback"><acronym title="dxpprocess://PCB:Zoom?document=C:\Users\Public\Documents\Altium\Flash Card Reader Product\Flash_Card_Reader\PCB1.PcbDoc;viewname=PCBEditor;Action=AREA_DYNAMICZOOM|Location1.X=7113.21mil|Location2.X=7124.46mil|Location1.Y=9353.43mil|Location2.Y=9364.68mil|Absolute=True">Minimum Solder Mask Sliver Constraint: (7.748mil &lt; 10mil) Between Pad Micro Controller-23(4538.583mil,1574.803mil) on Top Layer And Pad Micro Controller-24(4538.583mil,1543.307mil) on Top Layer [Top Solder] Mask Sliver [7.748mil]</acronym></a><br></td>
+</tr>
+<tr class="onmouseout_odd" onmouseover="className = 'onmouseover_odd'" onmouseout="className = 'onmouseout_odd'">
+<td class="column1"><a href="dxpprocess://PCB:Zoom?document=C:\Users\Public\Documents\Altium\Flash Card Reader Product\Flash_Card_Reader\PCB1.PcbDoc;viewname=PCBEditor;Action=AREA_DYNAMICZOOM|Location1.X=7184.139mil|Location2.X=7195.389mil|Location1.Y=9314.123mil|Location2.Y=9325.373mil|Absolute=True" class="callback"><acronym title="dxpprocess://PCB:Zoom?document=C:\Users\Public\Documents\Altium\Flash Card Reader Product\Flash_Card_Reader\PCB1.PcbDoc;viewname=PCBEditor;Action=AREA_DYNAMICZOOM|Location1.X=7184.139mil|Location2.X=7195.389mil|Location1.Y=9314.123mil|Location2.Y=9325.373mil|Absolute=True">Minimum Solder Mask Sliver Constraint: (7.748mil &lt; 10mil) Between Pad Micro Controller-25(4574.016mil,1500mil) on Top Layer And Pad Micro Controller-26(4605.512mil,1500mil) on Top Layer [Top Solder] Mask Sliver [7.748mil]</acronym></a><br></td>
+</tr>
+<tr class="onmouseout_even" onmouseover="className = 'onmouseover_even'" onmouseout="className = 'onmouseout_even'">
+<td class="column1"><a href="dxpprocess://PCB:Zoom?document=C:\Users\Public\Documents\Altium\Flash Card Reader Product\Flash_Card_Reader\PCB1.PcbDoc;viewname=PCBEditor;Action=AREA_DYNAMICZOOM|Location1.X=7152.643mil|Location2.X=7163.893mil|Location1.Y=9310.186mil|Location2.Y=9321.436mil|Absolute=True" class="callback"><acronym title="dxpprocess://PCB:Zoom?document=C:\Users\Public\Documents\Altium\Flash Card Reader Product\Flash_Card_Reader\PCB1.PcbDoc;viewname=PCBEditor;Action=AREA_DYNAMICZOOM|Location1.X=7152.643mil|Location2.X=7163.893mil|Location1.Y=9310.186mil|Location2.Y=9321.436mil|Absolute=True">Minimum Solder Mask Sliver Constraint: (7.748mil &lt; 10mil) Between Pad Micro Controller-25(4574.016mil,1500mil) on Top Layer And Pad Micro Controller-51(4536.614mil,1498.032mil) on Top Layer [Top Solder] Mask Sliver [7.748mil]</acronym></a><br></td>
+</tr>
+<tr class="onmouseout_odd" onmouseover="className = 'onmouseover_odd'" onmouseout="className = 'onmouseout_odd'">
+<td class="column1"><a href="dxpprocess://PCB:Zoom?document=C:\Users\Public\Documents\Altium\Flash Card Reader Product\Flash_Card_Reader\PCB1.PcbDoc;viewname=PCBEditor;Action=AREA_DYNAMICZOOM|Location1.X=7215.635mil|Location2.X=7226.885mil|Location1.Y=9314.123mil|Location2.Y=9325.373mil|Absolute=True" class="callback"><acronym title="dxpprocess://PCB:Zoom?document=C:\Users\Public\Documents\Altium\Flash Card Reader Product\Flash_Card_Reader\PCB1.PcbDoc;viewname=PCBEditor;Action=AREA_DYNAMICZOOM|Location1.X=7215.635mil|Location2.X=7226.885mil|Location1.Y=9314.123mil|Location2.Y=9325.373mil|Absolute=True">Minimum Solder Mask Sliver Constraint: (7.748mil &lt; 10mil) Between Pad Micro Controller-26(4605.512mil,1500mil) on Top Layer And Pad Micro Controller-27(4637.008mil,1500mil) on Top Layer [Top Solder] Mask Sliver [7.748mil]</acronym></a><br></td>
+</tr>
+<tr class="onmouseout_even" onmouseover="className = 'onmouseover_even'" onmouseout="className = 'onmouseout_even'">
+<td class="column1"><a href="dxpprocess://PCB:Zoom?document=C:\Users\Public\Documents\Altium\Flash Card Reader Product\Flash_Card_Reader\PCB1.PcbDoc;viewname=PCBEditor;Action=AREA_DYNAMICZOOM|Location1.X=7247.131mil|Location2.X=7258.381mil|Location1.Y=9314.123mil|Location2.Y=9325.373mil|Absolute=True" class="callback"><acronym title="dxpprocess://PCB:Zoom?document=C:\Users\Public\Documents\Altium\Flash Card Reader Product\Flash_Card_Reader\PCB1.PcbDoc;viewname=PCBEditor;Action=AREA_DYNAMICZOOM|Location1.X=7247.131mil|Location2.X=7258.381mil|Location1.Y=9314.123mil|Location2.Y=9325.373mil|Absolute=True">Minimum Solder Mask Sliver Constraint: (7.748mil &lt; 10mil) Between Pad Micro Controller-27(4637.008mil,1500mil) on Top Layer And Pad Micro Controller-28(4668.504mil,1500mil) on Top Layer [Top Solder] Mask Sliver [7.748mil]</acronym></a><br></td>
+</tr>
+<tr class="onmouseout_odd" onmouseover="className = 'onmouseover_odd'" onmouseout="className = 'onmouseout_odd'">
+<td class="column1"><a href="dxpprocess://PCB:Zoom?document=C:\Users\Public\Documents\Altium\Flash Card Reader Product\Flash_Card_Reader\PCB1.PcbDoc;viewname=PCBEditor;Action=AREA_DYNAMICZOOM|Location1.X=7278.627mil|Location2.X=7289.877mil|Location1.Y=9314.123mil|Location2.Y=9325.373mil|Absolute=True" class="callback"><acronym title="dxpprocess://PCB:Zoom?document=C:\Users\Public\Documents\Altium\Flash Card Reader Product\Flash_Card_Reader\PCB1.PcbDoc;viewname=PCBEditor;Action=AREA_DYNAMICZOOM|Location1.X=7278.627mil|Location2.X=7289.877mil|Location1.Y=9314.123mil|Location2.Y=9325.373mil|Absolute=True">Minimum Solder Mask Sliver Constraint: (7.748mil &lt; 10mil) Between Pad Micro Controller-28(4668.504mil,1500mil) on Top Layer And Pad Micro Controller-29(4700mil,1500mil) on Top Layer [Top Solder] Mask Sliver [7.748mil]</acronym></a><br></td>
+</tr>
+<tr class="onmouseout_even" onmouseover="className = 'onmouseover_even'" onmouseout="className = 'onmouseout_even'">
+<td class="column1"><a href="dxpprocess://PCB:Zoom?document=C:\Users\Public\Documents\Altium\Flash Card Reader Product\Flash_Card_Reader\PCB1.PcbDoc;viewname=PCBEditor;Action=AREA_DYNAMICZOOM|Location1.X=7310.123mil|Location2.X=7321.373mil|Location1.Y=9314.123mil|Location2.Y=9325.373mil|Absolute=True" class="callback"><acronym title="dxpprocess://PCB:Zoom?document=C:\Users\Public\Documents\Altium\Flash Card Reader Product\Flash_Card_Reader\PCB1.PcbDoc;viewname=PCBEditor;Action=AREA_DYNAMICZOOM|Location1.X=7310.123mil|Location2.X=7321.373mil|Location1.Y=9314.123mil|Location2.Y=9325.373mil|Absolute=True">Minimum Solder Mask Sliver Constraint: (7.748mil &lt; 10mil) Between Pad Micro Controller-29(4700mil,1500mil) on Top Layer And Pad Micro Controller-30(4731.496mil,1500mil) on Top Layer [Top Solder] Mask Sliver [7.748mil]</acronym></a><br></td>
+</tr>
+<tr class="onmouseout_odd" onmouseover="className = 'onmouseover_odd'" onmouseout="className = 'onmouseout_odd'">
+<td class="column1"><a href="dxpprocess://PCB:Zoom?document=C:\Users\Public\Documents\Altium\Flash Card Reader Product\Flash_Card_Reader\PCB1.PcbDoc;viewname=PCBEditor;Action=AREA_DYNAMICZOOM|Location1.X=7404.611mil|Location2.X=7415.861mil|Location1.Y=9778.69mil|Location2.Y=9789.94mil|Absolute=True" class="callback"><acronym title="dxpprocess://PCB:Zoom?document=C:\Users\Public\Documents\Altium\Flash Card Reader Product\Flash_Card_Reader\PCB1.PcbDoc;viewname=PCBEditor;Action=AREA_DYNAMICZOOM|Location1.X=7404.611mil|Location2.X=7415.861mil|Location1.Y=9778.69mil|Location2.Y=9789.94mil|Absolute=True">Minimum Solder Mask Sliver Constraint: (7.748mil &lt; 10mil) Between Pad Micro Controller-3(4825.984mil,1964.567mil) on Top Layer And Pad Micro Controller-4(4794.488mil,1964.567mil) on Top Layer [Top Solder] Mask Sliver [7.748mil]</acronym></a><br></td>
+</tr>
+<tr class="onmouseout_even" onmouseover="className = 'onmouseover_even'" onmouseout="className = 'onmouseout_even'">
+<td class="column1"><a href="dxpprocess://PCB:Zoom?document=C:\Users\Public\Documents\Altium\Flash Card Reader Product\Flash_Card_Reader\PCB1.PcbDoc;viewname=PCBEditor;Action=AREA_DYNAMICZOOM|Location1.X=7341.619mil|Location2.X=7352.869mil|Location1.Y=9314.123mil|Location2.Y=9325.373mil|Absolute=True" class="callback"><acronym title="dxpprocess://PCB:Zoom?document=C:\Users\Public\Documents\Altium\Flash Card Reader Product\Flash_Card_Reader\PCB1.PcbDoc;viewname=PCBEditor;Action=AREA_DYNAMICZOOM|Location1.X=7341.619mil|Location2.X=7352.869mil|Location1.Y=9314.123mil|Location2.Y=9325.373mil|Absolute=True">Minimum Solder Mask Sliver Constraint: (7.748mil &lt; 10mil) Between Pad Micro Controller-30(4731.496mil,1500mil) on Top Layer And Pad Micro Controller-31(4762.992mil,1500mil) on Top Layer [Top Solder] Mask Sliver [7.748mil]</acronym></a><br></td>
+</tr>
+<tr class="onmouseout_odd" onmouseover="className = 'onmouseover_odd'" onmouseout="className = 'onmouseout_odd'">
+<td class="column1"><a href="dxpprocess://PCB:Zoom?document=C:\Users\Public\Documents\Altium\Flash Card Reader Product\Flash_Card_Reader\PCB1.PcbDoc;viewname=PCBEditor;Action=AREA_DYNAMICZOOM|Location1.X=7373.115mil|Location2.X=7384.365mil|Location1.Y=9314.123mil|Location2.Y=9325.373mil|Absolute=True" class="callback"><acronym title="dxpprocess://PCB:Zoom?document=C:\Users\Public\Documents\Altium\Flash Card Reader Product\Flash_Card_Reader\PCB1.PcbDoc;viewname=PCBEditor;Action=AREA_DYNAMICZOOM|Location1.X=7373.115mil|Location2.X=7384.365mil|Location1.Y=9314.123mil|Location2.Y=9325.373mil|Absolute=True">Minimum Solder Mask Sliver Constraint: (7.748mil &lt; 10mil) Between Pad Micro Controller-31(4762.992mil,1500mil) on Top Layer And Pad Micro Controller-32(4794.488mil,1500mil) on Top Layer [Top Solder] Mask Sliver [7.748mil]</acronym></a><br></td>
+</tr>
+<tr class="onmouseout_even" onmouseover="className = 'onmouseover_even'" onmouseout="className = 'onmouseout_even'">
+<td class="column1"><a href="dxpprocess://PCB:Zoom?document=C:\Users\Public\Documents\Altium\Flash Card Reader Product\Flash_Card_Reader\PCB1.PcbDoc;viewname=PCBEditor;Action=AREA_DYNAMICZOOM|Location1.X=7404.611mil|Location2.X=7415.861mil|Location1.Y=9314.123mil|Location2.Y=9325.373mil|Absolute=True" class="callback"><acronym title="dxpprocess://PCB:Zoom?document=C:\Users\Public\Documents\Altium\Flash Card Reader Product\Flash_Card_Reader\PCB1.PcbDoc;viewname=PCBEditor;Action=AREA_DYNAMICZOOM|Location1.X=7404.611mil|Location2.X=7415.861mil|Location1.Y=9314.123mil|Location2.Y=9325.373mil|Absolute=True">Minimum Solder Mask Sliver Constraint: (7.748mil &lt; 10mil) Between Pad Micro Controller-32(4794.488mil,1500mil) on Top Layer And Pad Micro Controller-33(4825.984mil,1500mil) on Top Layer [Top Solder] Mask Sliver [7.748mil]</acronym></a><br></td>
+</tr>
+<tr class="onmouseout_odd" onmouseover="className = 'onmouseover_odd'" onmouseout="className = 'onmouseout_odd'">
+<td class="column1"><a href="dxpprocess://PCB:Zoom?document=C:\Users\Public\Documents\Altium\Flash Card Reader Product\Flash_Card_Reader\PCB1.PcbDoc;viewname=PCBEditor;Action=AREA_DYNAMICZOOM|Location1.X=7436.107mil|Location2.X=7447.357mil|Location1.Y=9314.123mil|Location2.Y=9325.373mil|Absolute=True" class="callback"><acronym title="dxpprocess://PCB:Zoom?document=C:\Users\Public\Documents\Altium\Flash Card Reader Product\Flash_Card_Reader\PCB1.PcbDoc;viewname=PCBEditor;Action=AREA_DYNAMICZOOM|Location1.X=7436.107mil|Location2.X=7447.357mil|Location1.Y=9314.123mil|Location2.Y=9325.373mil|Absolute=True">Minimum Solder Mask Sliver Constraint: (7.748mil &lt; 10mil) Between Pad Micro Controller-33(4825.984mil,1500mil) on Top Layer And Pad Micro Controller-34(4857.48mil,1500mil) on Top Layer [Top Solder] Mask Sliver [7.748mil]</acronym></a><br></td>
+</tr>
+<tr class="onmouseout_even" onmouseover="className = 'onmouseover_even'" onmouseout="className = 'onmouseout_even'">
+<td class="column1"><a href="dxpprocess://PCB:Zoom?document=C:\Users\Public\Documents\Altium\Flash Card Reader Product\Flash_Card_Reader\PCB1.PcbDoc;viewname=PCBEditor;Action=AREA_DYNAMICZOOM|Location1.X=7467.603mil|Location2.X=7478.853mil|Location1.Y=9314.123mil|Location2.Y=9325.373mil|Absolute=True" class="callback"><acronym title="dxpprocess://PCB:Zoom?document=C:\Users\Public\Documents\Altium\Flash Card Reader Product\Flash_Card_Reader\PCB1.PcbDoc;viewname=PCBEditor;Action=AREA_DYNAMICZOOM|Location1.X=7467.603mil|Location2.X=7478.853mil|Location1.Y=9314.123mil|Location2.Y=9325.373mil|Absolute=True">Minimum Solder Mask Sliver Constraint: (7.748mil &lt; 10mil) Between Pad Micro Controller-34(4857.48mil,1500mil) on Top Layer And Pad Micro Controller-35(4888.976mil,1500mil) on Top Layer [Top Solder] Mask Sliver [7.748mil]</acronym></a><br></td>
+</tr>
+<tr class="onmouseout_odd" onmouseover="className = 'onmouseover_odd'" onmouseout="className = 'onmouseout_odd'">
+<td class="column1"><a href="dxpprocess://PCB:Zoom?document=C:\Users\Public\Documents\Altium\Flash Card Reader Product\Flash_Card_Reader\PCB1.PcbDoc;viewname=PCBEditor;Action=AREA_DYNAMICZOOM|Location1.X=7499.099mil|Location2.X=7510.349mil|Location1.Y=9310.186mil|Location2.Y=9321.436mil|Absolute=True" class="callback"><acronym title="dxpprocess://PCB:Zoom?document=C:\Users\Public\Documents\Altium\Flash Card Reader Product\Flash_Card_Reader\PCB1.PcbDoc;viewname=PCBEditor;Action=AREA_DYNAMICZOOM|Location1.X=7499.099mil|Location2.X=7510.349mil|Location1.Y=9310.186mil|Location2.Y=9321.436mil|Absolute=True">Minimum Solder Mask Sliver Constraint: (7.748mil &lt; 10mil) Between Pad Micro Controller-35(4888.976mil,1500mil) on Top Layer And Pad Micro Controller-50(4926.378mil,1498.032mil) on Top Layer [Top Solder] Mask Sliver [7.748mil]</acronym></a><br></td>
+</tr>
+<tr class="onmouseout_even" onmouseover="className = 'onmouseover_even'" onmouseout="className = 'onmouseout_even'">
+<td class="column1"><a href="dxpprocess://PCB:Zoom?document=C:\Users\Public\Documents\Altium\Flash Card Reader Product\Flash_Card_Reader\PCB1.PcbDoc;viewname=PCBEditor;Action=AREA_DYNAMICZOOM|Location1.X=7538.533mil|Location2.X=7549.783mil|Location1.Y=9353.43mil|Location2.Y=9364.68mil|Absolute=True" class="callback"><acronym title="dxpprocess://PCB:Zoom?document=C:\Users\Public\Documents\Altium\Flash Card Reader Product\Flash_Card_Reader\PCB1.PcbDoc;viewname=PCBEditor;Action=AREA_DYNAMICZOOM|Location1.X=7538.533mil|Location2.X=7549.783mil|Location1.Y=9353.43mil|Location2.Y=9364.68mil|Absolute=True">Minimum Solder Mask Sliver Constraint: (7.748mil &lt; 10mil) Between Pad Micro Controller-36(4924.409mil,1543.307mil) on Top Layer And Pad Micro Controller-37(4924.409mil,1574.803mil) on Top Layer [Top Solder] Mask Sliver [7.748mil]</acronym></a><br></td>
+</tr>
+<tr class="onmouseout_odd" onmouseover="className = 'onmouseover_odd'" onmouseout="className = 'onmouseout_odd'">
+<td class="column1"><a href="dxpprocess://PCB:Zoom?document=C:\Users\Public\Documents\Altium\Flash Card Reader Product\Flash_Card_Reader\PCB1.PcbDoc;viewname=PCBEditor;Action=AREA_DYNAMICZOOM|Location1.X=7538.533mil|Location2.X=7549.783mil|Location1.Y=9384.926mil|Location2.Y=9396.176mil|Absolute=True" class="callback"><acronym title="dxpprocess://PCB:Zoom?document=C:\Users\Public\Documents\Altium\Flash Card Reader Product\Flash_Card_Reader\PCB1.PcbDoc;viewname=PCBEditor;Action=AREA_DYNAMICZOOM|Location1.X=7538.533mil|Location2.X=7549.783mil|Location1.Y=9384.926mil|Location2.Y=9396.176mil|Absolute=True">Minimum Solder Mask Sliver Constraint: (7.748mil &lt; 10mil) Between Pad Micro Controller-37(4924.409mil,1574.803mil) on Top Layer And Pad Micro Controller-38(4924.409mil,1606.299mil) on Top Layer [Top Solder] Mask Sliver [7.748mil]</acronym></a><br></td>
+</tr>
+<tr class="onmouseout_even" onmouseover="className = 'onmouseover_even'" onmouseout="className = 'onmouseout_even'">
+<td class="column1"><a href="dxpprocess://PCB:Zoom?document=C:\Users\Public\Documents\Altium\Flash Card Reader Product\Flash_Card_Reader\PCB1.PcbDoc;viewname=PCBEditor;Action=AREA_DYNAMICZOOM|Location1.X=7538.533mil|Location2.X=7549.783mil|Location1.Y=9416.422mil|Location2.Y=9427.672mil|Absolute=True" class="callback"><acronym title="dxpprocess://PCB:Zoom?document=C:\Users\Public\Documents\Altium\Flash Card Reader Product\Flash_Card_Reader\PCB1.PcbDoc;viewname=PCBEditor;Action=AREA_DYNAMICZOOM|Location1.X=7538.533mil|Location2.X=7549.783mil|Location1.Y=9416.422mil|Location2.Y=9427.672mil|Absolute=True">Minimum Solder Mask Sliver Constraint: (7.748mil &lt; 10mil) Between Pad Micro Controller-38(4924.409mil,1606.299mil) on Top Layer And Pad Micro Controller-39(4924.409mil,1637.795mil) on Top Layer [Top Solder] Mask Sliver [7.748mil]</acronym></a><br></td>
+</tr>
+<tr class="onmouseout_odd" onmouseover="className = 'onmouseover_odd'" onmouseout="className = 'onmouseout_odd'">
+<td class="column1"><a href="dxpprocess://PCB:Zoom?document=C:\Users\Public\Documents\Altium\Flash Card Reader Product\Flash_Card_Reader\PCB1.PcbDoc;viewname=PCBEditor;Action=AREA_DYNAMICZOOM|Location1.X=7538.533mil|Location2.X=7549.783mil|Location1.Y=9447.918mil|Location2.Y=9459.168mil|Absolute=True" class="callback"><acronym title="dxpprocess://PCB:Zoom?document=C:\Users\Public\Documents\Altium\Flash Card Reader Product\Flash_Card_Reader\PCB1.PcbDoc;viewname=PCBEditor;Action=AREA_DYNAMICZOOM|Location1.X=7538.533mil|Location2.X=7549.783mil|Location1.Y=9447.918mil|Location2.Y=9459.168mil|Absolute=True">Minimum Solder Mask Sliver Constraint: (7.748mil &lt; 10mil) Between Pad Micro Controller-39(4924.409mil,1637.795mil) on Top Layer And Pad Micro Controller-40(4924.409mil,1669.291mil) on Top Layer [Top Solder] Mask Sliver [7.748mil]</acronym></a><br></td>
+</tr>
+<tr class="onmouseout_even" onmouseover="className = 'onmouseover_even'" onmouseout="className = 'onmouseout_even'">
+<td class="column1"><a href="dxpprocess://PCB:Zoom?document=C:\Users\Public\Documents\Altium\Flash Card Reader Product\Flash_Card_Reader\PCB1.PcbDoc;viewname=PCBEditor;Action=AREA_DYNAMICZOOM|Location1.X=7373.115mil|Location2.X=7384.365mil|Location1.Y=9778.69mil|Location2.Y=9789.94mil|Absolute=True" class="callback"><acronym title="dxpprocess://PCB:Zoom?document=C:\Users\Public\Documents\Altium\Flash Card Reader Product\Flash_Card_Reader\PCB1.PcbDoc;viewname=PCBEditor;Action=AREA_DYNAMICZOOM|Location1.X=7373.115mil|Location2.X=7384.365mil|Location1.Y=9778.69mil|Location2.Y=9789.94mil|Absolute=True">Minimum Solder Mask Sliver Constraint: (7.748mil &lt; 10mil) Between Pad Micro Controller-4(4794.488mil,1964.567mil) on Top Layer And Pad Micro Controller-5(4762.992mil,1964.567mil) on Top Layer [Top Solder] Mask Sliver [7.748mil]</acronym></a><br></td>
+</tr>
+<tr class="onmouseout_odd" onmouseover="className = 'onmouseover_odd'" onmouseout="className = 'onmouseout_odd'">
+<td class="column1"><a href="dxpprocess://PCB:Zoom?document=C:\Users\Public\Documents\Altium\Flash Card Reader Product\Flash_Card_Reader\PCB1.PcbDoc;viewname=PCBEditor;Action=AREA_DYNAMICZOOM|Location1.X=7538.533mil|Location2.X=7549.783mil|Location1.Y=9479.414mil|Location2.Y=9490.664mil|Absolute=True" class="callback"><acronym title="dxpprocess://PCB:Zoom?document=C:\Users\Public\Documents\Altium\Flash Card Reader Product\Flash_Card_Reader\PCB1.PcbDoc;viewname=PCBEditor;Action=AREA_DYNAMICZOOM|Location1.X=7538.533mil|Location2.X=7549.783mil|Location1.Y=9479.414mil|Location2.Y=9490.664mil|Absolute=True">Minimum Solder Mask Sliver Constraint: (7.748mil &lt; 10mil) Between Pad Micro Controller-40(4924.409mil,1669.291mil) on Top Layer And Pad Micro Controller-41(4924.409mil,1700.787mil) on Top Layer [Top Solder] Mask Sliver [7.748mil]</acronym></a><br></td>
+</tr>
+<tr class="onmouseout_even" onmouseover="className = 'onmouseover_even'" onmouseout="className = 'onmouseout_even'">
+<td class="column1"><a href="dxpprocess://PCB:Zoom?document=C:\Users\Public\Documents\Altium\Flash Card Reader Product\Flash_Card_Reader\PCB1.PcbDoc;viewname=PCBEditor;Action=AREA_DYNAMICZOOM|Location1.X=7538.533mil|Location2.X=7549.783mil|Location1.Y=9510.91mil|Location2.Y=9522.16mil|Absolute=True" class="callback"><acronym title="dxpprocess://PCB:Zoom?document=C:\Users\Public\Documents\Altium\Flash Card Reader Product\Flash_Card_Reader\PCB1.PcbDoc;viewname=PCBEditor;Action=AREA_DYNAMICZOOM|Location1.X=7538.533mil|Location2.X=7549.783mil|Location1.Y=9510.91mil|Location2.Y=9522.16mil|Absolute=True">Minimum Solder Mask Sliver Constraint: (7.748mil &lt; 10mil) Between Pad Micro Controller-41(4924.409mil,1700.787mil) on Top Layer And Pad Micro Controller-42(4924.409mil,1732.284mil) on Top Layer [Top Solder] Mask Sliver [7.748mil]</acronym></a><br></td>
+</tr>
+<tr class="onmouseout_odd" onmouseover="className = 'onmouseover_odd'" onmouseout="className = 'onmouseout_odd'">
+<td class="column1"><a href="dxpprocess://PCB:Zoom?document=C:\Users\Public\Documents\Altium\Flash Card Reader Product\Flash_Card_Reader\PCB1.PcbDoc;viewname=PCBEditor;Action=AREA_DYNAMICZOOM|Location1.X=7538.533mil|Location2.X=7549.783mil|Location1.Y=9542.406mil|Location2.Y=9553.656mil|Absolute=True" class="callback"><acronym title="dxpprocess://PCB:Zoom?document=C:\Users\Public\Documents\Altium\Flash Card Reader Product\Flash_Card_Reader\PCB1.PcbDoc;viewname=PCBEditor;Action=AREA_DYNAMICZOOM|Location1.X=7538.533mil|Location2.X=7549.783mil|Location1.Y=9542.406mil|Location2.Y=9553.656mil|Absolute=True">Minimum Solder Mask Sliver Constraint: (7.748mil &lt; 10mil) Between Pad Micro Controller-42(4924.409mil,1732.284mil) on Top Layer And Pad Micro Controller-43(4924.409mil,1763.78mil) on Top Layer [Top Solder] Mask Sliver [7.748mil]</acronym></a><br></td>
+</tr>
+<tr class="onmouseout_even" onmouseover="className = 'onmouseover_even'" onmouseout="className = 'onmouseout_even'">
+<td class="column1"><a href="dxpprocess://PCB:Zoom?document=C:\Users\Public\Documents\Altium\Flash Card Reader Product\Flash_Card_Reader\PCB1.PcbDoc;viewname=PCBEditor;Action=AREA_DYNAMICZOOM|Location1.X=7538.533mil|Location2.X=7549.783mil|Location1.Y=9573.903mil|Location2.Y=9585.153mil|Absolute=True" class="callback"><acronym title="dxpprocess://PCB:Zoom?document=C:\Users\Public\Documents\Altium\Flash Card Reader Product\Flash_Card_Reader\PCB1.PcbDoc;viewname=PCBEditor;Action=AREA_DYNAMICZOOM|Location1.X=7538.533mil|Location2.X=7549.783mil|Location1.Y=9573.903mil|Location2.Y=9585.153mil|Absolute=True">Minimum Solder Mask Sliver Constraint: (7.748mil &lt; 10mil) Between Pad Micro Controller-43(4924.409mil,1763.78mil) on Top Layer And Pad Micro Controller-44(4924.409mil,1795.276mil) on Top Layer [Top Solder] Mask Sliver [7.748mil]</acronym></a><br></td>
+</tr>
+<tr class="onmouseout_odd" onmouseover="className = 'onmouseover_odd'" onmouseout="className = 'onmouseout_odd'">
+<td class="column1"><a href="dxpprocess://PCB:Zoom?document=C:\Users\Public\Documents\Altium\Flash Card Reader Product\Flash_Card_Reader\PCB1.PcbDoc;viewname=PCBEditor;Action=AREA_DYNAMICZOOM|Location1.X=7538.533mil|Location2.X=7549.783mil|Location1.Y=9605.399mil|Location2.Y=9616.649mil|Absolute=True" class="callback"><acronym title="dxpprocess://PCB:Zoom?document=C:\Users\Public\Documents\Altium\Flash Card Reader Product\Flash_Card_Reader\PCB1.PcbDoc;viewname=PCBEditor;Action=AREA_DYNAMICZOOM|Location1.X=7538.533mil|Location2.X=7549.783mil|Location1.Y=9605.399mil|Location2.Y=9616.649mil|Absolute=True">Minimum Solder Mask Sliver Constraint: (7.748mil &lt; 10mil) Between Pad Micro Controller-44(4924.409mil,1795.276mil) on Top Layer And Pad Micro Controller-45(4924.409mil,1826.772mil) on Top Layer [Top Solder] Mask Sliver [7.748mil]</acronym></a><br></td>
+</tr>
+<tr class="onmouseout_even" onmouseover="className = 'onmouseover_even'" onmouseout="className = 'onmouseout_even'">
+<td class="column1"><a href="dxpprocess://PCB:Zoom?document=C:\Users\Public\Documents\Altium\Flash Card Reader Product\Flash_Card_Reader\PCB1.PcbDoc;viewname=PCBEditor;Action=AREA_DYNAMICZOOM|Location1.X=7538.533mil|Location2.X=7549.783mil|Location1.Y=9636.895mil|Location2.Y=9648.145mil|Absolute=True" class="callback"><acronym title="dxpprocess://PCB:Zoom?document=C:\Users\Public\Documents\Altium\Flash Card Reader Product\Flash_Card_Reader\PCB1.PcbDoc;viewname=PCBEditor;Action=AREA_DYNAMICZOOM|Location1.X=7538.533mil|Location2.X=7549.783mil|Location1.Y=9636.895mil|Location2.Y=9648.145mil|Absolute=True">Minimum Solder Mask Sliver Constraint: (7.748mil &lt; 10mil) Between Pad Micro Controller-45(4924.409mil,1826.772mil) on Top Layer And Pad Micro Controller-46(4924.409mil,1858.268mil) on Top Layer [Top Solder] Mask Sliver [7.748mil]</acronym></a><br></td>
+</tr>
+<tr class="onmouseout_odd" onmouseover="className = 'onmouseover_odd'" onmouseout="className = 'onmouseout_odd'">
+<td class="column1"><a href="dxpprocess://PCB:Zoom?document=C:\Users\Public\Documents\Altium\Flash Card Reader Product\Flash_Card_Reader\PCB1.PcbDoc;viewname=PCBEditor;Action=AREA_DYNAMICZOOM|Location1.X=7538.533mil|Location2.X=7549.783mil|Location1.Y=9668.391mil|Location2.Y=9679.641mil|Absolute=True" class="callback"><acronym title="dxpprocess://PCB:Zoom?document=C:\Users\Public\Documents\Altium\Flash Card Reader Product\Flash_Card_Reader\PCB1.PcbDoc;viewname=PCBEditor;Action=AREA_DYNAMICZOOM|Location1.X=7538.533mil|Location2.X=7549.783mil|Location1.Y=9668.391mil|Location2.Y=9679.641mil|Absolute=True">Minimum Solder Mask Sliver Constraint: (7.748mil &lt; 10mil) Between Pad Micro Controller-46(4924.409mil,1858.268mil) on Top Layer And Pad Micro Controller-47(4924.409mil,1889.764mil) on Top Layer [Top Solder] Mask Sliver [7.748mil]</acronym></a><br></td>
+</tr>
+<tr class="onmouseout_even" onmouseover="className = 'onmouseover_even'" onmouseout="className = 'onmouseout_even'">
+<td class="column1"><a href="dxpprocess://PCB:Zoom?document=C:\Users\Public\Documents\Altium\Flash Card Reader Product\Flash_Card_Reader\PCB1.PcbDoc;viewname=PCBEditor;Action=AREA_DYNAMICZOOM|Location1.X=7538.533mil|Location2.X=7549.783mil|Location1.Y=9699.887mil|Location2.Y=9711.137mil|Absolute=True" class="callback"><acronym title="dxpprocess://PCB:Zoom?document=C:\Users\Public\Documents\Altium\Flash Card Reader Product\Flash_Card_Reader\PCB1.PcbDoc;viewname=PCBEditor;Action=AREA_DYNAMICZOOM|Location1.X=7538.533mil|Location2.X=7549.783mil|Location1.Y=9699.887mil|Location2.Y=9711.137mil|Absolute=True">Minimum Solder Mask Sliver Constraint: (7.748mil &lt; 10mil) Between Pad Micro Controller-47(4924.409mil,1889.764mil) on Top Layer And Pad Micro Controller-48(4924.409mil,1921.26mil) on Top Layer [Top Solder] Mask Sliver [7.748mil]</acronym></a><br></td>
+</tr>
+<tr class="onmouseout_odd" onmouseover="className = 'onmouseover_odd'" onmouseout="className = 'onmouseout_odd'">
+<td class="column1"><a href="dxpprocess://PCB:Zoom?document=C:\Users\Public\Documents\Altium\Flash Card Reader Product\Flash_Card_Reader\PCB1.PcbDoc;viewname=PCBEditor;Action=AREA_DYNAMICZOOM|Location1.X=7341.619mil|Location2.X=7352.869mil|Location1.Y=9778.69mil|Location2.Y=9789.94mil|Absolute=True" class="callback"><acronym title="dxpprocess://PCB:Zoom?document=C:\Users\Public\Documents\Altium\Flash Card Reader Product\Flash_Card_Reader\PCB1.PcbDoc;viewname=PCBEditor;Action=AREA_DYNAMICZOOM|Location1.X=7341.619mil|Location2.X=7352.869mil|Location1.Y=9778.69mil|Location2.Y=9789.94mil|Absolute=True">Minimum Solder Mask Sliver Constraint: (7.748mil &lt; 10mil) Between Pad Micro Controller-5(4762.992mil,1964.567mil) on Top Layer And Pad Micro Controller-6(4731.496mil,1964.567mil) on Top Layer [Top Solder] Mask Sliver [7.748mil]</acronym></a><br></td>
+</tr>
+<tr class="onmouseout_even" onmouseover="className = 'onmouseover_even'" onmouseout="className = 'onmouseout_even'">
+<td class="column1"><a href="dxpprocess://PCB:Zoom?document=C:\Users\Public\Documents\Altium\Flash Card Reader Product\Flash_Card_Reader\PCB1.PcbDoc;viewname=PCBEditor;Action=AREA_DYNAMICZOOM|Location1.X=7310.123mil|Location2.X=7321.373mil|Location1.Y=9778.69mil|Location2.Y=9789.94mil|Absolute=True" class="callback"><acronym title="dxpprocess://PCB:Zoom?document=C:\Users\Public\Documents\Altium\Flash Card Reader Product\Flash_Card_Reader\PCB1.PcbDoc;viewname=PCBEditor;Action=AREA_DYNAMICZOOM|Location1.X=7310.123mil|Location2.X=7321.373mil|Location1.Y=9778.69mil|Location2.Y=9789.94mil|Absolute=True">Minimum Solder Mask Sliver Constraint: (7.748mil &lt; 10mil) Between Pad Micro Controller-6(4731.496mil,1964.567mil) on Top Layer And Pad Micro Controller-7(4700mil,1964.567mil) on Top Layer [Top Solder] Mask Sliver [7.748mil]</acronym></a><br></td>
+</tr>
+<tr class="onmouseout_odd" onmouseover="className = 'onmouseover_odd'" onmouseout="className = 'onmouseout_odd'">
+<td class="column1"><a href="dxpprocess://PCB:Zoom?document=C:\Users\Public\Documents\Altium\Flash Card Reader Product\Flash_Card_Reader\PCB1.PcbDoc;viewname=PCBEditor;Action=AREA_DYNAMICZOOM|Location1.X=7278.627mil|Location2.X=7289.877mil|Location1.Y=9778.69mil|Location2.Y=9789.94mil|Absolute=True" class="callback"><acronym title="dxpprocess://PCB:Zoom?document=C:\Users\Public\Documents\Altium\Flash Card Reader Product\Flash_Card_Reader\PCB1.PcbDoc;viewname=PCBEditor;Action=AREA_DYNAMICZOOM|Location1.X=7278.627mil|Location2.X=7289.877mil|Location1.Y=9778.69mil|Location2.Y=9789.94mil|Absolute=True">Minimum Solder Mask Sliver Constraint: (7.748mil &lt; 10mil) Between Pad Micro Controller-7(4700mil,1964.567mil) on Top Layer And Pad Micro Controller-8(4668.504mil,1964.567mil) on Top Layer [Top Solder] Mask Sliver [7.748mil]</acronym></a><br></td>
+</tr>
+<tr class="onmouseout_even" onmouseover="className = 'onmouseover_even'" onmouseout="className = 'onmouseout_even'">
+<td class="column1"><a href="dxpprocess://PCB:Zoom?document=C:\Users\Public\Documents\Altium\Flash Card Reader Product\Flash_Card_Reader\PCB1.PcbDoc;viewname=PCBEditor;Action=AREA_DYNAMICZOOM|Location1.X=7247.131mil|Location2.X=7258.381mil|Location1.Y=9778.69mil|Location2.Y=9789.94mil|Absolute=True" class="callback"><acronym title="dxpprocess://PCB:Zoom?document=C:\Users\Public\Documents\Altium\Flash Card Reader Product\Flash_Card_Reader\PCB1.PcbDoc;viewname=PCBEditor;Action=AREA_DYNAMICZOOM|Location1.X=7247.131mil|Location2.X=7258.381mil|Location1.Y=9778.69mil|Location2.Y=9789.94mil|Absolute=True">Minimum Solder Mask Sliver Constraint: (7.748mil &lt; 10mil) Between Pad Micro Controller-8(4668.504mil,1964.567mil) on Top Layer And Pad Micro Controller-9(4637.008mil,1964.567mil) on Top Layer [Top Solder] Mask Sliver [7.748mil]</acronym></a><br></td>
+</tr>
+</table></a><hr color="#EEEEEE"><a href="#top" style="font-size: 0.9em">Back to top</a><br><br><a name="IDXNWDCE4SS0X5NP0ASEUHM4BIOLD2PG1N0RGHX5I5KL2E5YBL0LYB"><table>
+<tr>
+<th style="text-align : left" colspan="1" class="rule">Silk To Solder Mask (Clearance=10mil) (IsPad),(All)</th>
+</tr>
+<tr class="onmouseout_odd" onmouseover="className = 'onmouseover_odd'" onmouseout="className = 'onmouseout_odd'">
+<td class="column1"><a href="dxpprocess://PCB:Zoom?document=C:\Users\Public\Documents\Altium\Flash Card Reader Product\Flash_Card_Reader\PCB1.PcbDoc;viewname=PCBEditor;Action=AREA_DYNAMICZOOM|Location1.X=6155.005mil|Location2.X=6166.255mil|Location1.Y=9182.266mil|Location2.Y=9193.516mil|Absolute=True" class="callback"><acronym title="dxpprocess://PCB:Zoom?document=C:\Users\Public\Documents\Altium\Flash Card Reader Product\Flash_Card_Reader\PCB1.PcbDoc;viewname=PCBEditor;Action=AREA_DYNAMICZOOM|Location1.X=6155.005mil|Location2.X=6166.255mil|Location1.Y=9182.266mil|Location2.Y=9193.516mil|Absolute=True">Silk To Solder Mask Clearance Constraint: (8.854mil &lt; 10mil) Between Arc (3560.63mil,1375.591mil) on Top Overlay And Pad LDO3V3-1(3562.598mil,1416.535mil) on Top Layer [Top Overlay] to [Top Solder] clearance [8.854mil]</acronym></a><br></td>
+</tr>
+<tr class="onmouseout_even" onmouseover="className = 'onmouseover_even'" onmouseout="className = 'onmouseout_even'">
+<td class="column1"><a href="dxpprocess://PCB:Zoom?document=C:\Users\Public\Documents\Altium\Flash Card Reader Product\Flash_Card_Reader\PCB1.PcbDoc;viewname=PCBEditor;Action=AREA_DYNAMICZOOM|Location1.X=6135.667mil|Location2.X=6143.333mil|Location1.Y=9420.915mil|Location2.Y=9428.582mil|Absolute=True" class="callback"><acronym title="dxpprocess://PCB:Zoom?document=C:\Users\Public\Documents\Altium\Flash Card Reader Product\Flash_Card_Reader\PCB1.PcbDoc;viewname=PCBEditor;Action=AREA_DYNAMICZOOM|Location1.X=6135.667mil|Location2.X=6143.333mil|Location1.Y=9420.915mil|Location2.Y=9428.582mil|Absolute=True">Silk To Solder Mask Clearance Constraint: (Collision &lt; 10mil) Between Pad C3-1(3531.102mil,1600mil) on Top Layer And Text "LDO3V3" (3539.5mil,1564.768mil) on Top Overlay [Top Overlay] to [Top Solder] clearance [0mil]</acronym></a><br></td>
+</tr>
+<tr class="onmouseout_odd" onmouseover="className = 'onmouseover_odd'" onmouseout="className = 'onmouseout_odd'">
+<td class="column1"><a href="dxpprocess://PCB:Zoom?document=C:\Users\Public\Documents\Altium\Flash Card Reader Product\Flash_Card_Reader\PCB1.PcbDoc;viewname=PCBEditor;Action=AREA_DYNAMICZOOM|Location1.X=6195.647mil|Location2.X=6203.314mil|Location1.Y=9420.915mil|Location2.Y=9428.582mil|Absolute=True" class="callback"><acronym title="dxpprocess://PCB:Zoom?document=C:\Users\Public\Documents\Altium\Flash Card Reader Product\Flash_Card_Reader\PCB1.PcbDoc;viewname=PCBEditor;Action=AREA_DYNAMICZOOM|Location1.X=6195.647mil|Location2.X=6203.314mil|Location1.Y=9420.915mil|Location2.Y=9428.582mil|Absolute=True">Silk To Solder Mask Clearance Constraint: (Collision &lt; 10mil) Between Pad C3-2(3600mil,1600mil) on Top Layer And Text "LDO3V3" (3539.5mil,1564.768mil) on Top Overlay [Top Overlay] to [Top Solder] clearance [0mil]</acronym></a><br></td>
+</tr>
+<tr class="onmouseout_even" onmouseover="className = 'onmouseover_even'" onmouseout="className = 'onmouseout_even'">
+<td class="column1"><a href="dxpprocess://PCB:Zoom?document=C:\Users\Public\Documents\Altium\Flash Card Reader Product\Flash_Card_Reader\PCB1.PcbDoc;viewname=PCBEditor;Action=AREA_DYNAMICZOOM|Location1.X=6140.406mil|Location2.X=6151.656mil|Location1.Y=9229.316mil|Location2.Y=9240.566mil|Absolute=True" class="callback"><acronym title="dxpprocess://PCB:Zoom?document=C:\Users\Public\Documents\Altium\Flash Card Reader Product\Flash_Card_Reader\PCB1.PcbDoc;viewname=PCBEditor;Action=AREA_DYNAMICZOOM|Location1.X=6140.406mil|Location2.X=6151.656mil|Location1.Y=9229.316mil|Location2.Y=9240.566mil|Absolute=True">Silk To Solder Mask Clearance Constraint: (9.897mil &lt; 10mil) Between Pad LDO3V3-1(3562.598mil,1416.535mil) on Top Layer And Track (3538.583mil,1430.709mil)(3538.583mil,1485.827mil) on Top Overlay [Top Overlay] to [Top Solder] clearance [9.897mil]</acronym></a><br></td>
+</tr>
+<tr class="onmouseout_odd" onmouseover="className = 'onmouseover_odd'" onmouseout="className = 'onmouseout_odd'">
+<td class="column1"><a href="dxpprocess://PCB:Zoom?document=C:\Users\Public\Documents\Altium\Flash Card Reader Product\Flash_Card_Reader\PCB1.PcbDoc;viewname=PCBEditor;Action=AREA_DYNAMICZOOM|Location1.X=6248.344mil|Location2.X=6259.594mil|Location1.Y=9229.316mil|Location2.Y=9240.566mil|Absolute=True" class="callback"><acronym title="dxpprocess://PCB:Zoom?document=C:\Users\Public\Documents\Altium\Flash Card Reader Product\Flash_Card_Reader\PCB1.PcbDoc;viewname=PCBEditor;Action=AREA_DYNAMICZOOM|Location1.X=6248.344mil|Location2.X=6259.594mil|Location1.Y=9229.316mil|Location2.Y=9240.566mil|Absolute=True">Silk To Solder Mask Clearance Constraint: (9.897mil &lt; 10mil) Between Pad LDO3V3-2(3637.402mil,1416.535mil) on Top Layer And Track (3661.417mil,1430.709mil)(3661.417mil,1485.827mil) on Top Overlay [Top Overlay] to [Top Solder] clearance [9.897mil]</acronym></a><br></td>
+</tr>
+</table></a><hr color="#EEEEEE"><a href="#top" style="font-size: 0.9em">Back to top</a><br><br></body>
+</html>

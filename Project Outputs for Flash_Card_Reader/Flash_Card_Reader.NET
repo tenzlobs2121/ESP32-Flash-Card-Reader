@@ -1,0 +1,113 @@
+Wire List
+
+<<< Component List >>>
+                                3V7            BAT_1043
+10uF                            C1             CAPC2012X88N
+0.1uF                           C2             CAPC1608X90X35NL10T15
+1pf                             C3             CAPC2012X88N
+10pf                            C4             CAPC2012X88N
+1uF                             C5             CAPC1608X90N
+10nF                            C6             WCAP-CSGP_0805_L2W1.25H1.25
+10nF                            C7             WCAP-CSGP_0805_L2W1.25H1.25
+10nF                            C8             WCAP-CSGP_0805_L2W1.25H1.25
+10nF                            C9             WCAP-CSGP_0805_L2W1.25H1.25
+10nF                            C10            WCAP-CSGP_0805_L2W1.25H1.25
+10nF                            C11            WCAP-CSGP_0805_L2W1.25H1.25
+10nF                            C12            WCAP-CSGP_0805_L2W1.25H1.25
+10nF                            C13            WCAP-CSGP_0805_L2W1.25H1.25
+QRE1113GR                       IR1            4LEADSMD
+QRE1113GR                       IR2            4LEADSMD
+QRE1113GR                       IR3            4LEADSMD
+QRE1113GR                       IR4            4LEADSMD
+QRE1113GR                       IR5            4LEADSMD
+QRE1113GR                       IR6            4LEADSMD
+QRE1113GR                       IR7            4LEADSMD
+QRE1113GR                       IR8            4LEADSMD
+LDO 3.3 regulator               LDO3V3         SOT95P237X112-3N
+ESP32-C3-MINI-1-N4              Micro Con      XCVR_ESP32-C3-MINI-1-N4
+10K                             R1             FP-RMCF0603-IPC_C
+100                             R2             RESC6432X75N
+100                             R3             RESC6432X75N
+100                             R4             RESC6432X75N
+100                             R5             RESC6432X75N
+100                             R6             RESC6432X75N
+100                             R7             RESC6432X75N
+100                             R8             RESC6432X75N
+100                             R9             RESC6432X75N
+220                             R10            RESC1005X35N
+
+<<< Wire List >>>
+
+  NODE  REFERENCE  PIN #   PIN NAME       PIN TYPE    PART VALUE
+
+[00021] NetIR1_A
+        IR1        A       A              I/O         QRE1113GR
+        R2         2       2              PASSIVE     100
+
+[00006] NetC6_2
+        C6         2       2              PASSIVE     10nF
+        IR1        C       C              I/O         QRE1113GR
+        R10        1       1              PASSIVE     220
+
+[00005] NetC5_1
+        C5         1       1              PASSIVE     1uF
+        Micro Con  8       EN             INPUT       ESP32-C3-MINI-1-N4
+        R1         2       2              PASSIVE     10K
+
+[00004] GPIO0
+        Micro Con  12      IO0            PASSIVE     ESP32-C3-MINI-1-N4
+
+[00003] GND
+        3V7        N       NEG            PASSIVE     
+        C1         2       2              PASSIVE     10uF
+        C2         2       2              PASSIVE     0.1uF
+        C3         2       2              PASSIVE     1pf
+        C4         2       2              PASSIVE     10pf
+        C5         2       2              PASSIVE     1uF
+        LDO3V3     1       GND            POWER       LDO 3.3 regulator
+        Micro Con  1       GND            POWER       ESP32-C3-MINI-1-N4
+        Micro Con  2       GND            POWER       ESP32-C3-MINI-1-N4
+        Micro Con  11      GND            POWER       ESP32-C3-MINI-1-N4
+        Micro Con  14      GND            POWER       ESP32-C3-MINI-1-N4
+        Micro Con  36      GND            POWER       ESP32-C3-MINI-1-N4
+        Micro Con  37      GND            POWER       ESP32-C3-MINI-1-N4
+        Micro Con  38      GND            POWER       ESP32-C3-MINI-1-N4
+        Micro Con  39      GND            POWER       ESP32-C3-MINI-1-N4
+        Micro Con  40      GND            POWER       ESP32-C3-MINI-1-N4
+        Micro Con  41      GND            POWER       ESP32-C3-MINI-1-N4
+        Micro Con  42      GND            POWER       ESP32-C3-MINI-1-N4
+        Micro Con  43      GND            POWER       ESP32-C3-MINI-1-N4
+        Micro Con  44      GND            POWER       ESP32-C3-MINI-1-N4
+        Micro Con  45      GND            POWER       ESP32-C3-MINI-1-N4
+        Micro Con  46      GND            POWER       ESP32-C3-MINI-1-N4
+        Micro Con  47      GND            POWER       ESP32-C3-MINI-1-N4
+        Micro Con  48      GND            POWER       ESP32-C3-MINI-1-N4
+        Micro Con  49_1    GND            POWER       ESP32-C3-MINI-1-N4
+        Micro Con  49_2    GND            POWER       ESP32-C3-MINI-1-N4
+        Micro Con  49_3    GND            POWER       ESP32-C3-MINI-1-N4
+        Micro Con  49_4    GND            POWER       ESP32-C3-MINI-1-N4
+        Micro Con  49_5    GND            POWER       ESP32-C3-MINI-1-N4
+        Micro Con  49_6    GND            POWER       ESP32-C3-MINI-1-N4
+        Micro Con  49_7    GND            POWER       ESP32-C3-MINI-1-N4
+        Micro Con  49_8    GND            POWER       ESP32-C3-MINI-1-N4
+        Micro Con  49_9    GND            POWER       ESP32-C3-MINI-1-N4
+        Micro Con  50      GND            POWER       ESP32-C3-MINI-1-N4
+        Micro Con  51      GND            POWER       ESP32-C3-MINI-1-N4
+        Micro Con  52      GND            POWER       ESP32-C3-MINI-1-N4
+        Micro Con  53      GND            POWER       ESP32-C3-MINI-1-N4
+
+[00002] 3V3
+        C1         1       1              PASSIVE     10uF
+        C2         1       1              PASSIVE     0.1uF
+        C4         1       1              PASSIVE     10pf
+        C6         1       1              PASSIVE     10nF
+        LDO3V3     2       VOUT           POWER       LDO 3.3 regulator
+        Micro Con  3       3V3            POWER       ESP32-C3-MINI-1-N4
+        R1         1       1              PASSIVE     10K
+        R2         1       1              PASSIVE     100
+
+[00001] 3.7V
+        3V7        P       POS            PASSIVE     
+        C3         1       1              PASSIVE     1pf
+        LDO3V3     3       VIN            POWER       LDO 3.3 regulator
+

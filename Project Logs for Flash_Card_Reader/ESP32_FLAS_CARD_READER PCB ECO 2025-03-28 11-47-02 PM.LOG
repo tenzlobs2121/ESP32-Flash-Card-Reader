@@ -1,0 +1,34 @@
+Removed Member From Class: ClassName=ESP32_USBC_CHARGER Member=IR1
+Removed Member From Class: ClassName=ESP32_USBC_CHARGER Member=IR3
+Removed Member From Class: ClassName=ESP32_USBC_CHARGER Member=R1
+Removed Member From Class: ClassName=ESP32_USBC_CHARGER Member=R2
+Removed Member From Class: ClassName=ESP32_USBC_CHARGER Member=R3
+Removed Member From Class: ClassName=ESP32_USBC_CHARGER Member=R4
+Removed Member From Class: ClassName=ESP32_USBC_CHARGER Member=R5
+Removed Member From Class: ClassName=ESP32_USBC_CHARGER Member=R6
+Removed Member From Class: ClassName=ESP32_USBC_CHARGER Member=R7
+Removed Member From Class: ClassName=ESP32_USBC_CHARGER Member=R8
+Change Component Footprint: Designator=C10 Old Footprint=CAPC1608X90X35NL10T15 New Footprint=CAPC1608X90X35NL10T15
+Change Component Footprint: Designator=C11 Old Footprint=CAPC1608X90X35NL10T15 New Footprint=CAPC1608X90X35NL10T15
+Added Component: Designator=NPN1(SOT-23)
+Added Component: Designator=NPN2(SOT-23)
+Added Member To Class: ClassName=ESP32_USBC_CHARGER Member=Component C14 10nF
+Added Member To Class: ClassName=ESP32_USBC_CHARGER Member=Component C15 10nF
+Added Member To Class: ClassName=ESP32_USBC_CHARGER Member=Component C20 100nF
+Added Member To Class: ClassName=ESP32_USBC_CHARGER Member=Component C21 100nF
+Added Member To Class: ClassName=ESP32_USBC_CHARGER Member=Component DAC1 MCP4706A0T-E/CH
+Added Member To Class: ClassName=ESP32_USBC_CHARGER Member=Component IR6 QRE1113GR
+Added Member To Class: ClassName=ESP32_USBC_CHARGER Member=Component IR7 QRE1113GR
+Added Member To Class: ClassName=ESP32_USBC_CHARGER Member=Component IR8 QRE1113GR
+Added Member To Class: ClassName=ESP32_USBC_CHARGER Member=Component R10 100
+Added Member To Class: ClassName=ESP32_USBC_CHARGER Member=Component R11 100
+Added Member To Class: ClassName=ESP32_USBC_CHARGER Member=Component R12 220
+Added Member To Class: ClassName=ESP32_USBC_CHARGER Member=Component R13 220
+Added Member To Class: ClassName=ESP32_USBC_CHARGER Member=Component R14 100
+Added Member To Class: ClassName=ESP32_USBC_CHARGER Member=Component R15 100
+Added Member To Class: ClassName=ESP32_USBC_CHARGER Member=Component R16 220
+Added Member To Class: ClassName=ESP32_USBC_CHARGER Member=Component R17 220
+Added Member To Class: ClassName=ESP32_USBC_CHARGER Member=Component R18 10K
+Added Member To Class: ClassName=ESP32_USBC_CHARGER Member=Component R19 10K
+Added Member To Class: ClassName=ESP32_USBC_CHARGER Member=Component R20 10
+Added Member To Class: ClassName=ESP32_USBC_CHARGER Member=Component R23 10K

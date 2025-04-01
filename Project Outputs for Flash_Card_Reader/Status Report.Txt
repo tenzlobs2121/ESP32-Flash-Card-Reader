@@ -1,0 +1,10 @@
+Output: WireList Netlist
+Type  : WireListNetlist
+From  : Project [Flash_Card_Reader.PrjPcb]
+   Generated File[Flash_Card_Reader.NET]
+
+
+Files Generated   : 1
+Documents Printed : 0
+
+Finished Output Generation At 11:12:32 AM On 2025-03-25

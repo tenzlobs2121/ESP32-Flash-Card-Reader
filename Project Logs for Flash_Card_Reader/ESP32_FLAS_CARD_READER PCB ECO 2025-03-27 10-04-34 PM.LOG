@@ -1,0 +1,13 @@
+Removed Pin From Net: NetName=5V_VCC Pin=R_LED-A
+Removed Pin From Net: NetName=NetR19_2 Pin=R_LED-C
+Removed Member From Class: ClassName=ESP32_USBC_CHARGER Member=R_LED
+Added Component: Designator=R_LED?(LED3MM)
+Add component (AddParameter): Name = "Check_prices"; Value = "https://www.snapeda.com/parts/TLLR4400/Vishay+Semiconductor+Opto+Division/view-part/?ref=eda"; VariantName = "[No Variations]"
+Add component (AddParameter): Name = "MF"; Value = "Vishay"; VariantName = "[No Variations]"
+Add component (AddParameter): Name = "MP"; Value = "TLLR4400"; VariantName = "[No Variations]"
+Add component (AddParameter): Name = "Package"; Value = "None"; VariantName = "[No Variations]"
+Add component (AddParameter): Name = "SnapEDA_Link"; Value = "https://www.snapeda.com/parts/TLLR4400/Vishay+Semiconductor+Opto+Division/view-part/?ref=snap"; VariantName = "[No Variations]"
+Add component (AddParameter): Name = "Value"; Value = ""; VariantName = "[No Variations]"
+Added Pin To Net: NetName=5V_VCC Pin=R_LED?-A
+Added Pin To Net: NetName=NetR19_2 Pin=R_LED?-K
+Added Member To Class: ClassName=ESP32_USBC_CHARGER Member=Component R_LED? TLLR4400
