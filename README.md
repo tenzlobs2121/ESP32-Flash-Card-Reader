@@ -6,3 +6,5 @@ DAC links:  https://ww1.microchip.com/downloads/en/DeviceDoc/22272C.pdf         
 
 
 USB to UART links:  https://dl.espressif.com/dl/schematics/SCH_ESP32-C3-DEVKITM-1_V1_20200915A.pdf
+
+ESP32-C3-mini-1 Schematic reference: https://github.com/esp-rs/esp-rust-board/blob/v1.2/hardware/esp-rust-board/schematic/esp-rust-board.pdf
